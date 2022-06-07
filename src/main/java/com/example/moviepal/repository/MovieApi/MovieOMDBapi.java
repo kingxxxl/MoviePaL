@@ -1,6 +1,7 @@
 package com.example.moviepal.repository.MovieApi;
 
 import com.example.moviepal.advice.ControllerAdviseHandler;
+import com.example.moviepal.exceptions.InvalidIdException;
 import com.example.moviepal.model.Movie;
 import com.example.moviepal.model.Search;
 import com.fasterxml.jackson.core.JsonParser;
@@ -23,8 +24,11 @@ import java.util.List;
 public class MovieOMDBapi {
     Logger logger = LoggerFactory.getLogger(ControllerAdviseHandler.class);
     private final String URL_FIND_SINGLE_BY_NAME = "https://www.omdbapi.com/?apikey=c2f1c494&t=";
+    private final String URL_FIND_SINGLE_BY_ID = "https://www.omdbapi.com/?apikey=c2f1c494&i=";
     private final String URL_SEARCH_LIST_BY_NAME = "https://www.omdbapi.com/?apikey=c2f1c494&s=";
     public Movie findByTitle(String name) throws JsonProcessingException {
+        logger.info("Starting findByTitle");
+
         String url = URL_FIND_SINGLE_BY_NAME + name;
 
         logger.info("URL was obtained:"+url);
@@ -39,7 +43,29 @@ public class MovieOMDBapi {
         return movie;
 
     }
+    public Movie findById(String id) throws InvalidIdException, JsonProcessingException {
+        logger.info("Starting findById");
+        String url = URL_FIND_SINGLE_BY_ID + id;
+
+        logger.info("URL was obtained:"+url);
+
+        String apiJson = getBodyFromURL(url);
+
+        Movie movie = getMovieFromSingleJson(apiJson);
+
+        logger.info("The movie was mapped with the given json: "+movie);
+
+
+        if (movie.getId() == null){
+            logger.warn("no id for this movie");
+            throw  new InvalidIdException();
+        }
+        logger.info("returning the movie object");
+        return movie;
+    }
     public List<Movie> findBySearchName(String name) throws JsonProcessingException {
+        logger.info("Starting findBySearchName");
+
         String url = URL_SEARCH_LIST_BY_NAME +name;
         logger.info("URL was obtained:"+url);
         String apiJson = getBodyFromURL(url);
@@ -52,6 +78,7 @@ public class MovieOMDBapi {
     }
 
     private String getBodyFromURL(String url){
+        logger.info("Starting getBodyFromURL");
 
         //getting the json string from the url
         WebClient webClient = WebClient.create(url);

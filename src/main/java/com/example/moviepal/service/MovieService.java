@@ -3,6 +3,7 @@ package com.example.moviepal.service;
 
 import com.example.moviepal.advice.ControllerAdviseHandler;
 import com.example.moviepal.exceptions.InvalidIdException;
+import com.example.moviepal.exceptions.NoSuchFoundException;
 import com.example.moviepal.model.Movie;
 import com.example.moviepal.model.Search;
 import com.example.moviepal.repository.MovieApi.MovieOMDBapi;
@@ -40,8 +41,8 @@ import java.util.List;
             return movie;
         }
        catch (JsonProcessingException e){
-            throw new InvalidIdException("Invalid name");
-        }
+           logger.warn("no movie with that name");
+           throw new NoSuchFoundException("No movie was found with that name!");        }
     }
 
     public List<Movie> findBySearchName(String name) {
@@ -52,8 +53,19 @@ import java.util.List;
             return movieOMDBapi.findBySearchName(name);
         }
         catch (Exception e){
-            System.out.println(e.getMessage());
-            return null;
+            logger.warn("no search result was found");
+            throw new NoSuchFoundException("No movie was found with that name!");
+        }
+    }
+
+    public Movie findById(String id) {
+        logger.info("starting findById in MovieService");
+        try {
+            logger.info("calling movieOMDBapi.findByid using tid");
+            return movieOMDBapi.findById(id);
+        } catch (Exception e) {
+            logger.warn("no id for this movie");
+            throw new InvalidIdException("No such id!");
         }
     }
 }

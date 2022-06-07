@@ -32,6 +32,13 @@ public class LookUpMovieController {
         return ResponseEntity.status(HttpStatus.OK).body(movieService.findByName(name));
     }
 
+    @GetMapping("/id/{id}")
+    public ResponseEntity<Movie> byId(@PathVariable String id){
+        logger.info("Starting movie/lookby/movie/lookby/id in LookUpMovieController");
+        logger.info("calling movieService.findByid with id");
+        return ResponseEntity.status(HttpStatus.OK).body(movieService.findById(id));
+    }
+
     @GetMapping("/search/name/{name}")
     public ResponseEntity<List<Movie>> byNameSearch(@PathVariable String name){
         logger.info("Starting movie/lookby/search/movie/lookby/name in LookUpMovieController");
