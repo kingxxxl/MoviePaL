@@ -1,31 +1,28 @@
-package com.example.moviepal.repository.MovieApi;
+package com.example.moviepal.service.MovieApi;
 
-import com.example.moviepal.advice.ControllerAdviseHandler;
 import com.example.moviepal.exceptions.InvalidIdException;
 import com.example.moviepal.model.Movie;
-import com.example.moviepal.model.Search;
-import com.fasterxml.jackson.core.JsonParser;
+import com.example.moviepal.model.outDB.Search;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
-import com.google.gson.Gson;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Repository
+@Service
 public class MovieOMDBapi {
-    Logger logger = LoggerFactory.getLogger(ControllerAdviseHandler.class);
+    Logger logger = LoggerFactory.getLogger(MovieOMDBapi.class);
     private final String URL_FIND_SINGLE_BY_NAME = "https://www.omdbapi.com/?apikey=c2f1c494&t=";
     private final String URL_FIND_SINGLE_BY_ID = "https://www.omdbapi.com/?apikey=c2f1c494&i=";
     private final String URL_SEARCH_LIST_BY_NAME = "https://www.omdbapi.com/?apikey=c2f1c494&s=";
+    private final String URL_SEARCH_LIST_BY_NAME_YEAR = "https://www.omdbapi.com/?apikey=c2f1c494&y=";
     public Movie findByTitle(String name) throws JsonProcessingException {
         logger.info("Starting findByTitle");
 
@@ -76,6 +73,16 @@ public class MovieOMDBapi {
         return movies;
 
     }
+//    public List<Movie> findBySearchYear(String year) throws JsonProcessingException {
+//        logger.info("Starting findBySearchYear");
+//
+//        String url = URL_SEARCH_LIST_BY_YEAR +year;
+//        logger.info("URL was obtained:"+url);
+//        String apiJson = getBodyFromURL(url);
+//        List<Movie> movies = getListMovieFromJson(apiJson);
+//        logger.info("The movies were mapped with the given json: "+movies);
+//        return movies;
+//    }
 
     private String getBodyFromURL(String url){
         logger.info("Starting getBodyFromURL");
@@ -128,11 +135,11 @@ public class MovieOMDBapi {
         movie.setId(c.getId());
         movie.setTitle(c.getTitle());
         movie.setYear(c.getYear());
+        movie.setType(c.getType());
         result.add(movie);
         }
         logger.info("fished  creating movie list result in getListFromSearch");
 
         return result;
     }
-
 }

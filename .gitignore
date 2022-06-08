@@ -18,6 +18,7 @@ target/
 *.iws
 *.iml
 *.ipr
+log.log.2022-06-07.0.gz
 
 ### NetBeans ###
 /nbproject/private/

@@ -2,7 +2,6 @@ package com.example.moviepal.controllers.MovieControllers;
 
 import com.example.moviepal.advice.ControllerAdviseHandler;
 import com.example.moviepal.model.Movie;
-import com.example.moviepal.model.Search;
 import com.example.moviepal.service.MovieService;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
@@ -23,7 +22,7 @@ public class LookUpMovieController {
 
 
     final private MovieService movieService;
-    Logger logger = LoggerFactory.getLogger(ControllerAdviseHandler.class);
+    Logger logger = LoggerFactory.getLogger(MovieService.class);
 
     @GetMapping("/name/{name}")
     public ResponseEntity<Movie> byNameExact(@PathVariable String name){

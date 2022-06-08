@@ -9,15 +9,18 @@ import lombok.RequiredArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @AllArgsConstructor
 @RequiredArgsConstructor
 @Data
-@Entity
+//@Entity
 public class Movie {
     @Id
     @JsonProperty("imdbID")
     private String id;
     private String title;
     private String year;
+    private String type;
 }

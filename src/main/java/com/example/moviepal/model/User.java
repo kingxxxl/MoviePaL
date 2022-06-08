@@ -7,10 +7,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Collection;
 import java.util.Collections;
@@ -20,12 +17,20 @@ import java.util.Collections;
 @Entity
 public class User implements UserDetails {
     @Id
-    private Integer  id;
+    private Integer id;
     @NotNull(message ="username may not be empty" )
-    private String  username;
+    private String username;
     @NotNull(message ="password may not be empty" )
-    private String  password;
+    private String password;
     private String role;
+
+
+    @OneToOne(mappedBy = "user")
+    private WishListMovie wishListMovie;
+
+//    @OneToOne(cascade = CascadeType.MERGE)
+//    @JoinColumn(name = "wishList_id", referencedColumnName = "ListId")
+//    private WishListMovie wishListMovie;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

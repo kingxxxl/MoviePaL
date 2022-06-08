@@ -1,9 +1,6 @@
-package com.example.moviepal.model;
+package com.example.moviepal.model.outDB;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
@@ -18,6 +15,7 @@ public class Search {
     private List<Search> search;
     private String title;
     private String year;
+    private String type;
     @JsonProperty("imdbID")
     private String id;
 }
