@@ -33,7 +33,6 @@ public class UserSeed implements CommandLineRunner {
                         genre  = "comedy";
                         break;
                 }
-
                 String randomDate = String.valueOf((int) (Math.floor(Math.random() * 30) + 1990));
                 User user = new User();
                 user.setId(i);
