@@ -78,8 +78,7 @@ import java.util.List;
     }
 
     public void addMovieByNameToWish(String name, User user) {
-        logger.info("calling addMovieByNameToWish with name of the movie");
-        List<WishListMovie> wishListForTheUser=  listsService.getAllWishListByUser(user);
+        logger.info("starting addMovieByNameToWish with name of the movie");
         Movie movie= findByName(name);
         logger.info("movie was called: "+ movie);
         if(!listsService.isMovieInUserWishList(movie,user)){
