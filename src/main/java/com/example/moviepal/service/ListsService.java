@@ -40,7 +40,6 @@ import java.util.Optional;
             }else {
                 logger.info("list was NOT found, creating one using the given user");
                 WishListMovie newList = new WishListMovie();
-                newList.setListId(1);
                 newList.setUser(user);
                 logger.info("list was created: "+newList);
                 wishListMovieRepository.save(newList);

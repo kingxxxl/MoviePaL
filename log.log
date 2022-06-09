@@ -16094,3 +16094,444 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'MoviePaL.wish_list_movie' do
 2022-06-09 16:44:25.922  INFO 21719 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
 2022-06-09 16:44:26.601  INFO 21719 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2022-06-09 16:44:27.540  INFO 21719 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-09 18:08:28.853  INFO 22239 --- [main] c.example.moviepal.MoviePaLApplication   : Starting MoviePaLApplication using Java 16.0.1 on abdo.local with PID 22239 (/Users/abdullahalmasar/IdeaProjects/MoviePaL/target/classes started by abdullahalmasar in /Users/abdullahalmasar/IdeaProjects/MoviePaL)
+2022-06-09 18:08:28.855  INFO 22239 --- [main] c.example.moviepal.MoviePaLApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-06-09 18:08:29.285  INFO 22239 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-09 18:08:29.335  INFO 22239 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 2 JPA repository interfaces.
+2022-06-09 18:08:29.653  INFO 22239 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-09 18:08:29.658  INFO 22239 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-09 18:08:29.658  INFO 22239 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-09 18:08:29.732  INFO 22239 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-09 18:08:29.732  INFO 22239 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 851 ms
+2022-06-09 18:08:29.806  INFO 22239 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-09 18:08:29.826  INFO 22239 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-09 18:08:29.894  INFO 22239 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-09 18:08:29.940  INFO 22239 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-09 18:08:31.234  INFO 22239 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-09 18:08:31.245  INFO 22239 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-06-09 18:08:31.865  WARN 22239 --- [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table wish_list_movie drop foreign key FK92st5ga0r5klxy0offf6w0gm8" via JDBC Statement
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table wish_list_movie drop foreign key FK92st5ga0r5klxy0offf6w0gm8" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:387) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:371) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:341) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:235) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:156) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:128) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:114) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:157) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.0.jar:2.7.0]
+	at com.example.moviepal.MoviePaLApplication.main(MoviePaLApplication.java:10) ~[classes/:na]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'MoviePaL.wish_list_movie' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	... 35 common frames omitted
+
+2022-06-09 18:08:33.306  INFO 22239 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-09 18:08:33.315  INFO 22239 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-09 18:08:33.632  WARN 22239 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-09 18:08:33.728  INFO 22239 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@333efb51, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2c451c4a, org.springframework.security.web.context.SecurityContextPersistenceFilter@a6204e4, org.springframework.security.web.header.HeaderWriterFilter@47c356e, org.springframework.security.web.authentication.logout.LogoutFilter@da11873, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4eace42b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4b360a82, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@556a6320, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@38ad86b1, org.springframework.security.web.session.SessionManagementFilter@29eaf100, org.springframework.security.web.access.ExceptionTranslationFilter@1eab0700, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@41cf4272]
+2022-06-09 18:08:34.013  INFO 22239 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-09 18:08:34.023  INFO 22239 --- [main] c.example.moviepal.MoviePaLApplication   : Started MoviePaLApplication in 5.391 seconds (JVM running for 5.763)
+2022-06-09 18:08:34.025  INFO 22239 --- [main] com.example.moviepal.Seedrs.Seed         : starting loadUserData from Seed
+2022-06-09 18:08:36.846  INFO 22239 --- [main] com.example.moviepal.Seedrs.Seed         : Seed completed: number of rows added: 3
+2022-06-09 18:08:37.439  INFO 22239 --- [main] com.example.moviepal.Seedrs.Seed         : Seed completed: number of row added: 1
+2022-06-09 18:08:43.891  INFO 22239 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-09 18:08:43.891  INFO 22239 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-09 18:08:43.892  INFO 22239 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-09 18:08:44.325  INFO 22239 --- [http-nio-8080-exec-2] c.e.m.c.M.AddMovieController             : Starting movie/add/name in LookUpMovieController
+2022-06-09 18:08:44.325  INFO 22239 --- [http-nio-8080-exec-2] c.e.m.c.M.AddMovieController             : calling movieService.addByName with name
+2022-06-09 18:08:44.325  INFO 22239 --- [http-nio-8080-exec-2] c.example.moviepal.service.UserService   : starting findUserIdByName: id is TEMP0
+2022-06-09 18:08:44.426  INFO 22239 --- [http-nio-8080-exec-2] c.example.moviepal.service.UserService   : userid was found: 1
+2022-06-09 18:08:44.427  INFO 22239 --- [http-nio-8080-exec-2] c.e.m.c.M.AddMovieController             : User doing the call is: TEMP0 with id: 1
+2022-06-09 18:08:44.427  INFO 22239 --- [http-nio-8080-exec-2] c.example.moviepal.service.UserService   : starting getUserById: user id is 1
+2022-06-09 18:08:45.019  INFO 22239 --- [http-nio-8080-exec-2] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@16066092
+2022-06-09 18:08:45.019  INFO 22239 --- [http-nio-8080-exec-2] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@16066092
+2022-06-09 18:08:45.530  INFO 22239 --- [http-nio-8080-exec-2] c.e.m.c.M.AddMovieController             : User doing the call is: TEMP0 with user password: $2a$10$V2N4KnZTkNh2DdqPAWZgAuVlvhbFOToCeTSgaRsFQKg3j3IVLC5cS
+2022-06-09 18:08:45.530  INFO 22239 --- [http-nio-8080-exec-2] c.example.moviepal.service.MovieService  : calling addMovieByNameToWish with name of the movie
+2022-06-09 18:08:45.530  INFO 22239 --- [http-nio-8080-exec-2] c.example.moviepal.service.ListsService  : calling getAllWishListByUser for a list by user id: 1
+2022-06-09 18:08:45.636  INFO 22239 --- [http-nio-8080-exec-2] c.example.moviepal.service.MovieService  : starting findByName in MovieService
+2022-06-09 18:08:45.636  INFO 22239 --- [http-nio-8080-exec-2] c.example.moviepal.service.MovieService  : calling movieOMDBapi.findByTitle using the name
+2022-06-09 18:08:45.636  INFO 22239 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findByTitle
+2022-06-09 18:08:45.637  INFO 22239 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&t=joy
+2022-06-09 18:08:45.637  INFO 22239 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-09 18:08:46.978  INFO 22239 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Joy","Year":"2015","Rated":"PG-13","Released":"25 Dec 2015","Runtime":"124 min","Genre":"Biography, Drama","Director":"David O. Russell","Writer":"David O. Russell, Annie Mumolo","Actors":"Jennifer Lawrence, Robert De Niro, Bradley Cooper","Plot":"Joy is the story of the title character, who rose to become founder and matriarch of a powerful family business dynasty.","Language":"English, Spanish, French","Country":"United States","Awards":"Nominated for 1 Oscar. 8 wins & 23 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BNzRiOWZmMzUtZTJiOC00MjQ1LTkwMjgtNzhlYzBmODAzYTA0XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"6.6/10"},{"Source":"Rotten Tomatoes","Value":"60%"},{"Source":"Metacritic","Value":"56/100"}],"Metascore":"56","imdbRating":"6.6","imdbVotes":"135,525","imdbID":"tt2446980","Type":"movie","DVD":"03 May 2016","BoxOffice":"$56,451,232","Production":"N/A","Website":"N/A","Response":"True"}
+2022-06-09 18:08:46.979  INFO 22239 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-09 18:08:46.980  INFO 22239 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-09 18:08:47.016  INFO 22239 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt2446980, title=Joy, year=2015, type=movie)
+2022-06-09 18:08:47.016  INFO 22239 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-09 18:08:47.016  INFO 22239 --- [http-nio-8080-exec-2] c.example.moviepal.service.MovieService  : movie was called: Movie(id=tt2446980, title=Joy, year=2015, type=movie)
+2022-06-09 18:08:47.016  INFO 22239 --- [http-nio-8080-exec-2] c.example.moviepal.service.MovieService  : calling listsService for a list by user id: 1
+2022-06-09 18:08:47.017  INFO 22239 --- [http-nio-8080-exec-2] c.example.moviepal.service.ListsService  : calling getWishListByUserId for a list by user id: 1
+2022-06-09 18:08:47.117  INFO 22239 --- [http-nio-8080-exec-2] c.example.moviepal.service.ListsService  : list was NOT found, creating one using the given user
+2022-06-09 18:08:47.118  INFO 22239 --- [http-nio-8080-exec-2] c.example.moviepal.service.ListsService  : list was created: WishListMovie(listId=1, movieId=null, user=com.example.moviepal.model.User@16066092)
+2022-06-09 18:08:47.617  INFO 22239 --- [http-nio-8080-exec-2] c.example.moviepal.service.ListsService  : list was saved: WishListMovie(listId=1, movieId=null, user=com.example.moviepal.model.User@16066092)
+2022-06-09 18:08:47.618  INFO 22239 --- [http-nio-8080-exec-2] c.example.moviepal.service.MovieService  : The list returned is: WishListMovie(listId=1, movieId=null, user=com.example.moviepal.model.User@16066092)
+2022-06-09 18:08:47.618  INFO 22239 --- [http-nio-8080-exec-2] c.example.moviepal.service.MovieService  : movie.getId() is : tt2446980
+2022-06-09 18:08:48.019  INFO 22239 --- [http-nio-8080-exec-2] c.example.moviepal.service.ListsService  : calling getAllWishListByUser for a list by user id: 1
+2022-06-09 18:09:20.243  INFO 22239 --- [http-nio-8080-exec-3] c.e.m.c.M.AddMovieController             : Starting movie/add/name in LookUpMovieController
+2022-06-09 18:09:20.244  INFO 22239 --- [http-nio-8080-exec-3] c.e.m.c.M.AddMovieController             : calling movieService.addByName with name
+2022-06-09 18:09:20.244  INFO 22239 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : starting findUserIdByName: id is TEMP0
+2022-06-09 18:09:20.447  INFO 22239 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : userid was found: 1
+2022-06-09 18:09:20.447  INFO 22239 --- [http-nio-8080-exec-3] c.e.m.c.M.AddMovieController             : User doing the call is: TEMP0 with id: 1
+2022-06-09 18:09:20.447  INFO 22239 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : starting getUserById: user id is 1
+2022-06-09 18:09:21.061  INFO 22239 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@48bae513
+2022-06-09 18:09:21.061  INFO 22239 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@48bae513
+2022-06-09 18:09:21.573  INFO 22239 --- [http-nio-8080-exec-3] c.e.m.c.M.AddMovieController             : User doing the call is: TEMP0 with user password: $2a$10$V2N4KnZTkNh2DdqPAWZgAuVlvhbFOToCeTSgaRsFQKg3j3IVLC5cS
+2022-06-09 18:09:21.573  INFO 22239 --- [http-nio-8080-exec-3] c.example.moviepal.service.MovieService  : calling addMovieByNameToWish with name of the movie
+2022-06-09 18:09:21.573  INFO 22239 --- [http-nio-8080-exec-3] c.example.moviepal.service.ListsService  : calling getAllWishListByUser for a list by user id: 1
+2022-06-09 18:09:21.677  INFO 22239 --- [http-nio-8080-exec-3] c.example.moviepal.service.MovieService  : starting findByName in MovieService
+2022-06-09 18:09:21.678  INFO 22239 --- [http-nio-8080-exec-3] c.example.moviepal.service.MovieService  : calling movieOMDBapi.findByTitle using the name
+2022-06-09 18:09:21.678  INFO 22239 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findByTitle
+2022-06-09 18:09:21.678  INFO 22239 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&t=joy
+2022-06-09 18:09:21.678  INFO 22239 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-09 18:09:21.791  INFO 22239 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Joy","Year":"2015","Rated":"PG-13","Released":"25 Dec 2015","Runtime":"124 min","Genre":"Biography, Drama","Director":"David O. Russell","Writer":"David O. Russell, Annie Mumolo","Actors":"Jennifer Lawrence, Robert De Niro, Bradley Cooper","Plot":"Joy is the story of the title character, who rose to become founder and matriarch of a powerful family business dynasty.","Language":"English, Spanish, French","Country":"United States","Awards":"Nominated for 1 Oscar. 8 wins & 23 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BNzRiOWZmMzUtZTJiOC00MjQ1LTkwMjgtNzhlYzBmODAzYTA0XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"6.6/10"},{"Source":"Rotten Tomatoes","Value":"60%"},{"Source":"Metacritic","Value":"56/100"}],"Metascore":"56","imdbRating":"6.6","imdbVotes":"135,525","imdbID":"tt2446980","Type":"movie","DVD":"03 May 2016","BoxOffice":"$56,451,232","Production":"N/A","Website":"N/A","Response":"True"}
+2022-06-09 18:09:21.791  INFO 22239 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-09 18:09:21.791  INFO 22239 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-09 18:09:21.792  INFO 22239 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt2446980, title=Joy, year=2015, type=movie)
+2022-06-09 18:09:21.792  INFO 22239 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-09 18:09:21.793  INFO 22239 --- [http-nio-8080-exec-3] c.example.moviepal.service.MovieService  : movie was called: Movie(id=tt2446980, title=Joy, year=2015, type=movie)
+2022-06-09 18:09:21.793  INFO 22239 --- [http-nio-8080-exec-3] c.example.moviepal.service.MovieService  : calling listsService for a list by user id: 1
+2022-06-09 18:09:31.228  INFO 22239 --- [http-nio-8080-exec-4] c.e.m.c.M.AddMovieController             : Starting movie/add/name in LookUpMovieController
+2022-06-09 18:09:31.229  INFO 22239 --- [http-nio-8080-exec-4] c.e.m.c.M.AddMovieController             : calling movieService.addByName with name
+2022-06-09 18:09:31.229  INFO 22239 --- [http-nio-8080-exec-4] c.example.moviepal.service.UserService   : starting findUserIdByName: id is TEMP0
+2022-06-09 18:09:31.429  INFO 22239 --- [http-nio-8080-exec-4] c.example.moviepal.service.UserService   : userid was found: 1
+2022-06-09 18:09:31.429  INFO 22239 --- [http-nio-8080-exec-4] c.e.m.c.M.AddMovieController             : User doing the call is: TEMP0 with id: 1
+2022-06-09 18:09:31.429  INFO 22239 --- [http-nio-8080-exec-4] c.example.moviepal.service.UserService   : starting getUserById: user id is 1
+2022-06-09 18:09:32.018  INFO 22239 --- [http-nio-8080-exec-4] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@24713c25
+2022-06-09 18:09:32.018  INFO 22239 --- [http-nio-8080-exec-4] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@24713c25
+2022-06-09 18:09:32.529  INFO 22239 --- [http-nio-8080-exec-4] c.e.m.c.M.AddMovieController             : User doing the call is: TEMP0 with user password: $2a$10$V2N4KnZTkNh2DdqPAWZgAuVlvhbFOToCeTSgaRsFQKg3j3IVLC5cS
+2022-06-09 18:09:32.530  INFO 22239 --- [http-nio-8080-exec-4] c.example.moviepal.service.MovieService  : calling addMovieByNameToWish with name of the movie
+2022-06-09 18:09:32.530  INFO 22239 --- [http-nio-8080-exec-4] c.example.moviepal.service.ListsService  : calling getAllWishListByUser for a list by user id: 1
+2022-06-09 18:09:32.633  INFO 22239 --- [http-nio-8080-exec-4] c.example.moviepal.service.MovieService  : starting findByName in MovieService
+2022-06-09 18:09:32.633  INFO 22239 --- [http-nio-8080-exec-4] c.example.moviepal.service.MovieService  : calling movieOMDBapi.findByTitle using the name
+2022-06-09 18:09:32.633  INFO 22239 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findByTitle
+2022-06-09 18:09:32.633  INFO 22239 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&t=joy
+2022-06-09 18:09:32.633  INFO 22239 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-09 18:09:32.745  INFO 22239 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Joy","Year":"2015","Rated":"PG-13","Released":"25 Dec 2015","Runtime":"124 min","Genre":"Biography, Drama","Director":"David O. Russell","Writer":"David O. Russell, Annie Mumolo","Actors":"Jennifer Lawrence, Robert De Niro, Bradley Cooper","Plot":"Joy is the story of the title character, who rose to become founder and matriarch of a powerful family business dynasty.","Language":"English, Spanish, French","Country":"United States","Awards":"Nominated for 1 Oscar. 8 wins & 23 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BNzRiOWZmMzUtZTJiOC00MjQ1LTkwMjgtNzhlYzBmODAzYTA0XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"6.6/10"},{"Source":"Rotten Tomatoes","Value":"60%"},{"Source":"Metacritic","Value":"56/100"}],"Metascore":"56","imdbRating":"6.6","imdbVotes":"135,525","imdbID":"tt2446980","Type":"movie","DVD":"03 May 2016","BoxOffice":"$56,451,232","Production":"N/A","Website":"N/A","Response":"True"}
+2022-06-09 18:09:32.746  INFO 22239 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-09 18:09:32.746  INFO 22239 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-09 18:09:32.747  INFO 22239 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt2446980, title=Joy, year=2015, type=movie)
+2022-06-09 18:09:32.747  INFO 22239 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-09 18:09:32.747  INFO 22239 --- [http-nio-8080-exec-4] c.example.moviepal.service.MovieService  : movie was called: Movie(id=tt2446980, title=Joy, year=2015, type=movie)
+2022-06-09 18:09:32.747  INFO 22239 --- [http-nio-8080-exec-4] c.example.moviepal.service.MovieService  : calling listsService for a list by user id: 1
+2022-06-09 18:10:28.392  INFO 22239 --- [http-nio-8080-exec-5] c.e.m.c.M.AddMovieController             : Starting movie/add/name in LookUpMovieController
+2022-06-09 18:10:28.393  INFO 22239 --- [http-nio-8080-exec-5] c.e.m.c.M.AddMovieController             : calling movieService.addByName with name
+2022-06-09 18:10:28.393  INFO 22239 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : starting findUserIdByName: id is TEMP201
+2022-06-09 18:10:28.492  INFO 22239 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : userid was found: 4
+2022-06-09 18:10:28.492  INFO 22239 --- [http-nio-8080-exec-5] c.e.m.c.M.AddMovieController             : User doing the call is: TEMP201 with id: 4
+2022-06-09 18:10:28.492  INFO 22239 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : starting getUserById: user id is 4
+2022-06-09 18:10:29.081  INFO 22239 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@1c9d8c44
+2022-06-09 18:10:29.081  INFO 22239 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@1c9d8c44
+2022-06-09 18:10:29.569  INFO 22239 --- [http-nio-8080-exec-5] c.e.m.c.M.AddMovieController             : User doing the call is: TEMP201 with user password: $2a$10$irIAYtguBn.vy.qDSzYalOzJJRg4ycgPF7AQi2v1JNaG3F8wLZm8a
+2022-06-09 18:10:29.569  INFO 22239 --- [http-nio-8080-exec-5] c.example.moviepal.service.MovieService  : calling addMovieByNameToWish with name of the movie
+2022-06-09 18:10:29.569  INFO 22239 --- [http-nio-8080-exec-5] c.example.moviepal.service.ListsService  : calling getAllWishListByUser for a list by user id: 4
+2022-06-09 18:10:29.669  INFO 22239 --- [http-nio-8080-exec-5] c.example.moviepal.service.MovieService  : starting findByName in MovieService
+2022-06-09 18:10:29.670  INFO 22239 --- [http-nio-8080-exec-5] c.example.moviepal.service.MovieService  : calling movieOMDBapi.findByTitle using the name
+2022-06-09 18:10:29.670  INFO 22239 --- [http-nio-8080-exec-5] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findByTitle
+2022-06-09 18:10:29.670  INFO 22239 --- [http-nio-8080-exec-5] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&t=dark
+2022-06-09 18:10:29.670  INFO 22239 --- [http-nio-8080-exec-5] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-09 18:10:29.814  INFO 22239 --- [http-nio-8080-exec-5] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Dark","Year":"2017–2020","Rated":"TV-MA","Released":"01 Dec 2017","Runtime":"60 min","Genre":"Crime, Drama, Mystery","Director":"N/A","Writer":"Baran bo Odar, Jantje Friese","Actors":"Louis Hofmann, Karoline Eichhorn, Lisa Vicari","Plot":"A family saga with a supernatural twist, set in a German town where the disappearance of two young children exposes the relationships among four families.","Language":"German","Country":"Germany, United States","Awards":"8 wins & 22 nominations","Poster":"https://m.media-amazon.com/images/M/MV5BOTk2NzUyOTctZDdlMS00MDJlLTgzNTEtNzQzYjFhNjA0YjBjXkEyXkFqcGdeQXVyMjg1NDcxNDE@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"8.7/10"}],"Metascore":"N/A","imdbRating":"8.7","imdbVotes":"355,852","imdbID":"tt5753856","Type":"series","totalSeasons":"3","Response":"True"}
+2022-06-09 18:10:29.814  INFO 22239 --- [http-nio-8080-exec-5] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-09 18:10:29.815  INFO 22239 --- [http-nio-8080-exec-5] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-09 18:10:29.815  INFO 22239 --- [http-nio-8080-exec-5] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt5753856, title=Dark, year=2017–2020, type=series)
+2022-06-09 18:10:29.815  INFO 22239 --- [http-nio-8080-exec-5] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-09 18:10:29.816  INFO 22239 --- [http-nio-8080-exec-5] c.example.moviepal.service.MovieService  : movie was called: Movie(id=tt5753856, title=Dark, year=2017–2020, type=series)
+2022-06-09 18:10:29.816  INFO 22239 --- [http-nio-8080-exec-5] c.example.moviepal.service.MovieService  : calling listsService for a list by user id: 4
+2022-06-09 18:10:29.816  INFO 22239 --- [http-nio-8080-exec-5] c.example.moviepal.service.ListsService  : calling getWishListByUserId for a list by user id: 4
+2022-06-09 18:10:29.914  INFO 22239 --- [http-nio-8080-exec-5] c.example.moviepal.service.ListsService  : list was NOT found, creating one using the given user
+2022-06-09 18:10:29.914  INFO 22239 --- [http-nio-8080-exec-5] c.example.moviepal.service.ListsService  : list was created: WishListMovie(listId=1, movieId=null, user=com.example.moviepal.model.User@1c9d8c44)
+2022-06-09 18:10:30.407  INFO 22239 --- [http-nio-8080-exec-5] c.example.moviepal.service.ListsService  : list was saved: WishListMovie(listId=1, movieId=null, user=com.example.moviepal.model.User@1c9d8c44)
+2022-06-09 18:10:30.407  INFO 22239 --- [http-nio-8080-exec-5] c.example.moviepal.service.MovieService  : The list returned is: WishListMovie(listId=1, movieId=null, user=com.example.moviepal.model.User@1c9d8c44)
+2022-06-09 18:10:30.407  INFO 22239 --- [http-nio-8080-exec-5] c.example.moviepal.service.MovieService  : movie.getId() is : tt5753856
+2022-06-09 18:10:30.799  INFO 22239 --- [http-nio-8080-exec-5] c.example.moviepal.service.ListsService  : calling getAllWishListByUser for a list by user id: 4
+2022-06-09 18:10:39.002  INFO 22239 --- [http-nio-8080-exec-6] c.e.m.c.M.AddMovieController             : Starting movie/add/name in LookUpMovieController
+2022-06-09 18:10:39.002  INFO 22239 --- [http-nio-8080-exec-6] c.e.m.c.M.AddMovieController             : calling movieService.addByName with name
+2022-06-09 18:10:39.003  INFO 22239 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : starting findUserIdByName: id is TEMP201
+2022-06-09 18:10:39.198  INFO 22239 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : userid was found: 4
+2022-06-09 18:10:39.199  INFO 22239 --- [http-nio-8080-exec-6] c.e.m.c.M.AddMovieController             : User doing the call is: TEMP201 with id: 4
+2022-06-09 18:10:39.199  INFO 22239 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : starting getUserById: user id is 4
+2022-06-09 18:10:39.806  INFO 22239 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@63f1b49a
+2022-06-09 18:10:39.806  INFO 22239 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@63f1b49a
+2022-06-09 18:10:40.318  INFO 22239 --- [http-nio-8080-exec-6] c.e.m.c.M.AddMovieController             : User doing the call is: TEMP201 with user password: $2a$10$irIAYtguBn.vy.qDSzYalOzJJRg4ycgPF7AQi2v1JNaG3F8wLZm8a
+2022-06-09 18:10:40.318  INFO 22239 --- [http-nio-8080-exec-6] c.example.moviepal.service.MovieService  : calling addMovieByNameToWish with name of the movie
+2022-06-09 18:10:40.318  INFO 22239 --- [http-nio-8080-exec-6] c.example.moviepal.service.ListsService  : calling getAllWishListByUser for a list by user id: 4
+2022-06-09 18:10:40.421  INFO 22239 --- [http-nio-8080-exec-6] c.example.moviepal.service.MovieService  : starting findByName in MovieService
+2022-06-09 18:10:40.422  INFO 22239 --- [http-nio-8080-exec-6] c.example.moviepal.service.MovieService  : calling movieOMDBapi.findByTitle using the name
+2022-06-09 18:10:40.422  INFO 22239 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findByTitle
+2022-06-09 18:10:40.422  INFO 22239 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&t=dark
+2022-06-09 18:10:40.422  INFO 22239 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-09 18:10:40.534  INFO 22239 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Dark","Year":"2017–2020","Rated":"TV-MA","Released":"01 Dec 2017","Runtime":"60 min","Genre":"Crime, Drama, Mystery","Director":"N/A","Writer":"Baran bo Odar, Jantje Friese","Actors":"Louis Hofmann, Karoline Eichhorn, Lisa Vicari","Plot":"A family saga with a supernatural twist, set in a German town where the disappearance of two young children exposes the relationships among four families.","Language":"German","Country":"Germany, United States","Awards":"8 wins & 22 nominations","Poster":"https://m.media-amazon.com/images/M/MV5BOTk2NzUyOTctZDdlMS00MDJlLTgzNTEtNzQzYjFhNjA0YjBjXkEyXkFqcGdeQXVyMjg1NDcxNDE@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"8.7/10"}],"Metascore":"N/A","imdbRating":"8.7","imdbVotes":"355,852","imdbID":"tt5753856","Type":"series","totalSeasons":"3","Response":"True"}
+2022-06-09 18:10:40.534  INFO 22239 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-09 18:10:40.534  INFO 22239 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-09 18:10:40.535  INFO 22239 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt5753856, title=Dark, year=2017–2020, type=series)
+2022-06-09 18:10:40.535  INFO 22239 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-09 18:10:40.535  INFO 22239 --- [http-nio-8080-exec-6] c.example.moviepal.service.MovieService  : movie was called: Movie(id=tt5753856, title=Dark, year=2017–2020, type=series)
+2022-06-09 18:10:40.536  INFO 22239 --- [http-nio-8080-exec-6] c.example.moviepal.service.MovieService  : calling listsService for a list by user id: 4
+2022-06-09 18:11:44.119  INFO 22239 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-09 18:11:44.120  INFO 22239 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-06-09 18:11:45.176  INFO 22239 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-09 18:11:46.544  INFO 22239 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-09 18:11:49.723  INFO 22260 --- [main] c.example.moviepal.MoviePaLApplication   : Starting MoviePaLApplication using Java 16.0.1 on abdo.local with PID 22260 (/Users/abdullahalmasar/IdeaProjects/MoviePaL/target/classes started by abdullahalmasar in /Users/abdullahalmasar/IdeaProjects/MoviePaL)
+2022-06-09 18:11:49.726  INFO 22260 --- [main] c.example.moviepal.MoviePaLApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-06-09 18:11:50.211  INFO 22260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-09 18:11:50.264  INFO 22260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 2 JPA repository interfaces.
+2022-06-09 18:11:50.617  INFO 22260 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-09 18:11:50.622  INFO 22260 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-09 18:11:50.622  INFO 22260 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-09 18:11:50.701  INFO 22260 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-09 18:11:50.701  INFO 22260 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 946 ms
+2022-06-09 18:11:50.788  INFO 22260 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-09 18:11:50.815  INFO 22260 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-09 18:11:50.921  INFO 22260 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-09 18:11:50.976  INFO 22260 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-09 18:11:52.816  INFO 22260 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-09 18:11:52.831  INFO 22260 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-06-09 18:11:53.846  WARN 22260 --- [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table wish_list_movie drop foreign key FK92st5ga0r5klxy0offf6w0gm8" via JDBC Statement
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table wish_list_movie drop foreign key FK92st5ga0r5klxy0offf6w0gm8" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:387) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:371) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:341) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:235) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:156) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:128) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:114) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:157) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.0.jar:2.7.0]
+	at com.example.moviepal.MoviePaLApplication.main(MoviePaLApplication.java:10) ~[classes/:na]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'MoviePaL.wish_list_movie' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	... 35 common frames omitted
+
+2022-06-09 18:11:57.011  INFO 22260 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-09 18:11:57.018  INFO 22260 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-09 18:11:57.315  WARN 22260 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-09 18:11:57.412  INFO 22260 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7792e14f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4eace42b, org.springframework.security.web.context.SecurityContextPersistenceFilter@478fe415, org.springframework.security.web.header.HeaderWriterFilter@b5d7233, org.springframework.security.web.authentication.logout.LogoutFilter@31940d6b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@402676e3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@31028e45, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@29eaf100, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6f87a7c7, org.springframework.security.web.session.SessionManagementFilter@5b80b41d, org.springframework.security.web.access.ExceptionTranslationFilter@3fcc7f5c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@105fe81e]
+2022-06-09 18:11:57.678  INFO 22260 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-09 18:11:57.686  INFO 22260 --- [main] c.example.moviepal.MoviePaLApplication   : Started MoviePaLApplication in 8.187 seconds (JVM running for 8.659)
+2022-06-09 18:11:57.687  INFO 22260 --- [main] com.example.moviepal.Seedrs.Seed         : starting loadUserData from Seed
+2022-06-09 18:12:02.472  INFO 22260 --- [main] com.example.moviepal.Seedrs.Seed         : Seed completed: number of rows added: 3
+2022-06-09 18:12:03.072  INFO 22260 --- [main] com.example.moviepal.Seedrs.Seed         : Seed completed: number of row added: 1
+2022-06-09 18:12:38.591  INFO 22260 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-09 18:12:38.592  INFO 22260 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-09 18:12:38.593  INFO 22260 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-09 18:12:39.032  INFO 22260 --- [http-nio-8080-exec-2] c.e.m.c.M.AddMovieController             : Starting movie/add/name in LookUpMovieController
+2022-06-09 18:12:39.032  INFO 22260 --- [http-nio-8080-exec-2] c.e.m.c.M.AddMovieController             : calling movieService.addByName with name
+2022-06-09 18:12:39.032  INFO 22260 --- [http-nio-8080-exec-2] c.example.moviepal.service.UserService   : starting findUserIdByName: id is TEMP201
+2022-06-09 18:12:39.132  INFO 22260 --- [http-nio-8080-exec-2] c.example.moviepal.service.UserService   : userid was found: 4
+2022-06-09 18:12:39.133  INFO 22260 --- [http-nio-8080-exec-2] c.e.m.c.M.AddMovieController             : User doing the call is: TEMP201 with id: 4
+2022-06-09 18:12:39.134  INFO 22260 --- [http-nio-8080-exec-2] c.example.moviepal.service.UserService   : starting getUserById: user id is 4
+2022-06-09 18:12:39.720  INFO 22260 --- [http-nio-8080-exec-2] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@5d9c464
+2022-06-09 18:12:39.720  INFO 22260 --- [http-nio-8080-exec-2] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@5d9c464
+2022-06-09 18:12:40.230  INFO 22260 --- [http-nio-8080-exec-2] c.e.m.c.M.AddMovieController             : User doing the call is: TEMP201 with user password: $2a$10$oR4XldfNpcchr.N9HVwQLu7HG7RHlOugOLMNotvCT6qZhk0OGD8ni
+2022-06-09 18:12:40.230  INFO 22260 --- [http-nio-8080-exec-2] c.example.moviepal.service.MovieService  : calling addMovieByNameToWish with name of the movie
+2022-06-09 18:12:40.231  INFO 22260 --- [http-nio-8080-exec-2] c.example.moviepal.service.ListsService  : calling getAllWishListByUser for a list by user id: 4
+2022-06-09 18:12:40.335  INFO 22260 --- [http-nio-8080-exec-2] c.example.moviepal.service.MovieService  : starting findByName in MovieService
+2022-06-09 18:12:40.335  INFO 22260 --- [http-nio-8080-exec-2] c.example.moviepal.service.MovieService  : calling movieOMDBapi.findByTitle using the name
+2022-06-09 18:12:40.335  INFO 22260 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findByTitle
+2022-06-09 18:12:40.336  INFO 22260 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&t=dark
+2022-06-09 18:12:40.336  INFO 22260 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-09 18:12:41.206  INFO 22260 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Dark","Year":"2017–2020","Rated":"TV-MA","Released":"01 Dec 2017","Runtime":"60 min","Genre":"Crime, Drama, Mystery","Director":"N/A","Writer":"Baran bo Odar, Jantje Friese","Actors":"Louis Hofmann, Karoline Eichhorn, Lisa Vicari","Plot":"A family saga with a supernatural twist, set in a German town where the disappearance of two young children exposes the relationships among four families.","Language":"German","Country":"Germany, United States","Awards":"8 wins & 22 nominations","Poster":"https://m.media-amazon.com/images/M/MV5BOTk2NzUyOTctZDdlMS00MDJlLTgzNTEtNzQzYjFhNjA0YjBjXkEyXkFqcGdeQXVyMjg1NDcxNDE@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"8.7/10"}],"Metascore":"N/A","imdbRating":"8.7","imdbVotes":"355,852","imdbID":"tt5753856","Type":"series","totalSeasons":"3","Response":"True"}
+2022-06-09 18:12:41.206  INFO 22260 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-09 18:12:41.207  INFO 22260 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-09 18:12:41.239  INFO 22260 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt5753856, title=Dark, year=2017–2020, type=series)
+2022-06-09 18:12:41.239  INFO 22260 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-09 18:12:41.239  INFO 22260 --- [http-nio-8080-exec-2] c.example.moviepal.service.MovieService  : movie was called: Movie(id=tt5753856, title=Dark, year=2017–2020, type=series)
+2022-06-09 18:12:41.239  INFO 22260 --- [http-nio-8080-exec-2] c.example.moviepal.service.MovieService  : calling listsService for a list by user id: 4
+2022-06-09 18:12:41.239  INFO 22260 --- [http-nio-8080-exec-2] c.example.moviepal.service.ListsService  : calling getWishListByUserId for a list by user id: 4
+2022-06-09 18:12:41.338  INFO 22260 --- [http-nio-8080-exec-2] c.example.moviepal.service.ListsService  : list was NOT found, creating one using the given user
+2022-06-09 18:12:41.338  INFO 22260 --- [http-nio-8080-exec-2] c.example.moviepal.service.ListsService  : list was created: WishListMovie(listId=null, movieId=null, user=com.example.moviepal.model.User@5d9c464)
+2022-06-09 18:12:41.729  INFO 22260 --- [http-nio-8080-exec-2] c.example.moviepal.service.ListsService  : list was saved: WishListMovie(listId=1, movieId=null, user=com.example.moviepal.model.User@5d9c464)
+2022-06-09 18:12:41.729  INFO 22260 --- [http-nio-8080-exec-2] c.example.moviepal.service.MovieService  : The list returned is: WishListMovie(listId=1, movieId=null, user=com.example.moviepal.model.User@5d9c464)
+2022-06-09 18:12:41.729  INFO 22260 --- [http-nio-8080-exec-2] c.example.moviepal.service.MovieService  : movie.getId() is : tt5753856
+2022-06-09 18:12:42.123  INFO 22260 --- [http-nio-8080-exec-2] c.example.moviepal.service.ListsService  : calling getAllWishListByUser for a list by user id: 4
+2022-06-09 18:12:55.824  INFO 22260 --- [http-nio-8080-exec-3] c.e.m.c.M.AddMovieController             : Starting movie/add/name in LookUpMovieController
+2022-06-09 18:12:55.825  INFO 22260 --- [http-nio-8080-exec-3] c.e.m.c.M.AddMovieController             : calling movieService.addByName with name
+2022-06-09 18:12:55.825  INFO 22260 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : starting findUserIdByName: id is TEMP201
+2022-06-09 18:12:56.018  INFO 22260 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : userid was found: 4
+2022-06-09 18:12:56.018  INFO 22260 --- [http-nio-8080-exec-3] c.e.m.c.M.AddMovieController             : User doing the call is: TEMP201 with id: 4
+2022-06-09 18:12:56.018  INFO 22260 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : starting getUserById: user id is 4
+2022-06-09 18:12:56.604  INFO 22260 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@219a641
+2022-06-09 18:12:56.604  INFO 22260 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@219a641
+2022-06-09 18:12:57.087  INFO 22260 --- [http-nio-8080-exec-3] c.e.m.c.M.AddMovieController             : User doing the call is: TEMP201 with user password: $2a$10$oR4XldfNpcchr.N9HVwQLu7HG7RHlOugOLMNotvCT6qZhk0OGD8ni
+2022-06-09 18:12:57.087  INFO 22260 --- [http-nio-8080-exec-3] c.example.moviepal.service.MovieService  : calling addMovieByNameToWish with name of the movie
+2022-06-09 18:12:57.088  INFO 22260 --- [http-nio-8080-exec-3] c.example.moviepal.service.ListsService  : calling getAllWishListByUser for a list by user id: 4
+2022-06-09 18:12:57.186  INFO 22260 --- [http-nio-8080-exec-3] c.example.moviepal.service.MovieService  : starting findByName in MovieService
+2022-06-09 18:12:57.186  INFO 22260 --- [http-nio-8080-exec-3] c.example.moviepal.service.MovieService  : calling movieOMDBapi.findByTitle using the name
+2022-06-09 18:12:57.186  INFO 22260 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findByTitle
+2022-06-09 18:12:57.186  INFO 22260 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&t=joy
+2022-06-09 18:12:57.187  INFO 22260 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-09 18:12:57.293  INFO 22260 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Joy","Year":"2015","Rated":"PG-13","Released":"25 Dec 2015","Runtime":"124 min","Genre":"Biography, Drama","Director":"David O. Russell","Writer":"David O. Russell, Annie Mumolo","Actors":"Jennifer Lawrence, Robert De Niro, Bradley Cooper","Plot":"Joy is the story of the title character, who rose to become founder and matriarch of a powerful family business dynasty.","Language":"English, Spanish, French","Country":"United States","Awards":"Nominated for 1 Oscar. 8 wins & 23 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BNzRiOWZmMzUtZTJiOC00MjQ1LTkwMjgtNzhlYzBmODAzYTA0XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"6.6/10"},{"Source":"Rotten Tomatoes","Value":"60%"},{"Source":"Metacritic","Value":"56/100"}],"Metascore":"56","imdbRating":"6.6","imdbVotes":"135,525","imdbID":"tt2446980","Type":"movie","DVD":"03 May 2016","BoxOffice":"$56,451,232","Production":"N/A","Website":"N/A","Response":"True"}
+2022-06-09 18:12:57.293  INFO 22260 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-09 18:12:57.293  INFO 22260 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-09 18:12:57.294  INFO 22260 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt2446980, title=Joy, year=2015, type=movie)
+2022-06-09 18:12:57.295  INFO 22260 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-09 18:12:57.295  INFO 22260 --- [http-nio-8080-exec-3] c.example.moviepal.service.MovieService  : movie was called: Movie(id=tt2446980, title=Joy, year=2015, type=movie)
+2022-06-09 18:12:57.295  INFO 22260 --- [http-nio-8080-exec-3] c.example.moviepal.service.MovieService  : calling listsService for a list by user id: 4
+2022-06-09 18:13:11.520  INFO 22260 --- [http-nio-8080-exec-4] c.e.m.c.M.AddMovieController             : Starting movie/add/name in LookUpMovieController
+2022-06-09 18:13:11.521  INFO 22260 --- [http-nio-8080-exec-4] c.e.m.c.M.AddMovieController             : calling movieService.addByName with name
+2022-06-09 18:13:11.521  INFO 22260 --- [http-nio-8080-exec-4] c.example.moviepal.service.UserService   : starting findUserIdByName: id is TEMP0
+2022-06-09 18:13:11.618  INFO 22260 --- [http-nio-8080-exec-4] c.example.moviepal.service.UserService   : userid was found: 1
+2022-06-09 18:13:11.618  INFO 22260 --- [http-nio-8080-exec-4] c.e.m.c.M.AddMovieController             : User doing the call is: TEMP0 with id: 1
+2022-06-09 18:13:11.618  INFO 22260 --- [http-nio-8080-exec-4] c.example.moviepal.service.UserService   : starting getUserById: user id is 1
+2022-06-09 18:13:12.197  INFO 22260 --- [http-nio-8080-exec-4] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@5d85c8
+2022-06-09 18:13:12.198  INFO 22260 --- [http-nio-8080-exec-4] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@5d85c8
+2022-06-09 18:13:12.684  INFO 22260 --- [http-nio-8080-exec-4] c.e.m.c.M.AddMovieController             : User doing the call is: TEMP0 with user password: $2a$10$ztfusqK6CIpjEdqhkpowk.0MIwIdnaa/TlCuF93ba9Z6Bc6xoFQTy
+2022-06-09 18:13:12.684  INFO 22260 --- [http-nio-8080-exec-4] c.example.moviepal.service.MovieService  : calling addMovieByNameToWish with name of the movie
+2022-06-09 18:13:12.684  INFO 22260 --- [http-nio-8080-exec-4] c.example.moviepal.service.ListsService  : calling getAllWishListByUser for a list by user id: 1
+2022-06-09 18:13:12.784  INFO 22260 --- [http-nio-8080-exec-4] c.example.moviepal.service.MovieService  : starting findByName in MovieService
+2022-06-09 18:13:12.784  INFO 22260 --- [http-nio-8080-exec-4] c.example.moviepal.service.MovieService  : calling movieOMDBapi.findByTitle using the name
+2022-06-09 18:13:12.784  INFO 22260 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findByTitle
+2022-06-09 18:13:12.784  INFO 22260 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&t=joy
+2022-06-09 18:13:12.784  INFO 22260 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-09 18:13:12.903  INFO 22260 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Joy","Year":"2015","Rated":"PG-13","Released":"25 Dec 2015","Runtime":"124 min","Genre":"Biography, Drama","Director":"David O. Russell","Writer":"David O. Russell, Annie Mumolo","Actors":"Jennifer Lawrence, Robert De Niro, Bradley Cooper","Plot":"Joy is the story of the title character, who rose to become founder and matriarch of a powerful family business dynasty.","Language":"English, Spanish, French","Country":"United States","Awards":"Nominated for 1 Oscar. 8 wins & 23 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BNzRiOWZmMzUtZTJiOC00MjQ1LTkwMjgtNzhlYzBmODAzYTA0XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"6.6/10"},{"Source":"Rotten Tomatoes","Value":"60%"},{"Source":"Metacritic","Value":"56/100"}],"Metascore":"56","imdbRating":"6.6","imdbVotes":"135,525","imdbID":"tt2446980","Type":"movie","DVD":"03 May 2016","BoxOffice":"$56,451,232","Production":"N/A","Website":"N/A","Response":"True"}
+2022-06-09 18:13:12.904  INFO 22260 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-09 18:13:12.904  INFO 22260 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-09 18:13:12.905  INFO 22260 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt2446980, title=Joy, year=2015, type=movie)
+2022-06-09 18:13:12.905  INFO 22260 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-09 18:13:12.905  INFO 22260 --- [http-nio-8080-exec-4] c.example.moviepal.service.MovieService  : movie was called: Movie(id=tt2446980, title=Joy, year=2015, type=movie)
+2022-06-09 18:13:12.905  INFO 22260 --- [http-nio-8080-exec-4] c.example.moviepal.service.MovieService  : calling listsService for a list by user id: 1
+2022-06-09 18:13:12.905  INFO 22260 --- [http-nio-8080-exec-4] c.example.moviepal.service.ListsService  : calling getWishListByUserId for a list by user id: 1
+2022-06-09 18:13:13.002  INFO 22260 --- [http-nio-8080-exec-4] c.example.moviepal.service.ListsService  : list was NOT found, creating one using the given user
+2022-06-09 18:13:13.002  INFO 22260 --- [http-nio-8080-exec-4] c.example.moviepal.service.ListsService  : list was created: WishListMovie(listId=null, movieId=null, user=com.example.moviepal.model.User@5d85c8)
+2022-06-09 18:13:13.391  INFO 22260 --- [http-nio-8080-exec-4] c.example.moviepal.service.ListsService  : list was saved: WishListMovie(listId=3, movieId=null, user=com.example.moviepal.model.User@5d85c8)
+2022-06-09 18:13:13.392  INFO 22260 --- [http-nio-8080-exec-4] c.example.moviepal.service.MovieService  : The list returned is: WishListMovie(listId=3, movieId=null, user=com.example.moviepal.model.User@5d85c8)
+2022-06-09 18:13:13.392  INFO 22260 --- [http-nio-8080-exec-4] c.example.moviepal.service.MovieService  : movie.getId() is : tt2446980
+2022-06-09 18:13:13.780  INFO 22260 --- [http-nio-8080-exec-4] c.example.moviepal.service.ListsService  : calling getAllWishListByUser for a list by user id: 1
+2022-06-09 18:13:24.239  INFO 22260 --- [http-nio-8080-exec-5] c.e.m.c.M.AddMovieController             : Starting movie/add/name in LookUpMovieController
+2022-06-09 18:13:24.240  INFO 22260 --- [http-nio-8080-exec-5] c.e.m.c.M.AddMovieController             : calling movieService.addByName with name
+2022-06-09 18:13:24.240  INFO 22260 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : starting findUserIdByName: id is TEMP0
+2022-06-09 18:13:24.434  INFO 22260 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : userid was found: 1
+2022-06-09 18:13:24.434  INFO 22260 --- [http-nio-8080-exec-5] c.e.m.c.M.AddMovieController             : User doing the call is: TEMP0 with id: 1
+2022-06-09 18:13:24.434  INFO 22260 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : starting getUserById: user id is 1
+2022-06-09 18:13:25.014  INFO 22260 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@2f19b88b
+2022-06-09 18:13:25.015  INFO 22260 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@2f19b88b
+2022-06-09 18:13:25.497  INFO 22260 --- [http-nio-8080-exec-5] c.e.m.c.M.AddMovieController             : User doing the call is: TEMP0 with user password: $2a$10$ztfusqK6CIpjEdqhkpowk.0MIwIdnaa/TlCuF93ba9Z6Bc6xoFQTy
+2022-06-09 18:13:25.497  INFO 22260 --- [http-nio-8080-exec-5] c.example.moviepal.service.MovieService  : calling addMovieByNameToWish with name of the movie
+2022-06-09 18:13:25.498  INFO 22260 --- [http-nio-8080-exec-5] c.example.moviepal.service.ListsService  : calling getAllWishListByUser for a list by user id: 1
+2022-06-09 18:13:25.595  INFO 22260 --- [http-nio-8080-exec-5] c.example.moviepal.service.MovieService  : starting findByName in MovieService
+2022-06-09 18:13:25.595  INFO 22260 --- [http-nio-8080-exec-5] c.example.moviepal.service.MovieService  : calling movieOMDBapi.findByTitle using the name
+2022-06-09 18:13:25.595  INFO 22260 --- [http-nio-8080-exec-5] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findByTitle
+2022-06-09 18:13:25.595  INFO 22260 --- [http-nio-8080-exec-5] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&t=joy
+2022-06-09 18:13:25.595  INFO 22260 --- [http-nio-8080-exec-5] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-09 18:13:25.703  INFO 22260 --- [http-nio-8080-exec-5] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Joy","Year":"2015","Rated":"PG-13","Released":"25 Dec 2015","Runtime":"124 min","Genre":"Biography, Drama","Director":"David O. Russell","Writer":"David O. Russell, Annie Mumolo","Actors":"Jennifer Lawrence, Robert De Niro, Bradley Cooper","Plot":"Joy is the story of the title character, who rose to become founder and matriarch of a powerful family business dynasty.","Language":"English, Spanish, French","Country":"United States","Awards":"Nominated for 1 Oscar. 8 wins & 23 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BNzRiOWZmMzUtZTJiOC00MjQ1LTkwMjgtNzhlYzBmODAzYTA0XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"6.6/10"},{"Source":"Rotten Tomatoes","Value":"60%"},{"Source":"Metacritic","Value":"56/100"}],"Metascore":"56","imdbRating":"6.6","imdbVotes":"135,525","imdbID":"tt2446980","Type":"movie","DVD":"03 May 2016","BoxOffice":"$56,451,232","Production":"N/A","Website":"N/A","Response":"True"}
+2022-06-09 18:13:25.703  INFO 22260 --- [http-nio-8080-exec-5] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-09 18:13:25.703  INFO 22260 --- [http-nio-8080-exec-5] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-09 18:13:25.704  INFO 22260 --- [http-nio-8080-exec-5] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt2446980, title=Joy, year=2015, type=movie)
+2022-06-09 18:13:25.704  INFO 22260 --- [http-nio-8080-exec-5] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-09 18:13:25.704  INFO 22260 --- [http-nio-8080-exec-5] c.example.moviepal.service.MovieService  : movie was called: Movie(id=tt2446980, title=Joy, year=2015, type=movie)
+2022-06-09 18:13:25.704  INFO 22260 --- [http-nio-8080-exec-5] c.example.moviepal.service.MovieService  : calling listsService for a list by user id: 1
+2022-06-09 18:14:09.593  INFO 22260 --- [http-nio-8080-exec-6] c.e.m.c.M.AddMovieController             : Starting movie/add/name in LookUpMovieController
+2022-06-09 18:14:09.594  INFO 22260 --- [http-nio-8080-exec-6] c.e.m.c.M.AddMovieController             : calling movieService.addByName with name
+2022-06-09 18:14:09.594  INFO 22260 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : starting findUserIdByName: id is TEMP0
+2022-06-09 18:14:09.793  INFO 22260 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : userid was found: 1
+2022-06-09 18:14:09.793  INFO 22260 --- [http-nio-8080-exec-6] c.e.m.c.M.AddMovieController             : User doing the call is: TEMP0 with id: 1
+2022-06-09 18:14:09.793  INFO 22260 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : starting getUserById: user id is 1
+2022-06-09 18:14:10.370  INFO 22260 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@71d2e7de
+2022-06-09 18:14:10.370  INFO 22260 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@71d2e7de
+2022-06-09 18:14:10.853  INFO 22260 --- [http-nio-8080-exec-6] c.e.m.c.M.AddMovieController             : User doing the call is: TEMP0 with user password: $2a$10$ztfusqK6CIpjEdqhkpowk.0MIwIdnaa/TlCuF93ba9Z6Bc6xoFQTy
+2022-06-09 18:14:10.853  INFO 22260 --- [http-nio-8080-exec-6] c.example.moviepal.service.MovieService  : calling addMovieByNameToWish with name of the movie
+2022-06-09 18:14:10.853  INFO 22260 --- [http-nio-8080-exec-6] c.example.moviepal.service.ListsService  : calling getAllWishListByUser for a list by user id: 1
+2022-06-09 18:14:10.960  INFO 22260 --- [http-nio-8080-exec-6] c.example.moviepal.service.MovieService  : starting findByName in MovieService
+2022-06-09 18:14:10.960  INFO 22260 --- [http-nio-8080-exec-6] c.example.moviepal.service.MovieService  : calling movieOMDBapi.findByTitle using the name
+2022-06-09 18:14:10.960  INFO 22260 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findByTitle
+2022-06-09 18:14:10.960  INFO 22260 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&t=dark
+2022-06-09 18:14:10.960  INFO 22260 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-09 18:14:11.068  INFO 22260 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Dark","Year":"2017–2020","Rated":"TV-MA","Released":"01 Dec 2017","Runtime":"60 min","Genre":"Crime, Drama, Mystery","Director":"N/A","Writer":"Baran bo Odar, Jantje Friese","Actors":"Louis Hofmann, Karoline Eichhorn, Lisa Vicari","Plot":"A family saga with a supernatural twist, set in a German town where the disappearance of two young children exposes the relationships among four families.","Language":"German","Country":"Germany, United States","Awards":"8 wins & 22 nominations","Poster":"https://m.media-amazon.com/images/M/MV5BOTk2NzUyOTctZDdlMS00MDJlLTgzNTEtNzQzYjFhNjA0YjBjXkEyXkFqcGdeQXVyMjg1NDcxNDE@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"8.7/10"}],"Metascore":"N/A","imdbRating":"8.7","imdbVotes":"355,852","imdbID":"tt5753856","Type":"series","totalSeasons":"3","Response":"True"}
+2022-06-09 18:14:11.069  INFO 22260 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-09 18:14:11.069  INFO 22260 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-09 18:14:11.070  INFO 22260 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt5753856, title=Dark, year=2017–2020, type=series)
+2022-06-09 18:14:11.070  INFO 22260 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-09 18:14:11.070  INFO 22260 --- [http-nio-8080-exec-6] c.example.moviepal.service.MovieService  : movie was called: Movie(id=tt5753856, title=Dark, year=2017–2020, type=series)
+2022-06-09 18:14:11.070  INFO 22260 --- [http-nio-8080-exec-6] c.example.moviepal.service.MovieService  : calling listsService for a list by user id: 1
+2022-06-09 18:14:26.454  INFO 22260 --- [http-nio-8080-exec-7] c.e.m.c.M.AddMovieController             : Starting movie/add/name in LookUpMovieController
+2022-06-09 18:14:26.455  INFO 22260 --- [http-nio-8080-exec-7] c.e.m.c.M.AddMovieController             : calling movieService.addByName with name
+2022-06-09 18:14:26.455  INFO 22260 --- [http-nio-8080-exec-7] c.example.moviepal.service.UserService   : starting findUserIdByName: id is TEMP201
+2022-06-09 18:14:26.558  INFO 22260 --- [http-nio-8080-exec-7] c.example.moviepal.service.UserService   : userid was found: 4
+2022-06-09 18:14:26.558  INFO 22260 --- [http-nio-8080-exec-7] c.e.m.c.M.AddMovieController             : User doing the call is: TEMP201 with id: 4
+2022-06-09 18:14:26.558  INFO 22260 --- [http-nio-8080-exec-7] c.example.moviepal.service.UserService   : starting getUserById: user id is 4
+2022-06-09 18:14:27.200  INFO 22260 --- [http-nio-8080-exec-7] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@5a3b4fb0
+2022-06-09 18:14:27.200  INFO 22260 --- [http-nio-8080-exec-7] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@5a3b4fb0
+2022-06-09 18:14:27.742  INFO 22260 --- [http-nio-8080-exec-7] c.e.m.c.M.AddMovieController             : User doing the call is: TEMP201 with user password: $2a$10$oR4XldfNpcchr.N9HVwQLu7HG7RHlOugOLMNotvCT6qZhk0OGD8ni
+2022-06-09 18:14:27.742  INFO 22260 --- [http-nio-8080-exec-7] c.example.moviepal.service.MovieService  : calling addMovieByNameToWish with name of the movie
+2022-06-09 18:14:27.742  INFO 22260 --- [http-nio-8080-exec-7] c.example.moviepal.service.ListsService  : calling getAllWishListByUser for a list by user id: 4
+2022-06-09 18:14:27.851  INFO 22260 --- [http-nio-8080-exec-7] c.example.moviepal.service.MovieService  : starting findByName in MovieService
+2022-06-09 18:14:27.852  INFO 22260 --- [http-nio-8080-exec-7] c.example.moviepal.service.MovieService  : calling movieOMDBapi.findByTitle using the name
+2022-06-09 18:14:27.852  INFO 22260 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findByTitle
+2022-06-09 18:14:27.852  INFO 22260 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&t=jodddy
+2022-06-09 18:14:27.852  INFO 22260 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-09 18:14:28.459  INFO 22260 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Response":"False","Error":"Movie not found!"}
+2022-06-09 18:14:28.459  INFO 22260 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-09 18:14:28.459  INFO 22260 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-09 18:14:28.460  INFO 22260 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=null, title=null, year=null, type=null)
+2022-06-09 18:14:28.460  INFO 22260 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-09 18:14:28.460  INFO 22260 --- [http-nio-8080-exec-7] c.example.moviepal.service.MovieService  : movie was called: Movie(id=null, title=null, year=null, type=null)
+2022-06-09 18:14:28.460  INFO 22260 --- [http-nio-8080-exec-7] c.example.moviepal.service.MovieService  : calling listsService for a list by user id: 4
+2022-06-09 18:15:00.854  INFO 22260 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-09 18:15:00.855  INFO 22260 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-06-09 18:15:01.593  INFO 22260 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-09 18:15:02.536  INFO 22260 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
