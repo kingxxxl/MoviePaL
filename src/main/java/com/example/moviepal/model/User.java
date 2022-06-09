@@ -1,5 +1,6 @@
 package com.example.moviepal.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -9,9 +10,10 @@ import javax.persistence.*;
 import javax.validation.constraints.*;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.List;
 
 @AllArgsConstructor @RequiredArgsConstructor
-@Data
+@Setter @Getter
 @Entity
 public class User implements UserDetails {
     @Id
@@ -33,13 +35,8 @@ public class User implements UserDetails {
     private String role;
 
 
-    @OneToOne(mappedBy = "user")
-    private WishListMovie wishListMovie;
-
-//    @OneToOne(cascade = CascadeType.MERGE)
-//    @JoinColumn(name = "wishList_id", referencedColumnName = "ListId")
-//    private WishListMovie wishListMovie;
-
+    @OneToMany(mappedBy = "user",fetch = FetchType.LAZY)
+    private List<WishListMovie> wishListMovie;
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return Collections.singleton(new SimpleGrantedAuthority(this.getRole()));

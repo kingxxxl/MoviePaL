@@ -42,10 +42,12 @@ import java.util.Optional;
             userRepository.save(user);
         }
     public User getUserById(Integer id) {
-            logger.info("starting getUserById: id isssss "+id);
+            logger.info("starting getUserById: user id is "+id);
 //        Optional<User> user = userRepository.findUserById(1);
-        Optional<User> user = userRepository.findUserByUsername("TEMP0");
-        logger.info("starting getUserById: "+user);
+//        Optional<User> user = userRepository.findUserByUsername("TEMP0");
+                Optional<User> user = userRepository.findById(id);
+
+        logger.info("starting getUserById: user is"+user.get());
         if (user.isPresent()){
             logger.info("user was found: "+user.get());
             return userRepository.findById(id).get();
@@ -54,10 +56,12 @@ import java.util.Optional;
             throw new InvalidIdException("Invalid id");
         }
     }
-    public User findUserIdByName(String name){
-        Optional<User> user = userRepository.findUserByUsername(name);
-        if (user.isPresent()){
-            return user.get();
+    public Integer findUserIdByName(String name){
+        logger.info("starting findUserIdByName: id is "+name);
+        Optional<Integer> userid = userRepository.findUseridByUsername(name);
+        if (userid.isPresent()){
+            logger.info("userid was found: "+userid.get());
+            return userid.get();
         }else {
             throw new NoUserFoundException("No user found with that name");
         }

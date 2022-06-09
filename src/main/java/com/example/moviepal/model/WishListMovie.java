@@ -18,7 +18,7 @@ public class WishListMovie implements MovieList {
     private Integer listId;
 
     private String movieId;
-    @OneToOne(cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     private User user;
 
 

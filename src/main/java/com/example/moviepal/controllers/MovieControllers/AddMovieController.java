@@ -33,9 +33,11 @@ public class AddMovieController {
         logger.info("Starting movie/add/name in LookUpMovieController");
         logger.info("calling movieService.addByName with name");
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        String loggedUserName =  auth.getName();
-        User user = userService.findUserIdByName(loggedUserName);
-        logger.info("User doing the call is: "+loggedUserName+" with id: "+user.getId());
+        String loggedUserName = auth.getName();
+        Integer userid = userService.findUserIdByName(loggedUserName);
+        logger.info("User doing the call is: "+loggedUserName+" with id: "+userid);
+        User user = userService.getUserById(userid);
+        logger.info("User doing the call is: "+loggedUserName+" with user password: "+user.getPassword());
         movieService.addMovieByNameToWish(name, user);
         return ResponseEntity.status(HttpStatus.OK).body(new API("movie was added to the list!",201));
     }
