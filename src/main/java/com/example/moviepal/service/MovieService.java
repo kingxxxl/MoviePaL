@@ -2,6 +2,7 @@ package com.example.moviepal.service;
 
 
 import com.example.moviepal.exceptions.InvalidIdException;
+import com.example.moviepal.exceptions.MovieAlreadyInTheListException;
 import com.example.moviepal.exceptions.NoSuchFoundException;
 import com.example.moviepal.model.Movie;
 import com.example.moviepal.model.User;
@@ -71,25 +72,34 @@ import java.util.List;
         }
     }
 
-    public void addMovieByNameToWish(String name) {
+    public void addMovieByNameToWish(String name, User user) {
         logger.info("calling addMovieByNameToWish with name of the movie");
-        User user = new User();
-        user.setId(12);
-        user.setPassword("sa");
-        user.setUsername("sa");
-        logger.info("saving a temp user");
-        userRepository.save(user);
-        logger.info("calling to get the movie by the name");
+        List<WishListMovie> wishListForTheUser=  listsService.getAllWishListByUser(user);
         Movie movie= findByName(name);
         logger.info("movie was called: "+ movie);
+        logger.info("calling listsService for a list by user id: " + user.getId());
+//        List<String> userAllWishListMovies = listsService.getWishListByUser(user);
+        if (wishListForTheUser.isEmpty()){
+            WishListMovie curr = listsService.getWishListByUser(user);
+            logger.info("The list returned is: "+ curr);
+            logger.info("movie.getId() is : "+ movie.getId());
+            curr.setMovieId(movie.getId());
+            wishListMovieRepository.save(curr);
+            listsService.getAllWishListByUser(user);
+        }else {
+            WishListMovie newWishList = new WishListMovie();
+            try {
+                newWishList.setUser(user);
+                newWishList.setMovieId(movie.getId());
+                wishListMovieRepository.save(newWishList);
+            }catch (Exception e){
+                throw new MovieAlreadyInTheListException("Movie in the list already!");
+            }
 
-        Integer userIdTemp = 12;
-        logger.info("calling listsService for a list by user id");
-        WishListMovie curr = listsService.getWishListByUserId(userIdTemp);
-        logger.info("The list returned is: "+ curr);
-        logger.info("movie.getId() is : "+ movie.getId());
-        curr.setMovieId(movie.getId());
-        wishListMovieRepository.save(curr);
+
+        }
+
+
     }
 }
 //

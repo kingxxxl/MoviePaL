@@ -11,7 +11,6 @@ import java.util.List;
 @RequiredArgsConstructor
 @Data
 public class Search {
-//    @JsonProperty()
     private List<Search> search;
     private String title;
     private String year;

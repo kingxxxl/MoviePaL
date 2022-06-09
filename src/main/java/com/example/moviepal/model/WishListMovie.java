@@ -14,7 +14,7 @@ import java.util.List;
 @Entity
 public class WishListMovie implements MovieList {
     @Id
-    @Column(unique = true)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer listId;
 
     private String movieId;

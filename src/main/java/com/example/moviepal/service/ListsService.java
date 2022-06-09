@@ -14,6 +14,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -30,10 +31,8 @@ import java.util.Optional;
         return wishListMovieRepository.findById(id).get();
     }
 
-        public WishListMovie getWishListByUserId(Integer id) {
-            logger.info("calling getWishListByUserId for a list by user id");
-            User user = userService.getUser(id);
-            logger.info("getting the User by id");
+        public WishListMovie getWishListByUser(User user) {
+            logger.info("calling getWishListByUserId for a list by user id: "+user.getId());
             Optional<WishListMovie> wishListMovie = wishListMovieRepository.findByUser(user);
             if (wishListMovie.isPresent()){
                 logger.info("list was found" + wishListMovie);
@@ -49,6 +48,15 @@ import java.util.Optional;
                 return newList;
             }
         }
+    public List<WishListMovie> getAllWishListByUser(User user){
+        logger.info("calling getAllWishListByUser for a list by user id: "+user.getId());
+       Optional<List<WishListMovie>> listMovies = wishListMovieRepository.findAllByUser(user);
+       if (listMovies.isPresent()){
+           return listMovies.get();
+       }
+        List<WishListMovie> listMovies1 = new ArrayList<>();
+        return listMovies1;
+    }
 
         public void saveWish(WishListMovie wishListMovie){
         wishListMovieRepository.save(wishListMovie);

@@ -8,6 +8,8 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.session.SessionRegistry;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 
 @Configuration
@@ -15,22 +17,25 @@ import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 @RequiredArgsConstructor
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private final MyUserDetailsService myUserDetailsService;
+    private SessionRegistry sessionRegistry;
+
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(myUserDetailsService).passwordEncoder(NoOpPasswordEncoder.getInstance());
-        //super.configure(auth);
+        auth.userDetailsService(myUserDetailsService).passwordEncoder(new BCryptPasswordEncoder());
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-       // super.configure(http);
-                 http.csrf().disable();
-//                .authorizeRequests()
-//                .antMatchers(HttpMethod.POST,"/user").permitAll()
-//                .antMatchers(HttpMethod.GET,"/user")
-//                .hasAuthority("ADMIN")
-//                .anyRequest()
-//                .authenticated().and().httpBasic();
+                 http.csrf().disable()
+                .authorizeRequests()
+                         .antMatchers(HttpMethod.POST,"/user/register").permitAll()
+                .antMatchers("/movie/lookby/search/**")
+                .hasAuthority("Admin")
+                .anyRequest()
+                         .authenticated()
+                         .and()
+                         .httpBasic();
+//                  .antMatchers(HttpMethod.POST,"/user").permitAll()
 
     }
 
