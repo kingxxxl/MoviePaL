@@ -4,6 +4,7 @@ package com.example.moviepal.advice;
 
 import com.example.moviepal.DTO.API;
 import com.example.moviepal.exceptions.InvalidIdException;
+import com.example.moviepal.exceptions.MovieAlreadyInTheListException;
 import com.example.moviepal.exceptions.NoMovieWasFoundException;
 import com.example.moviepal.exceptions.NoSuchFoundException;
 import org.slf4j.Logger;
@@ -51,6 +52,12 @@ public class ControllerAdviseHandler {
     public ResponseEntity<API> NoMovieWasFoundException(NoMovieWasFoundException noMovieWasFoundException){
         String message=noMovieWasFoundException.getMessage();
         logger.info("NoMovieWasFoundException was triggered");
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new API(message,400));
+    }
+    @ExceptionHandler(value = MovieAlreadyInTheListException.class)
+    public ResponseEntity<API> MovieAlreadyInTheListException(MovieAlreadyInTheListException movieAlreadyInTheListException){
+        String message=movieAlreadyInTheListException.getMessage();
+        logger.info("MovieAlreadyInTheListException was triggered");
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new API(message,400));
     }
 

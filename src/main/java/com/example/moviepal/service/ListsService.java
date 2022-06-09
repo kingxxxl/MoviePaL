@@ -60,4 +60,13 @@ import java.util.Optional;
         public void saveWish(WishListMovie wishListMovie){
         wishListMovieRepository.save(wishListMovie);
         }
+
+    public boolean isMovieInUserWishList(Movie movie, User user) {
+        Optional<WishListMovie> movieid = wishListMovieRepository.isMovieInList(movie.getId(),user);
+
+        if (movieid.isPresent()){
+            return true;
+        }
+        return false;
+    }
 }

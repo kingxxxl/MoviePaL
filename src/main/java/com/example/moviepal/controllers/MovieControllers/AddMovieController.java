@@ -37,7 +37,7 @@ public class AddMovieController {
         Integer userid = userService.findUserIdByName(loggedUserName);
         logger.info("User doing the call is: "+loggedUserName+" with id: "+userid);
         User user = userService.getUserById(userid);
-        logger.info("User doing the call is: "+loggedUserName);
+        logger.info("User was found: "+user.getUsername());
         movieService.addMovieByNameToWish(name, user);
         return ResponseEntity.status(HttpStatus.OK).body(new API("movie was added to the list!",201));
     }

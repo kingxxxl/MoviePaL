@@ -82,29 +82,14 @@ import java.util.List;
         List<WishListMovie> wishListForTheUser=  listsService.getAllWishListByUser(user);
         Movie movie= findByName(name);
         logger.info("movie was called: "+ movie);
-        logger.info("calling listsService for a list by user id: " + user.getId());
-//        List<String> userAllWishListMovies = listsService.getWishListByUser(user);
-        if (wishListForTheUser.isEmpty()){
-            WishListMovie curr = listsService.getWishListByUser(user);
-            logger.info("The list returned is: "+ curr);
-            logger.info("movie.getId() is : "+ movie.getId());
-            curr.setMovieId(movie.getId());
-            wishListMovieRepository.save(curr);
-            listsService.getAllWishListByUser(user);
-        }else {
+        if(!listsService.isMovieInUserWishList(movie,user)){
             WishListMovie newWishList = new WishListMovie();
-            try {
-                newWishList.setUser(user);
-                newWishList.setMovieId(movie.getId());
-                wishListMovieRepository.save(newWishList);
-            }catch (Exception e){
-                throw new MovieAlreadyInTheListException("Movie in the list already!");
-            }
-
-
+            newWishList.setUser(user);
+            newWishList.setMovieId(movie.getId());
+            wishListMovieRepository.save(newWishList);
+        }else {
+            throw new MovieAlreadyInTheListException("Movie in the list already!");
         }
-
-
     }
 }
 //
