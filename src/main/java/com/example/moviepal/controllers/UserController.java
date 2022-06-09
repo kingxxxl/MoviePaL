@@ -35,15 +35,7 @@ public class UserController {
     }
     
     @PostMapping("/register")
-    public ResponseEntity<API> addUser(@RequestBody @Valid User user, Errors errors) {
-        logger.info("starting addUser from UserController, :" +user+" isErrors:  "+errors.hasErrors());
-
-        if(errors.hasErrors()){
-            logger.warn("user entered has errors");
-
-            String message=errors.getFieldError().getDefaultMessage();
-            return ResponseEntity.status(400).body(new API(message,400));
-        }
+    public ResponseEntity<API> addUser(@RequestBody @Valid User user) {
         logger.info("Starting addUser in UserController");
         logger.info("calling adduser to the user service: "+user);
         userService.addUser(user);

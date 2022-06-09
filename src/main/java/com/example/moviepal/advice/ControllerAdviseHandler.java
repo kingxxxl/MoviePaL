@@ -4,6 +4,7 @@ package com.example.moviepal.advice;
 
 import com.example.moviepal.DTO.API;
 import com.example.moviepal.exceptions.InvalidIdException;
+import com.example.moviepal.exceptions.NoMovieWasFoundException;
 import com.example.moviepal.exceptions.NoSuchFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -43,6 +44,13 @@ public class ControllerAdviseHandler {
     public ResponseEntity<API> handleNoSuchFoundException(NoSuchFoundException noSuchFoundException){
         String message=noSuchFoundException.getMessage();
         logger.info("handleDataIntegrity was triggered");
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new API(message,400));
+    }
+
+    @ExceptionHandler(value = NoMovieWasFoundException.class)
+    public ResponseEntity<API> NoMovieWasFoundException(NoMovieWasFoundException noMovieWasFoundException){
+        String message=noMovieWasFoundException.getMessage();
+        logger.info("NoMovieWasFoundException was triggered");
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new API(message,400));
     }
 

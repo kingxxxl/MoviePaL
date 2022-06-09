@@ -3,6 +3,7 @@ package com.example.moviepal.service;
 
 import com.example.moviepal.exceptions.InvalidIdException;
 import com.example.moviepal.exceptions.MovieAlreadyInTheListException;
+import com.example.moviepal.exceptions.NoMovieWasFoundException;
 import com.example.moviepal.exceptions.NoSuchFoundException;
 import com.example.moviepal.model.Movie;
 import com.example.moviepal.model.User;
@@ -42,10 +43,14 @@ import java.util.List;
         try {
             logger.info("calling movieOMDBapi.findByTitle using the name");
             Movie movie = movieOMDBapi.findByTitle(name);
+            if (movie.getId() == null){
+                logger.warn("no movie with that name");
+                throw new NoMovieWasFoundException("No movie was found with that name!");
+            }
             return movie;
-        } catch (JsonProcessingException e) {
+        } catch (Exception e) {
             logger.warn("no movie with that name");
-            throw new NoSuchFoundException("No movie was found with that name!");
+            throw new NoMovieWasFoundException("No movie was found with that name!");
         }
     }
 
