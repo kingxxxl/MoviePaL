@@ -3,10 +3,12 @@ package com.example.moviepal.service;
 
 import com.example.moviepal.exceptions.NoMovieListWasFoundException;
 import com.example.moviepal.model.FavoriteListMovie;
+import com.example.moviepal.model.WatchedListMovie;
 import com.example.moviepal.model.outDB.Movie;
 import com.example.moviepal.model.User;
 import com.example.moviepal.model.WishListMovie;
 import com.example.moviepal.repository.FavoriteListMovieRepository;
+import com.example.moviepal.repository.WatchedListMovieRepository;
 import com.example.moviepal.repository.WishListMovieRepository;
 import com.example.moviepal.service.MovieApi.MovieOMDBapi;
 import lombok.RequiredArgsConstructor;
@@ -26,6 +28,7 @@ import java.util.Optional;
     private final MovieOMDBapi movieOMDBapi;
     private final WishListMovieRepository wishListMovieRepository;
     private final FavoriteListMovieRepository favoriteListMovieRepository;
+    private final WatchedListMovieRepository watchedListMovieRepository;
     private final UserService userService;
 
     public WishListMovie getWishListById(Integer id) {
@@ -64,6 +67,22 @@ import java.util.Optional;
             throw new NoMovieListWasFoundException("No favoritelist for this user yet, add some movies first!");
         }
     }
+    public List<Movie> getWatchedListByUser(User user) {
+        logger.info("calling getWatchedListByUserId for a list by user id: "+user.getId());
+        List<WatchedListMovie> watchedListMovie = watchedListMovieRepository.isList(user);
+        if (!watchedListMovie.isEmpty()){
+            logger.info("list was found and size is: "+watchedListMovie.size());
+            List<Movie> movies = new ArrayList<>();
+            for (WatchedListMovie watched:watchedListMovie) {
+                Movie movie = movieOMDBapi.findById(watched.getMovieId());
+                movies.add(movie);
+            }
+            return movies;
+        }else {
+            logger.info("list was NOT found, creating one using the given user");
+            throw new NoMovieListWasFoundException("No watchedlist for this user yet, add some movies first!");
+        }
+    }
     public List<WishListMovie> getAllWishListByUser(User user){
         logger.info("calling getAllWishListByUser for a list by user id: "+user.getId());
        Optional<List<WishListMovie>> listMovies = wishListMovieRepository.findAllByUser(user);
@@ -87,6 +106,13 @@ import java.util.Optional;
     }
     public boolean isMovieInUserFavoriteList(Movie movie, User user) {
         Optional<FavoriteListMovie> movieid = favoriteListMovieRepository.isMovieInList(movie.getId(),user);
+        if (movieid.isPresent()){
+            return true;
+        }
+        return false;
+    }
+    public boolean isMovieInUserWatchedList(Movie movie, User user) {
+        Optional<WatchedListMovie> movieid = watchedListMovieRepository.isMovieInList(movie.getId(),user);
         if (movieid.isPresent()){
             return true;
         }

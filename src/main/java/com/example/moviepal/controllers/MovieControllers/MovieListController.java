@@ -21,7 +21,6 @@ import java.util.List;
 @RequiredArgsConstructor
 public class MovieListController {
 
-    final private MovieService movieService;
     final private ListsService listsService;
     final private UserService userService;
     Logger logger = LoggerFactory.getLogger(MovieListController.class);
@@ -48,6 +47,18 @@ public class MovieListController {
         User user = userService.getUserById(userid);
         logger.info("User was found: "+user.getUsername());
         List<Movie> movies = listsService.getFavoriteListByUser(user);
+        return ResponseEntity.status(HttpStatus.OK).body(movies);
+    }
+    @GetMapping("/watched-list")
+    public ResponseEntity<List<Movie>> getWatchedList(){
+        logger.info("Starting user/watchedlist in getWatchedList");
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String loggedUserName = auth.getName();
+        Integer userid = userService.findUserIdByName(loggedUserName);
+        logger.info("User doing the call is: "+loggedUserName+" with id: "+userid);
+        User user = userService.getUserById(userid);
+        logger.info("User was found: "+user.getUsername());
+        List<Movie> movies = listsService.getWatchedListByUser(user);
         return ResponseEntity.status(HttpStatus.OK).body(movies);
     }
 }

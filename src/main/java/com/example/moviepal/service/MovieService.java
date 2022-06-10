@@ -6,11 +6,13 @@ import com.example.moviepal.exceptions.MovieAlreadyInTheListException;
 import com.example.moviepal.exceptions.NoMovieWasFoundException;
 import com.example.moviepal.exceptions.NoSuchFoundException;
 import com.example.moviepal.model.FavoriteListMovie;
+import com.example.moviepal.model.WatchedListMovie;
 import com.example.moviepal.model.outDB.Movie;
 import com.example.moviepal.model.User;
 import com.example.moviepal.model.WishListMovie;
 import com.example.moviepal.repository.FavoriteListMovieRepository;
 import com.example.moviepal.repository.UserRepository;
+import com.example.moviepal.repository.WatchedListMovieRepository;
 import com.example.moviepal.repository.WishListMovieRepository;
 import com.example.moviepal.service.MovieApi.MovieOMDBapi;
 import lombok.RequiredArgsConstructor;
@@ -29,15 +31,8 @@ import java.util.List;
     private final ListsService listsService;
     private final WishListMovieRepository wishListMovieRepository;
     private final FavoriteListMovieRepository favoriteListMovieRepository;
+    private final WatchedListMovieRepository watchedListMovieRepository;
 
-    //         public Movie findByID(Integer id) {
-//        Optional<Movie> movie = movieRepository.findById(id);
-//        if (movie.isPresent()){
-//            return movieRepository.findById(id).get();
-//        }else {
-//            throw new InvalidIdException("Invalid id");
-//        }
-//    }
     public Movie findByName(String name) {
         logger.info("starting findByName in MovieService");
 
@@ -104,19 +99,17 @@ import java.util.List;
             throw new MovieAlreadyInTheListException("Movie in the list already!");
         }
     }
+    public void addMovieByNameToWatched(String name, User user) {
+        logger.info("starting addMovieByNameToWatched with name of the movie");
+        Movie movie= findByName(name);
+        logger.info("movie was called: "+ movie);
+        if(!listsService.isMovieInUserWatchedList(movie,user)){
+            WatchedListMovie newWatchedList = new WatchedListMovie();
+            newWatchedList.setUser(user);
+            newWatchedList.setMovieId(movie.getId());
+            watchedListMovieRepository.save(newWatchedList);
+        }else {
+            throw new MovieAlreadyInTheListException("Movie in the list already!");
+        }
+    }
 }
-//
-//
-//    public List<Movie> findBySearchYear(String year) {
-//        logger.info("starting findBySearchYear in MovieService");
-//
-//        try {
-//            logger.info("calling movieOMDBapi.findBySearchYear using the name");
-//            return movieOMDBapi.findBySearchYear(year);
-//        }
-//        catch (Exception e){
-//            logger.warn("no search result was found");
-//            throw new NoSuchFoundException("No movie was found with that year!");
-//        }
-//    }
-//}
