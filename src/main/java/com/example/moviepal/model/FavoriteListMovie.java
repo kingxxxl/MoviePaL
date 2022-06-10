@@ -8,11 +8,12 @@ import lombok.RequiredArgsConstructor;
 
 import javax.persistence.*;
 import java.util.List;
+
 @AllArgsConstructor
 @RequiredArgsConstructor
 @Data
 @Entity
-public class WishListMovie implements MovieList {
+public class FavoriteListMovie implements MovieList {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer listId;
@@ -20,14 +21,6 @@ public class WishListMovie implements MovieList {
     private String movieId;
     @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     private User user;
-
-
-
-
-
-
-//    @OneToOne(mappedBy = "wishListMovie")
-//    private User user;
 
     @Override
     public List<Movie> getMovies(String userId) {

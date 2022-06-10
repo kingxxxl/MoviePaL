@@ -1,7 +1,5 @@
 package com.example.moviepal.model.outDB;
 
-import com.example.moviepal.model.Movie;
-
 import java.util.List;
 
 public interface MovieList {

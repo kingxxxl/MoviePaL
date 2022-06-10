@@ -1,6 +1,6 @@
 package com.example.moviepal.controllers.MovieControllers;
 
-import com.example.moviepal.model.Movie;
+import com.example.moviepal.model.outDB.Movie;
 import com.example.moviepal.service.MovieService;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;

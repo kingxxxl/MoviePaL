@@ -5,13 +5,14 @@ import com.example.moviepal.exceptions.InvalidIdException;
 import com.example.moviepal.exceptions.MovieAlreadyInTheListException;
 import com.example.moviepal.exceptions.NoMovieWasFoundException;
 import com.example.moviepal.exceptions.NoSuchFoundException;
-import com.example.moviepal.model.Movie;
+import com.example.moviepal.model.FavoriteListMovie;
+import com.example.moviepal.model.outDB.Movie;
 import com.example.moviepal.model.User;
 import com.example.moviepal.model.WishListMovie;
+import com.example.moviepal.repository.FavoriteListMovieRepository;
 import com.example.moviepal.repository.UserRepository;
 import com.example.moviepal.repository.WishListMovieRepository;
 import com.example.moviepal.service.MovieApi.MovieOMDBapi;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,8 +27,8 @@ import java.util.List;
     Logger logger = LoggerFactory.getLogger(MovieService.class);
     private final MovieOMDBapi movieOMDBapi;
     private final ListsService listsService;
-    private final UserRepository userRepository;
     private final WishListMovieRepository wishListMovieRepository;
+    private final FavoriteListMovieRepository favoriteListMovieRepository;
 
     //         public Movie findByID(Integer id) {
 //        Optional<Movie> movie = movieRepository.findById(id);
@@ -86,6 +87,19 @@ import java.util.List;
             newWishList.setUser(user);
             newWishList.setMovieId(movie.getId());
             wishListMovieRepository.save(newWishList);
+        }else {
+            throw new MovieAlreadyInTheListException("Movie in the list already!");
+        }
+    }
+    public void addMovieByNameToFavorite(String name, User user) {
+        logger.info("starting addMovieByNameToFavorite with name of the movie");
+        Movie movie= findByName(name);
+        logger.info("movie was called: "+ movie);
+        if(!listsService.isMovieInUserFavoriteList(movie,user)){
+            FavoriteListMovie newFavoriteList = new FavoriteListMovie();
+            newFavoriteList.setUser(user);
+            newFavoriteList.setMovieId(movie.getId());
+            favoriteListMovieRepository.save(newFavoriteList);
         }else {
             throw new MovieAlreadyInTheListException("Movie in the list already!");
         }

@@ -1,8 +1,6 @@
 package com.example.moviepal.controllers.MovieControllers;
 
 import com.example.moviepal.DTO.API;
-import com.example.moviepal.advice.ControllerAdviseHandler;
-import com.example.moviepal.model.Movie;
 import com.example.moviepal.model.User;
 import com.example.moviepal.service.MovieService;
 import com.example.moviepal.service.UserService;
@@ -14,8 +12,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/movie/add")
@@ -39,6 +35,19 @@ public class AddMovieController {
         User user = userService.getUserById(userid);
         logger.info("User was found: "+user.getUsername());
         movieService.addMovieByNameToWish(name, user);
+        return ResponseEntity.status(HttpStatus.OK).body(new API("movie was added to the list!",201));
+    }
+    @PostMapping("/name/favorite-list/{name}")
+    public ResponseEntity<API> byNameToFavoriteList(@PathVariable String name){
+        logger.info("Starting movie/add/name in LookUpMovieController");
+        logger.info("calling movieService.addByName with name");
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String loggedUserName = auth.getName();
+        Integer userid = userService.findUserIdByName(loggedUserName);
+        logger.info("User doing the call is: "+loggedUserName+" with id: "+userid);
+        User user = userService.getUserById(userid);
+        logger.info("User was found: "+user.getUsername());
+        movieService.addMovieByNameToFavorite(name, user);
         return ResponseEntity.status(HttpStatus.OK).body(new API("movie was added to the list!",201));
     }
 

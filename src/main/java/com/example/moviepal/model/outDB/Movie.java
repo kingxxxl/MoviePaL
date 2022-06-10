@@ -1,4 +1,4 @@
-package com.example.moviepal.model;
+package com.example.moviepal.model.outDB;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;

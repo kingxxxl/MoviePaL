@@ -1,7 +1,7 @@
 package com.example.moviepal.service.MovieApi;
 
 import com.example.moviepal.exceptions.InvalidIdException;
-import com.example.moviepal.model.Movie;
+import com.example.moviepal.model.outDB.Movie;
 import com.example.moviepal.model.outDB.Search;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;

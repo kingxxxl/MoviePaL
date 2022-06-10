@@ -1,7 +1,6 @@
 package com.example.moviepal.controllers.MovieControllers;
 
-import com.example.moviepal.DTO.API;
-import com.example.moviepal.model.Movie;
+import com.example.moviepal.model.outDB.Movie;
 import com.example.moviepal.model.User;
 import com.example.moviepal.service.ListsService;
 import com.example.moviepal.service.MovieService;
@@ -37,6 +36,18 @@ public class MovieListController {
         User user = userService.getUserById(userid);
         logger.info("User was found: "+user.getUsername());
         List<Movie> movies = listsService.getWishListByUser(user);
+        return ResponseEntity.status(HttpStatus.OK).body(movies);
+    }
+    @GetMapping("/favorite-list")
+    public ResponseEntity<List<Movie>> getFavoriteList(){
+        logger.info("Starting user/favoritelist in getFavoriteList");
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String loggedUserName = auth.getName();
+        Integer userid = userService.findUserIdByName(loggedUserName);
+        logger.info("User doing the call is: "+loggedUserName+" with id: "+userid);
+        User user = userService.getUserById(userid);
+        logger.info("User was found: "+user.getUsername());
+        List<Movie> movies = listsService.getFavoriteListByUser(user);
         return ResponseEntity.status(HttpStatus.OK).body(movies);
     }
 }
