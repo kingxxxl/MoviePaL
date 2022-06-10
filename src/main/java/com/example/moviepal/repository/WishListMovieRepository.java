@@ -17,5 +17,6 @@ public interface WishListMovieRepository extends JpaRepository<WishListMovie, In
     @Query("SELECT w FROM WishListMovie w where w.movieId = ?1 and w.user = ?2")
 
     Optional<WishListMovie> isMovieInList(String movieid,User user);
-
+    @Query("SELECT w FROM WishListMovie w where w.user = ?1")
+    List<WishListMovie> isList(User user);
 }

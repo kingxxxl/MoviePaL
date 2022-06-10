@@ -3,10 +3,7 @@ package com.example.moviepal.advice;
 
 
 import com.example.moviepal.DTO.API;
-import com.example.moviepal.exceptions.InvalidIdException;
-import com.example.moviepal.exceptions.MovieAlreadyInTheListException;
-import com.example.moviepal.exceptions.NoMovieWasFoundException;
-import com.example.moviepal.exceptions.NoSuchFoundException;
+import com.example.moviepal.exceptions.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -52,6 +49,12 @@ public class ControllerAdviseHandler {
     public ResponseEntity<API> NoMovieWasFoundException(NoMovieWasFoundException noMovieWasFoundException){
         String message=noMovieWasFoundException.getMessage();
         logger.info("NoMovieWasFoundException was triggered");
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new API(message,400));
+    }
+    @ExceptionHandler(value = NoMovieListWasFoundException.class)
+    public ResponseEntity<API> NoMovieListWasFoundException(NoMovieListWasFoundException noMovieListWasFoundException){
+        String message=noMovieListWasFoundException.getMessage();
+        logger.info("NoMovieListWasFoundException was triggered");
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new API(message,400));
     }
     @ExceptionHandler(value = MovieAlreadyInTheListException.class)

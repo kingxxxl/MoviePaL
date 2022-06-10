@@ -40,25 +40,29 @@ public class MovieOMDBapi {
         return movie;
 
     }
-    public Movie findById(String id) throws InvalidIdException, JsonProcessingException {
+    public Movie findById(String id) throws InvalidIdException {
         logger.info("Starting findById");
         String url = URL_FIND_SINGLE_BY_ID + id;
 
         logger.info("URL was obtained:"+url);
 
         String apiJson = getBodyFromURL(url);
+        try {
+            Movie movie = getMovieFromSingleJson(apiJson);
+            logger.info("The movie was mapped with the given json: "+movie);
 
-        Movie movie = getMovieFromSingleJson(apiJson);
 
-        logger.info("The movie was mapped with the given json: "+movie);
-
-
-        if (movie.getId() == null){
-            logger.warn("no id for this movie");
-            throw  new InvalidIdException();
+            if (movie.getId() == null){
+                logger.warn("no id for this movie");
+                throw  new InvalidIdException();
+            }
+            logger.info("returning the movie object");
+            return movie;
+        }catch (JsonProcessingException e){
+            throw new InvalidIdException("No movie with that id");
         }
-        logger.info("returning the movie object");
-        return movie;
+
+
     }
     public List<Movie> findBySearchName(String name) throws JsonProcessingException {
         logger.info("Starting findBySearchName");

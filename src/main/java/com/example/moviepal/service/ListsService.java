@@ -2,6 +2,8 @@ package com.example.moviepal.service;
 
 
 import com.example.moviepal.exceptions.InvalidIdException;
+import com.example.moviepal.exceptions.NoMovieListWasFoundException;
+import com.example.moviepal.exceptions.NoMovieWasFoundException;
 import com.example.moviepal.exceptions.NoSuchFoundException;
 import com.example.moviepal.model.Movie;
 import com.example.moviepal.model.User;
@@ -31,20 +33,20 @@ import java.util.Optional;
         return wishListMovieRepository.findById(id).get();
     }
 
-        public WishListMovie getWishListByUser(User user) {
+        public List<Movie> getWishListByUser(User user) {
             logger.info("calling getWishListByUserId for a list by user id: "+user.getId());
-            Optional<WishListMovie> wishListMovie = wishListMovieRepository.findByUser(user);
-            if (wishListMovie.isPresent()){
-                logger.info("list was found" + wishListMovie);
-                return wishListMovie.get();
+            List<WishListMovie> wishListMovie = wishListMovieRepository.isList(user);
+            if (!wishListMovie.isEmpty()){
+                logger.info("list was found and size is: "+wishListMovie.size());
+                List<Movie> movies = new ArrayList<>();
+                for (WishListMovie wish:wishListMovie) {
+                    Movie movie = movieOMDBapi.findById(wish.getMovieId());
+                    movies.add(movie);
+                }
+                return movies;
             }else {
                 logger.info("list was NOT found, creating one using the given user");
-                WishListMovie newList = new WishListMovie();
-                newList.setUser(user);
-                logger.info("list was created: "+newList);
-                wishListMovieRepository.save(newList);
-                logger.info("list was saved: "+newList);
-                return newList;
+                throw new NoMovieListWasFoundException("No wishlist for this user yet, add some movies first!");
             }
         }
     public List<WishListMovie> getAllWishListByUser(User user){
