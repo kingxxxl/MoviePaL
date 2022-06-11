@@ -31,7 +31,7 @@ www.omdbapi.com
 # Flow
 ![](MoviePaL-Flow.svg)
 
-# Herokuapp
+# Herokuapp Links
 
 
 Register using  - `<POST>` : <https://moviepal1.herokuapp.com/user/register>
