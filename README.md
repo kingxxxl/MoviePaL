@@ -10,13 +10,20 @@
 
 # Features
 
--  Scalability
--  Security
--  The First Version Comes With Three Lists
+- Scalability
+- Security
+- Handling API and user errors 
+- The First Version Comes With Three Lists
+- 
    1 . Watch List
+- 
    2 . Favorite  List
+- 
    3 . Wish List
 
+# Used Api (Omdbapi)
+find more by visiting their website
+www.omdbapi.com
    
 # Data Class Diagram 
 ![](MoviePal-class-diagram.png)
