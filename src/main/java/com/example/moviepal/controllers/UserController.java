@@ -8,9 +8,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.web.bind.annotation.*;
 
 
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.util.List;
 
@@ -33,11 +37,13 @@ public class UserController {
 
     }
     @GetMapping("/logout-done")
-    public ResponseEntity<API> logout(){
-//        SecurityContextHolder.clearContext();
+    public ResponseEntity<API> logout(HttpServletRequest request) throws ServletException {
+        SecurityContextLogoutHandler ctxLogOut = new SecurityContextLogoutHandler();
+        ctxLogOut.logout(request,null,null);
+        SecurityContextHolder.clearContext();
         return ResponseEntity.status(HttpStatus.OK).body(new API("Log ou was successful!",200));
     }
-    
+
     @PostMapping("/register")
     public ResponseEntity<API> addUser(@RequestBody @Valid User user) {
         logger.info("Starting addUser in UserController");
