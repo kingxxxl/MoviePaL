@@ -32,6 +32,11 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.OK).body(userService.getUserById(id));
 
     }
+    @GetMapping("/logout-done")
+    public ResponseEntity<API> logout(){
+//        SecurityContextHolder.clearContext();
+        return ResponseEntity.status(HttpStatus.OK).body(new API("Log ou was successful!",200));
+    }
     
     @PostMapping("/register")
     public ResponseEntity<API> addUser(@RequestBody @Valid User user) {
