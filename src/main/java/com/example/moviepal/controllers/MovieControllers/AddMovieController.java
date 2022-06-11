@@ -35,7 +35,7 @@ public class AddMovieController {
         User user = userService.getUserById(userid);
         logger.info("User was found: "+user.getUsername());
         movieService.addMovieByNameToWish(name, user);
-        return ResponseEntity.status(HttpStatus.OK).body(new API("movie was added to the list!",201));
+        return ResponseEntity.status(HttpStatus.OK).body(new API("movie was added to your wish list!",201));
     }
     @PostMapping("/name/favorite-list/{name}")
     public ResponseEntity<API> byNameToFavoriteList(@PathVariable String name){
@@ -48,7 +48,7 @@ public class AddMovieController {
         User user = userService.getUserById(userid);
         logger.info("User was found: "+user.getUsername());
         movieService.addMovieByNameToFavorite(name, user);
-        return ResponseEntity.status(HttpStatus.OK).body(new API("movie was added to the list!",201));
+        return ResponseEntity.status(HttpStatus.OK).body(new API("movie was added to your favorite list!",201));
     }
     @PostMapping("/name/watched-list/{name}")
     public ResponseEntity<API> byNameToWatchedList(@PathVariable String name){
@@ -61,7 +61,7 @@ public class AddMovieController {
         User user = userService.getUserById(userid);
         logger.info("User was found: "+user.getUsername());
         movieService.addMovieByNameToWatched(name, user);
-        return ResponseEntity.status(HttpStatus.OK).body(new API("movie was added to the list!",201));
+        return ResponseEntity.status(HttpStatus.OK).body(new API("movie was added to your watched list!",201));
     }
 
 //    @GetMapping("/id/{id}")

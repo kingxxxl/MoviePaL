@@ -1,5 +1,6 @@
 package com.example.moviepal.repository;
 
+import com.example.moviepal.model.FavoriteListMovie;
 import com.example.moviepal.model.User;
 import com.example.moviepal.model.WishListMovie;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -11,7 +12,9 @@ import java.util.Optional;
 
 @Repository
 public interface WishListMovieRepository extends JpaRepository<WishListMovie, Integer> {
+    @Query("SELECT w FROM WishListMovie w where w.movieId = ?1 and w.user = ?2")
 
+    Optional<WishListMovie> findByUserAndMovieId(String movieid, User user);
     Optional<WishListMovie> findByUser(User user);
     Optional<List<WishListMovie>> findAllByUser(User user);
     @Query("SELECT w FROM WishListMovie w where w.movieId = ?1 and w.user = ?2")

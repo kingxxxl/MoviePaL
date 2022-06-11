@@ -2573,3 +2573,834 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'MoviePaL.wish_list_movie' do
 2022-06-11 14:23:05.047  INFO 27437 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
 2022-06-11 14:23:07.028  INFO 27437 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2022-06-11 14:23:08.345  INFO 27437 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-11 14:25:08.109  INFO 27537 --- [main] c.example.moviepal.MoviePaLApplication   : Starting MoviePaLApplication using Java 16.0.1 on abdo.local with PID 27537 (/Users/abdullahalmasar/IdeaProjects/MoviePaL/target/classes started by abdullahalmasar in /Users/abdullahalmasar/IdeaProjects/MoviePaL)
+2022-06-11 14:25:08.112  INFO 27537 --- [main] c.example.moviepal.MoviePaLApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-06-11 14:25:08.577  INFO 27537 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-11 14:25:08.629  INFO 27537 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 4 JPA repository interfaces.
+2022-06-11 14:25:08.971  INFO 27537 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-11 14:25:08.975  INFO 27537 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-11 14:25:08.976  INFO 27537 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-11 14:25:09.052  INFO 27537 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-11 14:25:09.052  INFO 27537 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 913 ms
+2022-06-11 14:25:09.136  INFO 27537 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-11 14:25:09.163  INFO 27537 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-11 14:25:09.259  INFO 27537 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-11 14:25:09.314  INFO 27537 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-11 14:25:11.068  INFO 27537 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-11 14:25:11.082  INFO 27537 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-06-11 14:25:11.731  WARN 27537 --- [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table favorite_list_movie drop foreign key FKba25th3qncslu0lew7lb9r6kd" via JDBC Statement
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table favorite_list_movie drop foreign key FKba25th3qncslu0lew7lb9r6kd" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:387) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:371) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:341) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:235) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:156) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:128) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:114) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:157) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.0.jar:2.7.0]
+	at com.example.moviepal.MoviePaLApplication.main(MoviePaLApplication.java:10) ~[classes/:na]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'MoviePaL.favorite_list_movie' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	... 35 common frames omitted
+
+2022-06-11 14:25:11.992  WARN 27537 --- [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table watched_list_movie drop foreign key FKnsgf8m2hcr3jangknares39q6" via JDBC Statement
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table watched_list_movie drop foreign key FKnsgf8m2hcr3jangknares39q6" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:387) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:371) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:341) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:235) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:156) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:128) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:114) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:157) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.0.jar:2.7.0]
+	at com.example.moviepal.MoviePaLApplication.main(MoviePaLApplication.java:10) ~[classes/:na]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'MoviePaL.watched_list_movie' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	... 35 common frames omitted
+
+2022-06-11 14:25:12.270  WARN 27537 --- [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table wish_list_movie drop foreign key FK92st5ga0r5klxy0offf6w0gm8" via JDBC Statement
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table wish_list_movie drop foreign key FK92st5ga0r5klxy0offf6w0gm8" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:387) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:371) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:341) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:235) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:156) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:128) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:114) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:157) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.0.jar:2.7.0]
+	at com.example.moviepal.MoviePaLApplication.main(MoviePaLApplication.java:10) ~[classes/:na]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'MoviePaL.wish_list_movie' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	... 35 common frames omitted
+
+2022-06-11 14:25:16.294  INFO 27537 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-11 14:25:16.301  INFO 27537 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-11 14:25:16.600  WARN 27537 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-11 14:25:16.747  INFO 27537 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@33bd9ac3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7c857e8f, org.springframework.security.web.context.SecurityContextPersistenceFilter@27bf574b, org.springframework.security.web.header.HeaderWriterFilter@684f7f1c, org.springframework.security.web.authentication.logout.LogoutFilter@25c4f621, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@556843a5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@326dbe25, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@570b85dd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@42028589, org.springframework.security.web.session.SessionManagementFilter@4bc41565, org.springframework.security.web.access.ExceptionTranslationFilter@5b657342, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@41bbdd8a]
+2022-06-11 14:25:17.020  INFO 27537 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-11 14:25:17.029  INFO 27537 --- [main] c.example.moviepal.MoviePaLApplication   : Started MoviePaLApplication in 9.13 seconds (JVM running for 9.694)
+2022-06-11 14:25:17.031  INFO 27537 --- [main] com.example.moviepal.Seedrs.Seed         : starting loadUserData from Seed
+2022-06-11 14:25:20.654  INFO 27537 --- [main] com.example.moviepal.Seedrs.Seed         : Seed completed: number of rows added: 3
+2022-06-11 14:25:21.380  INFO 27537 --- [main] com.example.moviepal.Seedrs.Seed         : Seed completed: number of row added: 1
+2022-06-11 14:25:26.797  INFO 27537 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-11 14:25:26.798  INFO 27537 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-11 14:25:26.799  INFO 27537 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-11 14:25:27.335  INFO 27537 --- [http-nio-8080-exec-2] c.example.moviepal.service.MovieService  : Starting movie/lookby/movie/lookby/name in LookUpMovieController
+2022-06-11 14:25:27.335  INFO 27537 --- [http-nio-8080-exec-2] c.example.moviepal.service.MovieService  : calling movieService.findByName with name
+2022-06-11 14:25:27.337  INFO 27537 --- [http-nio-8080-exec-2] c.example.moviepal.service.MovieService  : starting findByName in MovieService
+2022-06-11 14:25:27.337  INFO 27537 --- [http-nio-8080-exec-2] c.example.moviepal.service.MovieService  : calling movieOMDBapi.findByTitle using the name
+2022-06-11 14:25:27.337  INFO 27537 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findByTitle
+2022-06-11 14:25:27.337  INFO 27537 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&t=joy
+2022-06-11 14:25:27.337  INFO 27537 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-11 14:25:33.533  INFO 27537 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Joy","Year":"2015","Rated":"PG-13","Released":"25 Dec 2015","Runtime":"124 min","Genre":"Biography, Drama","Director":"David O. Russell","Writer":"David O. Russell, Annie Mumolo","Actors":"Jennifer Lawrence, Robert De Niro, Bradley Cooper","Plot":"Joy is the story of the title character, who rose to become founder and matriarch of a powerful family business dynasty.","Language":"English, Spanish, French","Country":"United States","Awards":"Nominated for 1 Oscar. 8 wins & 23 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BNzRiOWZmMzUtZTJiOC00MjQ1LTkwMjgtNzhlYzBmODAzYTA0XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"6.6/10"},{"Source":"Rotten Tomatoes","Value":"60%"},{"Source":"Metacritic","Value":"56/100"}],"Metascore":"56","imdbRating":"6.6","imdbVotes":"135,525","imdbID":"tt2446980","Type":"movie","DVD":"03 May 2016","BoxOffice":"$56,451,232","Production":"N/A","Website":"N/A","Response":"True"}
+2022-06-11 14:25:33.533  INFO 27537 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-11 14:25:33.534  INFO 27537 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-11 14:25:33.574  INFO 27537 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt2446980, title=Joy, year=2015, type=movie)
+2022-06-11 14:25:33.574  INFO 27537 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-11 14:25:38.094  INFO 27537 --- [http-nio-8080-exec-3] c.e.m.c.M.AddMovieController             : Starting movie/add/name in LookUpMovieController
+2022-06-11 14:25:38.094  INFO 27537 --- [http-nio-8080-exec-3] c.e.m.c.M.AddMovieController             : calling movieService.addByName with name
+2022-06-11 14:25:38.095  INFO 27537 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : starting findUserIdByName: id is TEMP0
+2022-06-11 14:25:38.356  INFO 27537 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : userid was found: 1
+2022-06-11 14:25:38.356  INFO 27537 --- [http-nio-8080-exec-3] c.e.m.c.M.AddMovieController             : User doing the call is: TEMP0 with id: 1
+2022-06-11 14:25:38.357  INFO 27537 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : starting getUserById: user id is 1
+2022-06-11 14:25:39.297  INFO 27537 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@30ca9622
+2022-06-11 14:25:39.297  INFO 27537 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@30ca9622
+2022-06-11 14:25:39.942  INFO 27537 --- [http-nio-8080-exec-3] c.e.m.c.M.AddMovieController             : User was found: TEMP0
+2022-06-11 14:25:39.942  INFO 27537 --- [http-nio-8080-exec-3] c.example.moviepal.service.MovieService  : starting addMovieByNameToFavorite with name of the movie
+2022-06-11 14:25:39.942  INFO 27537 --- [http-nio-8080-exec-3] c.example.moviepal.service.MovieService  : starting findByName in MovieService
+2022-06-11 14:25:39.942  INFO 27537 --- [http-nio-8080-exec-3] c.example.moviepal.service.MovieService  : calling movieOMDBapi.findByTitle using the name
+2022-06-11 14:25:39.942  INFO 27537 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findByTitle
+2022-06-11 14:25:39.942  INFO 27537 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&t=joy
+2022-06-11 14:25:39.943  INFO 27537 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-11 14:25:40.102  INFO 27537 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Joy","Year":"2015","Rated":"PG-13","Released":"25 Dec 2015","Runtime":"124 min","Genre":"Biography, Drama","Director":"David O. Russell","Writer":"David O. Russell, Annie Mumolo","Actors":"Jennifer Lawrence, Robert De Niro, Bradley Cooper","Plot":"Joy is the story of the title character, who rose to become founder and matriarch of a powerful family business dynasty.","Language":"English, Spanish, French","Country":"United States","Awards":"Nominated for 1 Oscar. 8 wins & 23 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BNzRiOWZmMzUtZTJiOC00MjQ1LTkwMjgtNzhlYzBmODAzYTA0XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"6.6/10"},{"Source":"Rotten Tomatoes","Value":"60%"},{"Source":"Metacritic","Value":"56/100"}],"Metascore":"56","imdbRating":"6.6","imdbVotes":"135,525","imdbID":"tt2446980","Type":"movie","DVD":"03 May 2016","BoxOffice":"$56,451,232","Production":"N/A","Website":"N/A","Response":"True"}
+2022-06-11 14:25:40.102  INFO 27537 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-11 14:25:40.102  INFO 27537 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-11 14:25:40.103  INFO 27537 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt2446980, title=Joy, year=2015, type=movie)
+2022-06-11 14:25:40.103  INFO 27537 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-11 14:25:40.104  INFO 27537 --- [http-nio-8080-exec-3] c.example.moviepal.service.MovieService  : movie was called: Movie(id=tt2446980, title=Joy, year=2015, type=movie)
+2022-06-11 14:25:45.701  INFO 27537 --- [http-nio-8080-exec-4] c.e.m.c.M.RemoveMovieController          : Starting movie/add/name in LookUpMovieController
+2022-06-11 14:25:45.701  INFO 27537 --- [http-nio-8080-exec-4] c.e.m.c.M.RemoveMovieController          : calling movieService.addByName with name
+2022-06-11 14:25:45.701  INFO 27537 --- [http-nio-8080-exec-4] c.example.moviepal.service.UserService   : starting findUserIdByName: id is TEMP0
+2022-06-11 14:25:45.947  INFO 27537 --- [http-nio-8080-exec-4] c.example.moviepal.service.UserService   : userid was found: 1
+2022-06-11 14:25:45.948  INFO 27537 --- [http-nio-8080-exec-4] c.e.m.c.M.RemoveMovieController          : User doing the call is: TEMP0 with id: 1
+2022-06-11 14:25:45.948  INFO 27537 --- [http-nio-8080-exec-4] c.example.moviepal.service.UserService   : starting getUserById: user id is 1
+2022-06-11 14:25:46.741  INFO 27537 --- [http-nio-8080-exec-4] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@5808cf1a
+2022-06-11 14:25:46.742  INFO 27537 --- [http-nio-8080-exec-4] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@5808cf1a
+2022-06-11 14:25:47.383  INFO 27537 --- [http-nio-8080-exec-4] c.e.m.c.M.RemoveMovieController          : User was found: TEMP0
+2022-06-11 14:25:47.384  INFO 27537 --- [http-nio-8080-exec-4] c.example.moviepal.service.MovieService  : starting removeMovieByNameFromFavorite with name of the movie
+2022-06-11 14:25:47.384  INFO 27537 --- [http-nio-8080-exec-4] c.example.moviepal.service.ListsService  : calling getFavoriteListByUserId for a list by user id: 1
+2022-06-11 14:25:47.523  INFO 27537 --- [http-nio-8080-exec-4] c.example.moviepal.service.ListsService  : list was found and size is: 1
+2022-06-11 14:25:47.523  INFO 27537 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findById
+2022-06-11 14:25:47.523  INFO 27537 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&i=tt2446980
+2022-06-11 14:25:47.524  INFO 27537 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-11 14:25:47.679  INFO 27537 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Joy","Year":"2015","Rated":"PG-13","Released":"25 Dec 2015","Runtime":"124 min","Genre":"Biography, Drama","Director":"David O. Russell","Writer":"David O. Russell, Annie Mumolo","Actors":"Jennifer Lawrence, Robert De Niro, Bradley Cooper","Plot":"Joy is the story of the title character, who rose to become founder and matriarch of a powerful family business dynasty.","Language":"English, Spanish, French","Country":"United States","Awards":"Nominated for 1 Oscar. 8 wins & 23 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BNzRiOWZmMzUtZTJiOC00MjQ1LTkwMjgtNzhlYzBmODAzYTA0XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"6.6/10"},{"Source":"Rotten Tomatoes","Value":"60%"},{"Source":"Metacritic","Value":"56/100"}],"Metascore":"56","imdbRating":"6.6","imdbVotes":"135,525","imdbID":"tt2446980","Type":"movie","DVD":"03 May 2016","BoxOffice":"$56,451,232","Production":"N/A","Website":"N/A","Response":"True"}
+2022-06-11 14:25:47.679  INFO 27537 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-11 14:25:47.680  INFO 27537 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-11 14:25:47.681  INFO 27537 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt2446980, title=Joy, year=2015, type=movie)
+2022-06-11 14:25:47.681  INFO 27537 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-11 14:25:47.681  INFO 27537 --- [http-nio-8080-exec-4] c.example.moviepal.service.MovieService  : favoriteListMovie was obtained using the user
+2022-06-11 14:25:47.681  INFO 27537 --- [http-nio-8080-exec-4] c.example.moviepal.service.MovieService  : movie is in the list
+2022-06-11 14:25:47.804  INFO 27537 --- [http-nio-8080-exec-4] c.example.moviepal.service.MovieService  : movie was found, now deleting it
+2022-06-11 14:25:50.871  INFO 27537 --- [http-nio-8080-exec-5] c.e.m.c.M.MovieListController            : Starting user/favoritelist in getFavoriteList
+2022-06-11 14:25:50.872  INFO 27537 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : starting findUserIdByName: id is TEMP0
+2022-06-11 14:25:51.115  INFO 27537 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : userid was found: 1
+2022-06-11 14:25:51.115  INFO 27537 --- [http-nio-8080-exec-5] c.e.m.c.M.MovieListController            : User doing the call is: TEMP0 with id: 1
+2022-06-11 14:25:51.115  INFO 27537 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : starting getUserById: user id is 1
+2022-06-11 14:25:51.899  INFO 27537 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@60bb8fc4
+2022-06-11 14:25:51.899  INFO 27537 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@60bb8fc4
+2022-06-11 14:25:52.503  INFO 27537 --- [http-nio-8080-exec-5] c.e.m.c.M.MovieListController            : User was found: TEMP0
+2022-06-11 14:25:52.504  INFO 27537 --- [http-nio-8080-exec-5] c.example.moviepal.service.ListsService  : calling getFavoriteListByUserId for a list by user id: 1
+2022-06-11 14:25:52.641  INFO 27537 --- [http-nio-8080-exec-5] c.example.moviepal.service.ListsService  : list was NOT found, creating one using the given user
+2022-06-11 14:25:52.642  INFO 27537 --- [http-nio-8080-exec-5] c.e.m.advice.ControllerAdviseHandler     : NoMovieListWasFoundException was triggered
+2022-06-11 14:25:54.916  INFO 27537 --- [http-nio-8080-exec-6] c.e.m.c.M.AddMovieController             : Starting movie/add/name in LookUpMovieController
+2022-06-11 14:25:54.916  INFO 27537 --- [http-nio-8080-exec-6] c.e.m.c.M.AddMovieController             : calling movieService.addByName with name
+2022-06-11 14:25:54.917  INFO 27537 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : starting findUserIdByName: id is TEMP0
+2022-06-11 14:25:55.177  INFO 27537 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : userid was found: 1
+2022-06-11 14:25:55.177  INFO 27537 --- [http-nio-8080-exec-6] c.e.m.c.M.AddMovieController             : User doing the call is: TEMP0 with id: 1
+2022-06-11 14:25:55.177  INFO 27537 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : starting getUserById: user id is 1
+2022-06-11 14:25:55.998  INFO 27537 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@7c2d5c54
+2022-06-11 14:25:55.998  INFO 27537 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@7c2d5c54
+2022-06-11 14:25:56.624  INFO 27537 --- [http-nio-8080-exec-6] c.e.m.c.M.AddMovieController             : User was found: TEMP0
+2022-06-11 14:25:56.624  INFO 27537 --- [http-nio-8080-exec-6] c.example.moviepal.service.MovieService  : starting addMovieByNameToFavorite with name of the movie
+2022-06-11 14:25:56.624  INFO 27537 --- [http-nio-8080-exec-6] c.example.moviepal.service.MovieService  : starting findByName in MovieService
+2022-06-11 14:25:56.624  INFO 27537 --- [http-nio-8080-exec-6] c.example.moviepal.service.MovieService  : calling movieOMDBapi.findByTitle using the name
+2022-06-11 14:25:56.624  INFO 27537 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findByTitle
+2022-06-11 14:25:56.624  INFO 27537 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&t=joy
+2022-06-11 14:25:56.624  INFO 27537 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-11 14:25:56.774  INFO 27537 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Joy","Year":"2015","Rated":"PG-13","Released":"25 Dec 2015","Runtime":"124 min","Genre":"Biography, Drama","Director":"David O. Russell","Writer":"David O. Russell, Annie Mumolo","Actors":"Jennifer Lawrence, Robert De Niro, Bradley Cooper","Plot":"Joy is the story of the title character, who rose to become founder and matriarch of a powerful family business dynasty.","Language":"English, Spanish, French","Country":"United States","Awards":"Nominated for 1 Oscar. 8 wins & 23 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BNzRiOWZmMzUtZTJiOC00MjQ1LTkwMjgtNzhlYzBmODAzYTA0XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"6.6/10"},{"Source":"Rotten Tomatoes","Value":"60%"},{"Source":"Metacritic","Value":"56/100"}],"Metascore":"56","imdbRating":"6.6","imdbVotes":"135,525","imdbID":"tt2446980","Type":"movie","DVD":"03 May 2016","BoxOffice":"$56,451,232","Production":"N/A","Website":"N/A","Response":"True"}
+2022-06-11 14:25:56.774  INFO 27537 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-11 14:25:56.774  INFO 27537 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-11 14:25:56.775  INFO 27537 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt2446980, title=Joy, year=2015, type=movie)
+2022-06-11 14:25:56.775  INFO 27537 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-11 14:25:56.775  INFO 27537 --- [http-nio-8080-exec-6] c.example.moviepal.service.MovieService  : movie was called: Movie(id=tt2446980, title=Joy, year=2015, type=movie)
+2022-06-11 14:25:59.764  INFO 27537 --- [http-nio-8080-exec-8] c.e.m.c.M.MovieListController            : Starting user/favoritelist in getFavoriteList
+2022-06-11 14:25:59.764  INFO 27537 --- [http-nio-8080-exec-8] c.example.moviepal.service.UserService   : starting findUserIdByName: id is TEMP0
+2022-06-11 14:26:00.015  INFO 27537 --- [http-nio-8080-exec-8] c.example.moviepal.service.UserService   : userid was found: 1
+2022-06-11 14:26:00.015  INFO 27537 --- [http-nio-8080-exec-8] c.e.m.c.M.MovieListController            : User doing the call is: TEMP0 with id: 1
+2022-06-11 14:26:00.015  INFO 27537 --- [http-nio-8080-exec-8] c.example.moviepal.service.UserService   : starting getUserById: user id is 1
+2022-06-11 14:26:00.923  INFO 27537 --- [http-nio-8080-exec-8] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@ff5d54
+2022-06-11 14:26:00.924  INFO 27537 --- [http-nio-8080-exec-8] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@ff5d54
+2022-06-11 14:26:01.569  INFO 27537 --- [http-nio-8080-exec-8] c.e.m.c.M.MovieListController            : User was found: TEMP0
+2022-06-11 14:26:01.569  INFO 27537 --- [http-nio-8080-exec-8] c.example.moviepal.service.ListsService  : calling getFavoriteListByUserId for a list by user id: 1
+2022-06-11 14:26:01.699  INFO 27537 --- [http-nio-8080-exec-8] c.example.moviepal.service.ListsService  : list was found and size is: 1
+2022-06-11 14:26:01.700  INFO 27537 --- [http-nio-8080-exec-8] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findById
+2022-06-11 14:26:01.700  INFO 27537 --- [http-nio-8080-exec-8] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&i=tt2446980
+2022-06-11 14:26:01.700  INFO 27537 --- [http-nio-8080-exec-8] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-11 14:26:01.867  INFO 27537 --- [http-nio-8080-exec-8] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Joy","Year":"2015","Rated":"PG-13","Released":"25 Dec 2015","Runtime":"124 min","Genre":"Biography, Drama","Director":"David O. Russell","Writer":"David O. Russell, Annie Mumolo","Actors":"Jennifer Lawrence, Robert De Niro, Bradley Cooper","Plot":"Joy is the story of the title character, who rose to become founder and matriarch of a powerful family business dynasty.","Language":"English, Spanish, French","Country":"United States","Awards":"Nominated for 1 Oscar. 8 wins & 23 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BNzRiOWZmMzUtZTJiOC00MjQ1LTkwMjgtNzhlYzBmODAzYTA0XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"6.6/10"},{"Source":"Rotten Tomatoes","Value":"60%"},{"Source":"Metacritic","Value":"56/100"}],"Metascore":"56","imdbRating":"6.6","imdbVotes":"135,525","imdbID":"tt2446980","Type":"movie","DVD":"03 May 2016","BoxOffice":"$56,451,232","Production":"N/A","Website":"N/A","Response":"True"}
+2022-06-11 14:26:01.867  INFO 27537 --- [http-nio-8080-exec-8] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-11 14:26:01.867  INFO 27537 --- [http-nio-8080-exec-8] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-11 14:26:01.868  INFO 27537 --- [http-nio-8080-exec-8] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt2446980, title=Joy, year=2015, type=movie)
+2022-06-11 14:26:01.868  INFO 27537 --- [http-nio-8080-exec-8] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-11 14:26:05.043  INFO 27537 --- [http-nio-8080-exec-9] c.e.m.c.M.AddMovieController             : Starting movie/add/name in LookUpMovieController
+2022-06-11 14:26:05.043  INFO 27537 --- [http-nio-8080-exec-9] c.e.m.c.M.AddMovieController             : calling movieService.addByName with name
+2022-06-11 14:26:05.043  INFO 27537 --- [http-nio-8080-exec-9] c.example.moviepal.service.UserService   : starting findUserIdByName: id is TEMP0
+2022-06-11 14:26:05.451  INFO 27537 --- [http-nio-8080-exec-9] c.example.moviepal.service.UserService   : userid was found: 1
+2022-06-11 14:26:05.451  INFO 27537 --- [http-nio-8080-exec-9] c.e.m.c.M.AddMovieController             : User doing the call is: TEMP0 with id: 1
+2022-06-11 14:26:05.451  INFO 27537 --- [http-nio-8080-exec-9] c.example.moviepal.service.UserService   : starting getUserById: user id is 1
+2022-06-11 14:26:06.241  INFO 27537 --- [http-nio-8080-exec-9] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@43fc9cf2
+2022-06-11 14:26:06.241  INFO 27537 --- [http-nio-8080-exec-9] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@43fc9cf2
+2022-06-11 14:26:06.859  INFO 27537 --- [http-nio-8080-exec-9] c.e.m.c.M.AddMovieController             : User was found: TEMP0
+2022-06-11 14:26:06.860  INFO 27537 --- [http-nio-8080-exec-9] c.example.moviepal.service.MovieService  : starting addMovieByNameToFavorite with name of the movie
+2022-06-11 14:26:06.860  INFO 27537 --- [http-nio-8080-exec-9] c.example.moviepal.service.MovieService  : starting findByName in MovieService
+2022-06-11 14:26:06.860  INFO 27537 --- [http-nio-8080-exec-9] c.example.moviepal.service.MovieService  : calling movieOMDBapi.findByTitle using the name
+2022-06-11 14:26:06.860  INFO 27537 --- [http-nio-8080-exec-9] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findByTitle
+2022-06-11 14:26:06.860  INFO 27537 --- [http-nio-8080-exec-9] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&t=joy
+2022-06-11 14:26:06.860  INFO 27537 --- [http-nio-8080-exec-9] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-11 14:26:07.061  INFO 27537 --- [http-nio-8080-exec-9] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Joy","Year":"2015","Rated":"PG-13","Released":"25 Dec 2015","Runtime":"124 min","Genre":"Biography, Drama","Director":"David O. Russell","Writer":"David O. Russell, Annie Mumolo","Actors":"Jennifer Lawrence, Robert De Niro, Bradley Cooper","Plot":"Joy is the story of the title character, who rose to become founder and matriarch of a powerful family business dynasty.","Language":"English, Spanish, French","Country":"United States","Awards":"Nominated for 1 Oscar. 8 wins & 23 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BNzRiOWZmMzUtZTJiOC00MjQ1LTkwMjgtNzhlYzBmODAzYTA0XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"6.6/10"},{"Source":"Rotten Tomatoes","Value":"60%"},{"Source":"Metacritic","Value":"56/100"}],"Metascore":"56","imdbRating":"6.6","imdbVotes":"135,525","imdbID":"tt2446980","Type":"movie","DVD":"03 May 2016","BoxOffice":"$56,451,232","Production":"N/A","Website":"N/A","Response":"True"}
+2022-06-11 14:26:07.061  INFO 27537 --- [http-nio-8080-exec-9] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-11 14:26:07.062  INFO 27537 --- [http-nio-8080-exec-9] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-11 14:26:07.063  INFO 27537 --- [http-nio-8080-exec-9] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt2446980, title=Joy, year=2015, type=movie)
+2022-06-11 14:26:07.063  INFO 27537 --- [http-nio-8080-exec-9] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-11 14:26:07.063  INFO 27537 --- [http-nio-8080-exec-9] c.example.moviepal.service.MovieService  : movie was called: Movie(id=tt2446980, title=Joy, year=2015, type=movie)
+2022-06-11 14:26:07.194  INFO 27537 --- [http-nio-8080-exec-9] c.e.m.advice.ControllerAdviseHandler     : MovieAlreadyInTheListException was triggered
+2022-06-11 14:26:24.939  INFO 27537 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-11 14:26:24.940  INFO 27537 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-06-11 14:26:26.956  INFO 27537 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-11 14:26:28.291  INFO 27537 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-11 14:33:15.208  INFO 27616 --- [main] c.example.moviepal.MoviePaLApplication   : Starting MoviePaLApplication using Java 16.0.1 on abdo.local with PID 27616 (/Users/abdullahalmasar/IdeaProjects/MoviePaL/target/classes started by abdullahalmasar in /Users/abdullahalmasar/IdeaProjects/MoviePaL)
+2022-06-11 14:33:15.215  INFO 27616 --- [main] c.example.moviepal.MoviePaLApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-06-11 14:33:15.683  INFO 27616 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-11 14:33:15.740  INFO 27616 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 4 JPA repository interfaces.
+2022-06-11 14:33:16.121  INFO 27616 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-11 14:33:16.127  INFO 27616 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-11 14:33:16.127  INFO 27616 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-11 14:33:16.208  INFO 27616 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-11 14:33:16.208  INFO 27616 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 968 ms
+2022-06-11 14:33:16.306  INFO 27616 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-11 14:33:16.346  INFO 27616 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-11 14:33:16.443  INFO 27616 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-11 14:33:16.510  INFO 27616 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-11 14:33:18.293  INFO 27616 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-11 14:33:18.308  INFO 27616 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-06-11 14:33:19.073  WARN 27616 --- [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table favorite_list_movie drop foreign key FKba25th3qncslu0lew7lb9r6kd" via JDBC Statement
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table favorite_list_movie drop foreign key FKba25th3qncslu0lew7lb9r6kd" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:387) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:371) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:341) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:235) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:156) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:128) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:114) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:157) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.0.jar:2.7.0]
+	at com.example.moviepal.MoviePaLApplication.main(MoviePaLApplication.java:10) ~[classes/:na]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'MoviePaL.favorite_list_movie' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	... 35 common frames omitted
+
+2022-06-11 14:33:19.436  WARN 27616 --- [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table watched_list_movie drop foreign key FKnsgf8m2hcr3jangknares39q6" via JDBC Statement
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table watched_list_movie drop foreign key FKnsgf8m2hcr3jangknares39q6" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:387) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:371) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:341) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:235) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:156) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:128) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:114) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:157) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.0.jar:2.7.0]
+	at com.example.moviepal.MoviePaLApplication.main(MoviePaLApplication.java:10) ~[classes/:na]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'MoviePaL.watched_list_movie' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	... 35 common frames omitted
+
+2022-06-11 14:33:19.732  WARN 27616 --- [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table wish_list_movie drop foreign key FK92st5ga0r5klxy0offf6w0gm8" via JDBC Statement
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table wish_list_movie drop foreign key FK92st5ga0r5klxy0offf6w0gm8" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:387) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:371) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:341) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:235) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:156) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:128) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:114) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:157) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.0.jar:2.7.0]
+	at com.example.moviepal.MoviePaLApplication.main(MoviePaLApplication.java:10) ~[classes/:na]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'MoviePaL.wish_list_movie' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	... 35 common frames omitted
+
+2022-06-11 14:33:23.513  INFO 27616 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-11 14:33:23.524  INFO 27616 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-11 14:33:23.833  WARN 27616 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-11 14:33:23.985  INFO 27616 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@b386a17, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1cda75be, org.springframework.security.web.context.SecurityContextPersistenceFilter@1e836aed, org.springframework.security.web.header.HeaderWriterFilter@5b657342, org.springframework.security.web.authentication.logout.LogoutFilter@67f0bf7e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1c36ab22, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@8dedec8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2d02a066, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2213854b, org.springframework.security.web.session.SessionManagementFilter@4be3de36, org.springframework.security.web.access.ExceptionTranslationFilter@6885f3f7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6d035815]
+2022-06-11 14:33:24.315  INFO 27616 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-11 14:33:24.324  INFO 27616 --- [main] c.example.moviepal.MoviePaLApplication   : Started MoviePaLApplication in 9.334 seconds (JVM running for 9.729)
+2022-06-11 14:33:24.326  INFO 27616 --- [main] com.example.moviepal.Seedrs.Seed         : starting loadUserData from Seed
+2022-06-11 14:33:28.066  INFO 27616 --- [main] com.example.moviepal.Seedrs.Seed         : Seed completed: number of rows added: 3
+2022-06-11 14:33:29.019  INFO 27616 --- [main] com.example.moviepal.Seedrs.Seed         : Seed completed: number of row added: 1
+2022-06-11 14:34:49.540  INFO 27616 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-11 14:34:49.540  INFO 27616 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-11 14:34:49.541  INFO 27616 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-11 14:34:50.084  INFO 27616 --- [http-nio-8080-exec-2] c.e.m.c.M.AddMovieController             : Starting movie/add/name in LookUpMovieController
+2022-06-11 14:34:50.084  INFO 27616 --- [http-nio-8080-exec-2] c.e.m.c.M.AddMovieController             : calling movieService.addByName with name
+2022-06-11 14:34:50.084  INFO 27616 --- [http-nio-8080-exec-2] c.example.moviepal.service.UserService   : starting findUserIdByName: id is TEMP0
+2022-06-11 14:34:50.213  INFO 27616 --- [http-nio-8080-exec-2] c.example.moviepal.service.UserService   : userid was found: 1
+2022-06-11 14:34:50.213  INFO 27616 --- [http-nio-8080-exec-2] c.e.m.c.M.AddMovieController             : User doing the call is: TEMP0 with id: 1
+2022-06-11 14:34:50.214  INFO 27616 --- [http-nio-8080-exec-2] c.example.moviepal.service.UserService   : starting getUserById: user id is 1
+2022-06-11 14:34:51.049  INFO 27616 --- [http-nio-8080-exec-2] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@3c50711b
+2022-06-11 14:34:51.049  INFO 27616 --- [http-nio-8080-exec-2] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@3c50711b
+2022-06-11 14:34:51.716  INFO 27616 --- [http-nio-8080-exec-2] c.e.m.c.M.AddMovieController             : User was found: TEMP0
+2022-06-11 14:34:51.716  INFO 27616 --- [http-nio-8080-exec-2] c.example.moviepal.service.MovieService  : starting addMovieByNameToWatched with name of the movie
+2022-06-11 14:34:51.716  INFO 27616 --- [http-nio-8080-exec-2] c.example.moviepal.service.MovieService  : starting findByName in MovieService
+2022-06-11 14:34:51.716  INFO 27616 --- [http-nio-8080-exec-2] c.example.moviepal.service.MovieService  : calling movieOMDBapi.findByTitle using the name
+2022-06-11 14:34:51.717  INFO 27616 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findByTitle
+2022-06-11 14:34:51.717  INFO 27616 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&t=dark
+2022-06-11 14:34:51.717  INFO 27616 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-11 14:34:58.670  INFO 27616 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Dark","Year":"2017–2020","Rated":"TV-MA","Released":"01 Dec 2017","Runtime":"60 min","Genre":"Crime, Drama, Mystery","Director":"N/A","Writer":"Baran bo Odar, Jantje Friese","Actors":"Louis Hofmann, Karoline Eichhorn, Lisa Vicari","Plot":"A family saga with a supernatural twist, set in a German town where the disappearance of two young children exposes the relationships among four families.","Language":"German","Country":"Germany, United States","Awards":"8 wins & 22 nominations","Poster":"https://m.media-amazon.com/images/M/MV5BOTk2NzUyOTctZDdlMS00MDJlLTgzNTEtNzQzYjFhNjA0YjBjXkEyXkFqcGdeQXVyMjg1NDcxNDE@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"8.7/10"}],"Metascore":"N/A","imdbRating":"8.7","imdbVotes":"355,852","imdbID":"tt5753856","Type":"series","totalSeasons":"3","Response":"True"}
+2022-06-11 14:34:58.671  INFO 27616 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-11 14:34:58.672  INFO 27616 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-11 14:34:58.711  INFO 27616 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt5753856, title=Dark, year=2017–2020, type=series)
+2022-06-11 14:34:58.711  INFO 27616 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-11 14:34:58.711  INFO 27616 --- [http-nio-8080-exec-2] c.example.moviepal.service.MovieService  : movie was called: Movie(id=tt5753856, title=Dark, year=2017–2020, type=series)
+2022-06-11 14:35:51.321  INFO 27616 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-11 14:35:51.322  INFO 27616 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-06-11 14:35:53.557  INFO 27616 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-11 14:35:55.029  INFO 27616 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-11 14:36:00.724  INFO 27640 --- [main] c.example.moviepal.MoviePaLApplication   : Starting MoviePaLApplication using Java 16.0.1 on abdo.local with PID 27640 (/Users/abdullahalmasar/IdeaProjects/MoviePaL/target/classes started by abdullahalmasar in /Users/abdullahalmasar/IdeaProjects/MoviePaL)
+2022-06-11 14:36:00.726  INFO 27640 --- [main] c.example.moviepal.MoviePaLApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-06-11 14:36:01.201  INFO 27640 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-11 14:36:01.261  INFO 27640 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 4 JPA repository interfaces.
+2022-06-11 14:36:01.628  INFO 27640 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-11 14:36:01.635  INFO 27640 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-11 14:36:01.635  INFO 27640 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-11 14:36:01.714  INFO 27640 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-11 14:36:01.714  INFO 27640 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 959 ms
+2022-06-11 14:36:01.815  INFO 27640 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-11 14:36:01.851  INFO 27640 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-11 14:36:01.940  INFO 27640 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-11 14:36:02.006  INFO 27640 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-11 14:36:03.723  INFO 27640 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-11 14:36:03.740  INFO 27640 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-06-11 14:36:04.479  WARN 27640 --- [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table favorite_list_movie drop foreign key FKba25th3qncslu0lew7lb9r6kd" via JDBC Statement
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table favorite_list_movie drop foreign key FKba25th3qncslu0lew7lb9r6kd" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:387) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:371) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:341) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:235) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:156) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:128) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:114) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:157) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.0.jar:2.7.0]
+	at com.example.moviepal.MoviePaLApplication.main(MoviePaLApplication.java:10) ~[classes/:na]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'MoviePaL.favorite_list_movie' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	... 35 common frames omitted
+
+2022-06-11 14:36:04.733  WARN 27640 --- [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table watched_list_movie drop foreign key FKnsgf8m2hcr3jangknares39q6" via JDBC Statement
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table watched_list_movie drop foreign key FKnsgf8m2hcr3jangknares39q6" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:387) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:371) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:341) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:235) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:156) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:128) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:114) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:157) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.0.jar:2.7.0]
+	at com.example.moviepal.MoviePaLApplication.main(MoviePaLApplication.java:10) ~[classes/:na]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'MoviePaL.watched_list_movie' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	... 35 common frames omitted
+
+2022-06-11 14:36:05.032  WARN 27640 --- [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table wish_list_movie drop foreign key FK92st5ga0r5klxy0offf6w0gm8" via JDBC Statement
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table wish_list_movie drop foreign key FK92st5ga0r5klxy0offf6w0gm8" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:387) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:371) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:341) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:235) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:156) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:128) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:114) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:157) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.0.jar:2.7.0]
+	at com.example.moviepal.MoviePaLApplication.main(MoviePaLApplication.java:10) ~[classes/:na]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'MoviePaL.wish_list_movie' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	... 35 common frames omitted
+
+2022-06-11 14:36:09.454  INFO 27640 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-11 14:36:09.460  INFO 27640 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-11 14:36:09.772  WARN 27640 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-11 14:36:09.916  INFO 27640 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@556843a5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3c5044fa, org.springframework.security.web.context.SecurityContextPersistenceFilter@6219006a, org.springframework.security.web.header.HeaderWriterFilter@1c382179, org.springframework.security.web.authentication.logout.LogoutFilter@4860627a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5c4516ec, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4bc41565, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3922b297, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3db5195, org.springframework.security.web.session.SessionManagementFilter@59e4a044, org.springframework.security.web.access.ExceptionTranslationFilter@13dc383b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@21046afa]
+2022-06-11 14:36:10.191  INFO 27640 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-11 14:36:10.199  INFO 27640 --- [main] c.example.moviepal.MoviePaLApplication   : Started MoviePaLApplication in 9.699 seconds (JVM running for 10.08)
+2022-06-11 14:36:10.200  INFO 27640 --- [main] com.example.moviepal.Seedrs.Seed         : starting loadUserData from Seed
+2022-06-11 14:36:13.790  INFO 27640 --- [main] com.example.moviepal.Seedrs.Seed         : Seed completed: number of rows added: 3
+2022-06-11 14:36:14.550  INFO 27640 --- [main] com.example.moviepal.Seedrs.Seed         : Seed completed: number of row added: 1
+2022-06-11 14:36:25.010  INFO 27640 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-11 14:36:25.010  INFO 27640 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-11 14:36:25.011  INFO 27640 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-11 14:36:25.481  INFO 27640 --- [http-nio-8080-exec-1] c.e.m.c.M.AddMovieController             : Starting movie/add/name in LookUpMovieController
+2022-06-11 14:36:25.481  INFO 27640 --- [http-nio-8080-exec-1] c.e.m.c.M.AddMovieController             : calling movieService.addByName with name
+2022-06-11 14:36:25.482  INFO 27640 --- [http-nio-8080-exec-1] c.example.moviepal.service.UserService   : starting findUserIdByName: id is TEMP0
+2022-06-11 14:36:25.628  INFO 27640 --- [http-nio-8080-exec-1] c.example.moviepal.service.UserService   : userid was found: 1
+2022-06-11 14:36:25.628  INFO 27640 --- [http-nio-8080-exec-1] c.e.m.c.M.AddMovieController             : User doing the call is: TEMP0 with id: 1
+2022-06-11 14:36:25.628  INFO 27640 --- [http-nio-8080-exec-1] c.example.moviepal.service.UserService   : starting getUserById: user id is 1
+2022-06-11 14:36:26.390  INFO 27640 --- [http-nio-8080-exec-1] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@267bdee1
+2022-06-11 14:36:26.390  INFO 27640 --- [http-nio-8080-exec-1] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@267bdee1
+2022-06-11 14:36:27.017  INFO 27640 --- [http-nio-8080-exec-1] c.e.m.c.M.AddMovieController             : User was found: TEMP0
+2022-06-11 14:36:27.018  INFO 27640 --- [http-nio-8080-exec-1] c.example.moviepal.service.MovieService  : starting addMovieByNameToWatched with name of the movie
+2022-06-11 14:36:27.018  INFO 27640 --- [http-nio-8080-exec-1] c.example.moviepal.service.MovieService  : starting findByName in MovieService
+2022-06-11 14:36:27.018  INFO 27640 --- [http-nio-8080-exec-1] c.example.moviepal.service.MovieService  : calling movieOMDBapi.findByTitle using the name
+2022-06-11 14:36:27.018  INFO 27640 --- [http-nio-8080-exec-1] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findByTitle
+2022-06-11 14:36:27.018  INFO 27640 --- [http-nio-8080-exec-1] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&t=joy
+2022-06-11 14:36:27.018  INFO 27640 --- [http-nio-8080-exec-1] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-11 14:36:33.357  INFO 27640 --- [http-nio-8080-exec-1] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Joy","Year":"2015","Rated":"PG-13","Released":"25 Dec 2015","Runtime":"124 min","Genre":"Biography, Drama","Director":"David O. Russell","Writer":"David O. Russell, Annie Mumolo","Actors":"Jennifer Lawrence, Robert De Niro, Bradley Cooper","Plot":"Joy is the story of the title character, who rose to become founder and matriarch of a powerful family business dynasty.","Language":"English, Spanish, French","Country":"United States","Awards":"Nominated for 1 Oscar. 8 wins & 23 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BNzRiOWZmMzUtZTJiOC00MjQ1LTkwMjgtNzhlYzBmODAzYTA0XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"6.6/10"},{"Source":"Rotten Tomatoes","Value":"60%"},{"Source":"Metacritic","Value":"56/100"}],"Metascore":"56","imdbRating":"6.6","imdbVotes":"135,525","imdbID":"tt2446980","Type":"movie","DVD":"03 May 2016","BoxOffice":"$56,451,232","Production":"N/A","Website":"N/A","Response":"True"}
+2022-06-11 14:36:33.358  INFO 27640 --- [http-nio-8080-exec-1] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-11 14:36:33.359  INFO 27640 --- [http-nio-8080-exec-1] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-11 14:36:33.394  INFO 27640 --- [http-nio-8080-exec-1] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt2446980, title=Joy, year=2015, type=movie)
+2022-06-11 14:36:33.394  INFO 27640 --- [http-nio-8080-exec-1] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-11 14:36:33.394  INFO 27640 --- [http-nio-8080-exec-1] c.example.moviepal.service.MovieService  : movie was called: Movie(id=tt2446980, title=Joy, year=2015, type=movie)
+2022-06-11 14:36:55.443  INFO 27640 --- [http-nio-8080-exec-3] c.e.m.c.M.MovieListController            : Starting user/watchedlist in getWatchedList
+2022-06-11 14:36:55.443  INFO 27640 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : starting findUserIdByName: id is TEMP0
+2022-06-11 14:36:55.711  INFO 27640 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : userid was found: 1
+2022-06-11 14:36:55.712  INFO 27640 --- [http-nio-8080-exec-3] c.e.m.c.M.MovieListController            : User doing the call is: TEMP0 with id: 1
+2022-06-11 14:36:55.712  INFO 27640 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : starting getUserById: user id is 1
+2022-06-11 14:36:56.489  INFO 27640 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@4e2ffb6f
+2022-06-11 14:36:56.490  INFO 27640 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@4e2ffb6f
+2022-06-11 14:36:57.879  INFO 27640 --- [http-nio-8080-exec-3] c.e.m.c.M.MovieListController            : User was found: TEMP0
+2022-06-11 14:36:57.880  INFO 27640 --- [http-nio-8080-exec-3] c.example.moviepal.service.ListsService  : calling getWatchedListByUserId for a list by user id: 1
+2022-06-11 14:36:58.029  INFO 27640 --- [http-nio-8080-exec-3] c.example.moviepal.service.ListsService  : list was found and size is: 1
+2022-06-11 14:36:58.029  INFO 27640 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findById
+2022-06-11 14:36:58.029  INFO 27640 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&i=tt2446980
+2022-06-11 14:36:58.029  INFO 27640 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-11 14:36:58.180  INFO 27640 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Joy","Year":"2015","Rated":"PG-13","Released":"25 Dec 2015","Runtime":"124 min","Genre":"Biography, Drama","Director":"David O. Russell","Writer":"David O. Russell, Annie Mumolo","Actors":"Jennifer Lawrence, Robert De Niro, Bradley Cooper","Plot":"Joy is the story of the title character, who rose to become founder and matriarch of a powerful family business dynasty.","Language":"English, Spanish, French","Country":"United States","Awards":"Nominated for 1 Oscar. 8 wins & 23 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BNzRiOWZmMzUtZTJiOC00MjQ1LTkwMjgtNzhlYzBmODAzYTA0XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"6.6/10"},{"Source":"Rotten Tomatoes","Value":"60%"},{"Source":"Metacritic","Value":"56/100"}],"Metascore":"56","imdbRating":"6.6","imdbVotes":"135,525","imdbID":"tt2446980","Type":"movie","DVD":"03 May 2016","BoxOffice":"$56,451,232","Production":"N/A","Website":"N/A","Response":"True"}
+2022-06-11 14:36:58.180  INFO 27640 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-11 14:36:58.180  INFO 27640 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-11 14:36:58.181  INFO 27640 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt2446980, title=Joy, year=2015, type=movie)
+2022-06-11 14:36:58.181  INFO 27640 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-11 14:37:03.287  INFO 27640 --- [http-nio-8080-exec-4] c.e.m.c.M.RemoveMovieController          : Starting movie/remove/name in LookUpMovieController
+2022-06-11 14:37:03.288  INFO 27640 --- [http-nio-8080-exec-4] c.e.m.c.M.RemoveMovieController          : calling movieService.addByName with name
+2022-06-11 14:37:03.288  INFO 27640 --- [http-nio-8080-exec-4] c.example.moviepal.service.UserService   : starting findUserIdByName: id is TEMP0
+2022-06-11 14:37:03.550  INFO 27640 --- [http-nio-8080-exec-4] c.example.moviepal.service.UserService   : userid was found: 1
+2022-06-11 14:37:03.550  INFO 27640 --- [http-nio-8080-exec-4] c.e.m.c.M.RemoveMovieController          : User doing the call is: TEMP0 with id: 1
+2022-06-11 14:37:03.551  INFO 27640 --- [http-nio-8080-exec-4] c.example.moviepal.service.UserService   : starting getUserById: user id is 1
+2022-06-11 14:37:04.451  INFO 27640 --- [http-nio-8080-exec-4] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@5160db45
+2022-06-11 14:37:04.452  INFO 27640 --- [http-nio-8080-exec-4] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@5160db45
+2022-06-11 14:37:05.101  INFO 27640 --- [http-nio-8080-exec-4] c.e.m.c.M.RemoveMovieController          : User was found: TEMP0
+2022-06-11 14:37:05.101  INFO 27640 --- [http-nio-8080-exec-4] c.example.moviepal.service.MovieService  : starting removeMovieByNameFromWatched with name of the movie
+2022-06-11 14:37:05.102  INFO 27640 --- [http-nio-8080-exec-4] c.example.moviepal.service.ListsService  : calling getWatchedListByUserId for a list by user id: 1
+2022-06-11 14:37:05.234  INFO 27640 --- [http-nio-8080-exec-4] c.example.moviepal.service.ListsService  : list was found and size is: 1
+2022-06-11 14:37:05.234  INFO 27640 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findById
+2022-06-11 14:37:05.234  INFO 27640 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&i=tt2446980
+2022-06-11 14:37:05.234  INFO 27640 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-11 14:37:05.380  INFO 27640 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Joy","Year":"2015","Rated":"PG-13","Released":"25 Dec 2015","Runtime":"124 min","Genre":"Biography, Drama","Director":"David O. Russell","Writer":"David O. Russell, Annie Mumolo","Actors":"Jennifer Lawrence, Robert De Niro, Bradley Cooper","Plot":"Joy is the story of the title character, who rose to become founder and matriarch of a powerful family business dynasty.","Language":"English, Spanish, French","Country":"United States","Awards":"Nominated for 1 Oscar. 8 wins & 23 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BNzRiOWZmMzUtZTJiOC00MjQ1LTkwMjgtNzhlYzBmODAzYTA0XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"6.6/10"},{"Source":"Rotten Tomatoes","Value":"60%"},{"Source":"Metacritic","Value":"56/100"}],"Metascore":"56","imdbRating":"6.6","imdbVotes":"135,525","imdbID":"tt2446980","Type":"movie","DVD":"03 May 2016","BoxOffice":"$56,451,232","Production":"N/A","Website":"N/A","Response":"True"}
+2022-06-11 14:37:05.380  INFO 27640 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-11 14:37:05.380  INFO 27640 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-11 14:37:05.381  INFO 27640 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt2446980, title=Joy, year=2015, type=movie)
+2022-06-11 14:37:05.381  INFO 27640 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-11 14:37:05.381  INFO 27640 --- [http-nio-8080-exec-4] c.example.moviepal.service.MovieService  : watchedListMovie was obtained using the user
+2022-06-11 14:37:05.381  INFO 27640 --- [http-nio-8080-exec-4] c.example.moviepal.service.MovieService  : movie is in the list
+2022-06-11 14:37:05.518  INFO 27640 --- [http-nio-8080-exec-4] c.example.moviepal.service.MovieService  : movie was found, now deleting it
+2022-06-11 14:37:09.637  INFO 27640 --- [http-nio-8080-exec-5] c.e.m.c.M.MovieListController            : Starting user/watchedlist in getWatchedList
+2022-06-11 14:37:09.638  INFO 27640 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : starting findUserIdByName: id is TEMP0
+2022-06-11 14:37:09.927  INFO 27640 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : userid was found: 1
+2022-06-11 14:37:09.927  INFO 27640 --- [http-nio-8080-exec-5] c.e.m.c.M.MovieListController            : User doing the call is: TEMP0 with id: 1
+2022-06-11 14:37:09.927  INFO 27640 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : starting getUserById: user id is 1
+2022-06-11 14:37:10.799  INFO 27640 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@20202b83
+2022-06-11 14:37:10.800  INFO 27640 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@20202b83
+2022-06-11 14:37:11.496  INFO 27640 --- [http-nio-8080-exec-5] c.e.m.c.M.MovieListController            : User was found: TEMP0
+2022-06-11 14:37:11.496  INFO 27640 --- [http-nio-8080-exec-5] c.example.moviepal.service.ListsService  : calling getWatchedListByUserId for a list by user id: 1
+2022-06-11 14:37:11.637  INFO 27640 --- [http-nio-8080-exec-5] c.example.moviepal.service.ListsService  : list was NOT found, creating one using the given user
+2022-06-11 14:37:11.638  INFO 27640 --- [http-nio-8080-exec-5] c.e.m.advice.ControllerAdviseHandler     : NoMovieListWasFoundException was triggered
+2022-06-11 14:37:17.995  INFO 27640 --- [http-nio-8080-exec-7] c.e.m.c.M.AddMovieController             : Starting movie/add/name in LookUpMovieController
+2022-06-11 14:37:17.995  INFO 27640 --- [http-nio-8080-exec-7] c.e.m.c.M.AddMovieController             : calling movieService.addByName with name
+2022-06-11 14:37:17.995  INFO 27640 --- [http-nio-8080-exec-7] c.example.moviepal.service.UserService   : starting findUserIdByName: id is TEMP0
+2022-06-11 14:37:18.250  INFO 27640 --- [http-nio-8080-exec-7] c.example.moviepal.service.UserService   : userid was found: 1
+2022-06-11 14:37:18.250  INFO 27640 --- [http-nio-8080-exec-7] c.e.m.c.M.AddMovieController             : User doing the call is: TEMP0 with id: 1
+2022-06-11 14:37:18.250  INFO 27640 --- [http-nio-8080-exec-7] c.example.moviepal.service.UserService   : starting getUserById: user id is 1
+2022-06-11 14:37:19.194  INFO 27640 --- [http-nio-8080-exec-7] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@406c2317
+2022-06-11 14:37:19.194  INFO 27640 --- [http-nio-8080-exec-7] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@406c2317
+2022-06-11 14:37:19.788  INFO 27640 --- [http-nio-8080-exec-7] c.e.m.c.M.AddMovieController             : User was found: TEMP0
+2022-06-11 14:37:19.788  INFO 27640 --- [http-nio-8080-exec-7] c.example.moviepal.service.MovieService  : starting addMovieByNameToWatched with name of the movie
+2022-06-11 14:37:19.789  INFO 27640 --- [http-nio-8080-exec-7] c.example.moviepal.service.MovieService  : starting findByName in MovieService
+2022-06-11 14:37:19.789  INFO 27640 --- [http-nio-8080-exec-7] c.example.moviepal.service.MovieService  : calling movieOMDBapi.findByTitle using the name
+2022-06-11 14:37:19.789  INFO 27640 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findByTitle
+2022-06-11 14:37:19.789  INFO 27640 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&t=joy
+2022-06-11 14:37:19.789  INFO 27640 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-11 14:37:19.936  INFO 27640 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Joy","Year":"2015","Rated":"PG-13","Released":"25 Dec 2015","Runtime":"124 min","Genre":"Biography, Drama","Director":"David O. Russell","Writer":"David O. Russell, Annie Mumolo","Actors":"Jennifer Lawrence, Robert De Niro, Bradley Cooper","Plot":"Joy is the story of the title character, who rose to become founder and matriarch of a powerful family business dynasty.","Language":"English, Spanish, French","Country":"United States","Awards":"Nominated for 1 Oscar. 8 wins & 23 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BNzRiOWZmMzUtZTJiOC00MjQ1LTkwMjgtNzhlYzBmODAzYTA0XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"6.6/10"},{"Source":"Rotten Tomatoes","Value":"60%"},{"Source":"Metacritic","Value":"56/100"}],"Metascore":"56","imdbRating":"6.6","imdbVotes":"135,525","imdbID":"tt2446980","Type":"movie","DVD":"03 May 2016","BoxOffice":"$56,451,232","Production":"N/A","Website":"N/A","Response":"True"}
+2022-06-11 14:37:19.936  INFO 27640 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-11 14:37:19.936  INFO 27640 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-11 14:37:19.937  INFO 27640 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt2446980, title=Joy, year=2015, type=movie)
+2022-06-11 14:37:19.937  INFO 27640 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-11 14:37:19.937  INFO 27640 --- [http-nio-8080-exec-7] c.example.moviepal.service.MovieService  : movie was called: Movie(id=tt2446980, title=Joy, year=2015, type=movie)
+2022-06-11 14:37:23.451  INFO 27640 --- [http-nio-8080-exec-8] c.e.m.c.M.MovieListController            : Starting user/watchedlist in getWatchedList
+2022-06-11 14:37:23.451  INFO 27640 --- [http-nio-8080-exec-8] c.example.moviepal.service.UserService   : starting findUserIdByName: id is TEMP0
+2022-06-11 14:37:23.703  INFO 27640 --- [http-nio-8080-exec-8] c.example.moviepal.service.UserService   : userid was found: 1
+2022-06-11 14:37:23.703  INFO 27640 --- [http-nio-8080-exec-8] c.e.m.c.M.MovieListController            : User doing the call is: TEMP0 with id: 1
+2022-06-11 14:37:23.703  INFO 27640 --- [http-nio-8080-exec-8] c.example.moviepal.service.UserService   : starting getUserById: user id is 1
+2022-06-11 14:37:24.527  INFO 27640 --- [http-nio-8080-exec-8] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@371f71f7
+2022-06-11 14:37:24.527  INFO 27640 --- [http-nio-8080-exec-8] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@371f71f7
+2022-06-11 14:37:25.219  INFO 27640 --- [http-nio-8080-exec-8] c.e.m.c.M.MovieListController            : User was found: TEMP0
+2022-06-11 14:37:25.219  INFO 27640 --- [http-nio-8080-exec-8] c.example.moviepal.service.ListsService  : calling getWatchedListByUserId for a list by user id: 1
+2022-06-11 14:37:25.396  INFO 27640 --- [http-nio-8080-exec-8] c.example.moviepal.service.ListsService  : list was found and size is: 1
+2022-06-11 14:37:25.396  INFO 27640 --- [http-nio-8080-exec-8] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findById
+2022-06-11 14:37:25.396  INFO 27640 --- [http-nio-8080-exec-8] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&i=tt2446980
+2022-06-11 14:37:25.396  INFO 27640 --- [http-nio-8080-exec-8] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-11 14:37:25.592  INFO 27640 --- [http-nio-8080-exec-8] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Joy","Year":"2015","Rated":"PG-13","Released":"25 Dec 2015","Runtime":"124 min","Genre":"Biography, Drama","Director":"David O. Russell","Writer":"David O. Russell, Annie Mumolo","Actors":"Jennifer Lawrence, Robert De Niro, Bradley Cooper","Plot":"Joy is the story of the title character, who rose to become founder and matriarch of a powerful family business dynasty.","Language":"English, Spanish, French","Country":"United States","Awards":"Nominated for 1 Oscar. 8 wins & 23 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BNzRiOWZmMzUtZTJiOC00MjQ1LTkwMjgtNzhlYzBmODAzYTA0XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"6.6/10"},{"Source":"Rotten Tomatoes","Value":"60%"},{"Source":"Metacritic","Value":"56/100"}],"Metascore":"56","imdbRating":"6.6","imdbVotes":"135,525","imdbID":"tt2446980","Type":"movie","DVD":"03 May 2016","BoxOffice":"$56,451,232","Production":"N/A","Website":"N/A","Response":"True"}
+2022-06-11 14:37:25.592  INFO 27640 --- [http-nio-8080-exec-8] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-11 14:37:25.592  INFO 27640 --- [http-nio-8080-exec-8] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-11 14:37:25.593  INFO 27640 --- [http-nio-8080-exec-8] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt2446980, title=Joy, year=2015, type=movie)
+2022-06-11 14:37:25.594  INFO 27640 --- [http-nio-8080-exec-8] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-11 14:37:28.296  INFO 27640 --- [http-nio-8080-exec-9] c.e.m.c.M.RemoveMovieController          : Starting movie/remove/name in LookUpMovieController
+2022-06-11 14:37:28.296  INFO 27640 --- [http-nio-8080-exec-9] c.e.m.c.M.RemoveMovieController          : calling movieService.addByName with name
+2022-06-11 14:37:28.296  INFO 27640 --- [http-nio-8080-exec-9] c.example.moviepal.service.UserService   : starting findUserIdByName: id is TEMP0
+2022-06-11 14:37:28.576  INFO 27640 --- [http-nio-8080-exec-9] c.example.moviepal.service.UserService   : userid was found: 1
+2022-06-11 14:37:28.576  INFO 27640 --- [http-nio-8080-exec-9] c.e.m.c.M.RemoveMovieController          : User doing the call is: TEMP0 with id: 1
+2022-06-11 14:37:28.576  INFO 27640 --- [http-nio-8080-exec-9] c.example.moviepal.service.UserService   : starting getUserById: user id is 1
+2022-06-11 14:37:29.414  INFO 27640 --- [http-nio-8080-exec-9] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@724963a4
+2022-06-11 14:37:29.415  INFO 27640 --- [http-nio-8080-exec-9] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@724963a4
+2022-06-11 14:37:30.344  INFO 27640 --- [http-nio-8080-exec-9] c.e.m.c.M.RemoveMovieController          : User was found: TEMP0
+2022-06-11 14:37:30.344  INFO 27640 --- [http-nio-8080-exec-9] c.example.moviepal.service.MovieService  : starting removeMovieByNameFromWatched with name of the movie
+2022-06-11 14:37:30.344  INFO 27640 --- [http-nio-8080-exec-9] c.example.moviepal.service.ListsService  : calling getWatchedListByUserId for a list by user id: 1
+2022-06-11 14:37:30.488  INFO 27640 --- [http-nio-8080-exec-9] c.example.moviepal.service.ListsService  : list was found and size is: 1
+2022-06-11 14:37:30.489  INFO 27640 --- [http-nio-8080-exec-9] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findById
+2022-06-11 14:37:30.489  INFO 27640 --- [http-nio-8080-exec-9] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&i=tt2446980
+2022-06-11 14:37:30.489  INFO 27640 --- [http-nio-8080-exec-9] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-11 14:37:30.644  INFO 27640 --- [http-nio-8080-exec-9] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Joy","Year":"2015","Rated":"PG-13","Released":"25 Dec 2015","Runtime":"124 min","Genre":"Biography, Drama","Director":"David O. Russell","Writer":"David O. Russell, Annie Mumolo","Actors":"Jennifer Lawrence, Robert De Niro, Bradley Cooper","Plot":"Joy is the story of the title character, who rose to become founder and matriarch of a powerful family business dynasty.","Language":"English, Spanish, French","Country":"United States","Awards":"Nominated for 1 Oscar. 8 wins & 23 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BNzRiOWZmMzUtZTJiOC00MjQ1LTkwMjgtNzhlYzBmODAzYTA0XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"6.6/10"},{"Source":"Rotten Tomatoes","Value":"60%"},{"Source":"Metacritic","Value":"56/100"}],"Metascore":"56","imdbRating":"6.6","imdbVotes":"135,525","imdbID":"tt2446980","Type":"movie","DVD":"03 May 2016","BoxOffice":"$56,451,232","Production":"N/A","Website":"N/A","Response":"True"}
+2022-06-11 14:37:30.645  INFO 27640 --- [http-nio-8080-exec-9] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-11 14:37:30.645  INFO 27640 --- [http-nio-8080-exec-9] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-11 14:37:30.646  INFO 27640 --- [http-nio-8080-exec-9] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt2446980, title=Joy, year=2015, type=movie)
+2022-06-11 14:37:30.646  INFO 27640 --- [http-nio-8080-exec-9] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-11 14:37:30.646  INFO 27640 --- [http-nio-8080-exec-9] c.example.moviepal.service.MovieService  : watchedListMovie was obtained using the user
+2022-06-11 14:37:30.646  INFO 27640 --- [http-nio-8080-exec-9] c.example.moviepal.service.MovieService  : movie is in the list
+2022-06-11 14:37:30.776  INFO 27640 --- [http-nio-8080-exec-9] c.example.moviepal.service.MovieService  : movie was found, now deleting it
+2022-06-11 14:37:34.393  INFO 27640 --- [http-nio-8080-exec-10] c.e.m.c.M.RemoveMovieController          : Starting movie/remove/name in LookUpMovieController
+2022-06-11 14:37:34.393  INFO 27640 --- [http-nio-8080-exec-10] c.e.m.c.M.RemoveMovieController          : calling movieService.addByName with name
+2022-06-11 14:37:34.393  INFO 27640 --- [http-nio-8080-exec-10] c.example.moviepal.service.UserService   : starting findUserIdByName: id is TEMP0
+2022-06-11 14:37:34.662  INFO 27640 --- [http-nio-8080-exec-10] c.example.moviepal.service.UserService   : userid was found: 1
+2022-06-11 14:37:34.662  INFO 27640 --- [http-nio-8080-exec-10] c.e.m.c.M.RemoveMovieController          : User doing the call is: TEMP0 with id: 1
+2022-06-11 14:37:34.662  INFO 27640 --- [http-nio-8080-exec-10] c.example.moviepal.service.UserService   : starting getUserById: user id is 1
+2022-06-11 14:37:35.542  INFO 27640 --- [http-nio-8080-exec-10] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@1a878f89
+2022-06-11 14:37:35.542  INFO 27640 --- [http-nio-8080-exec-10] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@1a878f89
+2022-06-11 14:37:36.277  INFO 27640 --- [http-nio-8080-exec-10] c.e.m.c.M.RemoveMovieController          : User was found: TEMP0
+2022-06-11 14:37:36.277  INFO 27640 --- [http-nio-8080-exec-10] c.example.moviepal.service.MovieService  : starting removeMovieByNameFromWatched with name of the movie
+2022-06-11 14:37:36.277  INFO 27640 --- [http-nio-8080-exec-10] c.example.moviepal.service.ListsService  : calling getWatchedListByUserId for a list by user id: 1
+2022-06-11 14:37:36.534  INFO 27640 --- [http-nio-8080-exec-10] c.example.moviepal.service.ListsService  : list was NOT found, creating one using the given user
+2022-06-11 14:37:36.534  INFO 27640 --- [http-nio-8080-exec-10] c.e.m.advice.ControllerAdviseHandler     : NoMovieListWasFoundException was triggered
+2022-06-11 14:37:42.279  INFO 27640 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-11 14:37:42.280  INFO 27640 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-06-11 14:37:44.576  INFO 27640 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-11 14:37:46.012  INFO 27640 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

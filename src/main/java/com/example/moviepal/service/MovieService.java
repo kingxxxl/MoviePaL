@@ -132,6 +132,26 @@ import java.util.Optional;
             }
         }
         throw new NoMovieWasFoundException("no movie with that name in your favorite list!");
-
     }
+    public void removeMovieByNameFromWatched(String name, User user) {
+        logger.info("starting removeMovieByNameFromWatched with name of the movie");
+        List<Movie> watchedListMovie = listsService.getWatchedListByUser(user);
+        logger.info("watchedListMovie was obtained using the user");
+        for (Movie m: watchedListMovie) {
+            if(name.equalsIgnoreCase(m.getTitle())){
+                logger.info("movie is in the list");
+                Optional<WatchedListMovie> movieToBeRemoved = watchedListMovieRepository.findByUserAndMovieId(m.getId(),user);
+                if (movieToBeRemoved.isPresent()){
+                    logger.info("movie was found, now deleting it");
+                    watchedListMovieRepository.delete(movieToBeRemoved.get());
+                    return;
+                }
+                logger.error("cant find the movie to be removed");
+                throw new RuntimeException("something went wrong");
+            }
+        }
+        throw new NoMovieWasFoundException("no movie with that name in your watched list!");
+    }
+
+
 }
