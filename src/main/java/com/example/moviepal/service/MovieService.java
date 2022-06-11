@@ -21,6 +21,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @Service
@@ -111,5 +112,26 @@ import java.util.List;
         }else {
             throw new MovieAlreadyInTheListException("Movie in the list already!");
         }
+    }
+
+    public void removeMovieByNameFromFavorite(String name, User user) {
+        logger.info("starting removeMovieByNameFromFavorite with name of the movie");
+        List<Movie> favoriteListMovie = listsService.getFavoriteListByUser(user);
+        logger.info("favoriteListMovie was obtained using the user");
+        for (Movie m: favoriteListMovie) {
+            if(name.equalsIgnoreCase(m.getTitle())){
+                logger.info("movie is in the list");
+                Optional<FavoriteListMovie> movieToBeRemoved = favoriteListMovieRepository.findByUserAndMovieId(m.getId(),user);
+                if (movieToBeRemoved.isPresent()){
+                    logger.info("movie was found, now deleting it");
+                    favoriteListMovieRepository.delete(movieToBeRemoved.get());
+                    return;
+                }
+                logger.error("cant find the movie to be removed");
+               throw new RuntimeException("something went wrong");
+            }
+        }
+        throw new NoMovieWasFoundException("no movie with that name in your favorite list!");
+
     }
 }

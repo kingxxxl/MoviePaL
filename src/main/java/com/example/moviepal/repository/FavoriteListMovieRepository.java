@@ -11,8 +11,9 @@ import java.util.Optional;
 
 @Repository
 public interface FavoriteListMovieRepository extends JpaRepository<FavoriteListMovie, Integer> {
+    @Query("SELECT w FROM FavoriteListMovie w where w.movieId = ?1 and w.user = ?2")
 
-    Optional<FavoriteListMovie> findByUser(User user);
+    Optional<FavoriteListMovie> findByUserAndMovieId(String movieid,User user);
     Optional<List<FavoriteListMovie>> findAllByUser(User user);
     @Query("SELECT w FROM FavoriteListMovie w where w.movieId = ?1 and w.user = ?2")
 

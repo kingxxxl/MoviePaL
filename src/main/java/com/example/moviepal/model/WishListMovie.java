@@ -2,15 +2,14 @@ package com.example.moviepal.model;
 
 import com.example.moviepal.model.outDB.Movie;
 import com.example.moviepal.model.outDB.MovieList;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
 @AllArgsConstructor
 @RequiredArgsConstructor
-@Data
+@Setter
+@Getter
 @Entity
 public class WishListMovie implements MovieList {
     @Id
@@ -18,7 +17,7 @@ public class WishListMovie implements MovieList {
     private Integer listId;
 
     private String movieId;
-    @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.LAZY)
     private User user;
 
 

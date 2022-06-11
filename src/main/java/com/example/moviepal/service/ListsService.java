@@ -29,11 +29,6 @@ import java.util.Optional;
     private final WishListMovieRepository wishListMovieRepository;
     private final FavoriteListMovieRepository favoriteListMovieRepository;
     private final WatchedListMovieRepository watchedListMovieRepository;
-    private final UserService userService;
-
-    public WishListMovie getWishListById(Integer id) {
-        return wishListMovieRepository.findById(id).get();
-    }
 
         public List<Movie> getWishListByUser(User user) {
             logger.info("calling getWishListByUserId for a list by user id: "+user.getId());
@@ -83,39 +78,16 @@ import java.util.Optional;
             throw new NoMovieListWasFoundException("No watchedlist for this user yet, add some movies first!");
         }
     }
-    public List<WishListMovie> getAllWishListByUser(User user){
-        logger.info("calling getAllWishListByUser for a list by user id: "+user.getId());
-       Optional<List<WishListMovie>> listMovies = wishListMovieRepository.findAllByUser(user);
-       if (listMovies.isPresent()){
-           return listMovies.get();
-       }
-        List<WishListMovie> listMovies1 = new ArrayList<>();
-        return listMovies1;
-    }
-
-        public void saveWish(WishListMovie wishListMovie){
-        wishListMovieRepository.save(wishListMovie);
-        }
-
     public boolean isMovieInUserWishList(Movie movie, User user) {
         Optional<WishListMovie> movieid = wishListMovieRepository.isMovieInList(movie.getId(),user);
-        if (movieid.isPresent()){
-            return true;
-        }
-        return false;
+        return movieid.isPresent();
     }
     public boolean isMovieInUserFavoriteList(Movie movie, User user) {
         Optional<FavoriteListMovie> movieid = favoriteListMovieRepository.isMovieInList(movie.getId(),user);
-        if (movieid.isPresent()){
-            return true;
-        }
-        return false;
+        return movieid.isPresent();
     }
     public boolean isMovieInUserWatchedList(Movie movie, User user) {
         Optional<WatchedListMovie> movieid = watchedListMovieRepository.isMovieInList(movie.getId(),user);
-        if (movieid.isPresent()){
-            return true;
-        }
-        return false;
+        return movieid.isPresent();
     }
 }
