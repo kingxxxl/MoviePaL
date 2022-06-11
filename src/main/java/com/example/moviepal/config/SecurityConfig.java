@@ -28,15 +28,24 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
                  http.csrf().disable()
                 .authorizeRequests()
-                         .antMatchers("/user/register").permitAll()
-                .antMatchers("/movie/lookby/search/**")
-                .hasAuthority("Admin")
-                .anyRequest()
+                         .antMatchers("/user/register","/movie/lookby/name/**").permitAll()
+                .antMatchers("/movie/**").hasAnyAuthority()
+                         .and()
+                         .logout()
+                         .logoutUrl("/user/logout").logoutSuccessUrl("/user/logout-done")
+                         .clearAuthentication(true)
+                         .invalidateHttpSession(true)
+                         .deleteCookies("JSESSIONID","remember-me","auth_code")
+                         .and()
+                         .authorizeRequests()
+                         .anyRequest()
                          .authenticated()
                          .and()
                          .httpBasic();
 //                  .antMatchers(HttpMethod.POST,"/user").permitAll()
 
     }
+
+
 
 }
