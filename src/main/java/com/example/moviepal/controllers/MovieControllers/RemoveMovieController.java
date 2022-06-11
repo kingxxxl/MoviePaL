@@ -24,6 +24,19 @@ public class RemoveMovieController {
 
     Logger logger = LoggerFactory.getLogger(RemoveMovieController.class);
 
+    @DeleteMapping ("/name/wishlist/{name}")
+    public ResponseEntity<API> byNameToWishList(@PathVariable String name){
+        logger.info("Starting movie/remove/name in LookUpMovieController");
+        logger.info("calling movieService.addByName with name");
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String loggedUserName = auth.getName();
+        Integer userid = userService.findUserIdByName(loggedUserName);
+        logger.info("User doing the call is: "+loggedUserName+" with id: "+userid);
+        User user = userService.getUserById(userid);
+        logger.info("User was found: "+user.getUsername());
+        movieService.removeMovieByNameFromWish(name, user);
+        return ResponseEntity.status(HttpStatus.OK).body(new API("movie was remove from the list!",200));
+    }
     @DeleteMapping ("/name/favorite-list/{name}")
     public ResponseEntity<API> byNameToFavoriteList(@PathVariable String name){
         logger.info("Starting movie/remove/name in LookUpMovieController");
