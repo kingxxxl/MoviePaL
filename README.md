@@ -64,3 +64,6 @@ To show all movie in a favorite list
 To show all movie in a watched list
 `<GET>` : <https://moviepal1.herokuapp.com/user/watched-list>
 
+
+
+# [Postman link](https://www.postman.com/winter-eclipse-239992/workspace/moviepal/request/21420839-71d06de8-3b52-4b14-8b6f-25f1a71b48dd)
