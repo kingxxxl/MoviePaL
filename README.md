@@ -2,8 +2,7 @@
 
 ![](movie-pal-logo-black.png)
 
-** Add, Store And Manage All Your Movie Lists In One Place!
-**
+# Store And Manage All Your Movie Lists In One Place!
 
 ------------
 
