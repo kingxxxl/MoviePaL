@@ -1,370 +1,712 @@
-2022-06-12 08:37:31.677  INFO 40065 --- [main] c.example.moviepal.MoviePaLApplication   : Starting MoviePaLApplication using Java 16.0.1 on abdo.local with PID 40065 (/Users/abdullahalmasar/IdeaProjects/MoviePaL/target/classes started by abdullahalmasar in /Users/abdullahalmasar/IdeaProjects/MoviePaL)
-2022-06-12 08:37:31.682  INFO 40065 --- [main] c.example.moviepal.MoviePaLApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-06-12 08:37:32.207  INFO 40065 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-06-12 08:37:32.273  INFO 40065 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 4 JPA repository interfaces.
-2022-06-12 08:37:32.685  INFO 40065 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-06-12 08:37:32.690  INFO 40065 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-06-12 08:37:32.691  INFO 40065 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
-2022-06-12 08:37:32.787  INFO 40065 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-06-12 08:37:32.788  INFO 40065 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1071 ms
-2022-06-12 08:37:32.871  INFO 40065 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-06-12 08:37:34.332  INFO 40065 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-06-12 08:37:34.372  INFO 40065 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-06-12 08:37:34.417  INFO 40065 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
-2022-06-12 08:37:34.521  INFO 40065 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-06-12 08:37:34.599  INFO 40065 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-06-12 08:37:36.098  INFO 40065 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-06-12 08:37:36.106  INFO 40065 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-06-12 08:37:36.395  WARN 40065 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-06-12 08:37:36.579  INFO 40065 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5392aa2b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@174f0d06, org.springframework.security.web.context.SecurityContextPersistenceFilter@58647985, org.springframework.security.web.header.HeaderWriterFilter@33bd9ac3, org.springframework.security.web.authentication.logout.LogoutFilter@1aee6983, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@73eae5f, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@603faaad, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5cc87de4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@57bfca3a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@69e8b711, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4536a09a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@706690e1, org.springframework.security.web.session.SessionManagementFilter@42028589, org.springframework.security.web.access.ExceptionTranslationFilter@b386a17, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7a053795]
-2022-06-12 08:37:36.884  INFO 40065 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-06-12 08:37:36.894  INFO 40065 --- [main] c.example.moviepal.MoviePaLApplication   : Started MoviePaLApplication in 5.479 seconds (JVM running for 6.069)
-2022-06-12 08:37:46.873  INFO 40065 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-06-12 08:37:46.873  INFO 40065 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-06-12 08:37:46.874  INFO 40065 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-06-12 08:37:46.983  INFO 40065 --- [http-nio-8080-exec-1] c.e.moviepal.controllers.UserController  : Starting addUser in UserController
-2022-06-12 08:37:46.983  INFO 40065 --- [http-nio-8080-exec-1] c.e.moviepal.controllers.UserController  : calling adduser to the user service: com.example.moviepal.model.User@39559a71
-2022-06-12 08:37:46.983  INFO 40065 --- [http-nio-8080-exec-1] c.example.moviepal.service.UserService   : Starting addUser from UserService
-2022-06-12 08:37:47.058  INFO 40065 --- [http-nio-8080-exec-1] c.example.moviepal.service.UserService   : created a hash password: $2a$10$m5f38ONy.wPZtsTG5hPsbuuGOUN68WMtirIfY/EyUes68Unj1L6Km
-2022-06-12 08:37:47.058  INFO 40065 --- [http-nio-8080-exec-1] c.example.moviepal.service.UserService   : hash password was set to the user: com.example.moviepal.model.User@39559a71
-2022-06-12 08:38:03.443  INFO 40065 --- [http-nio-8080-exec-3] c.e.m.c.M.MovieListController            : Starting user/wishlist in getWishList
-2022-06-12 08:38:03.443  INFO 40065 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : starting findUserIdByName: id is Aking
-2022-06-12 08:38:03.538  INFO 40065 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : userid was found: 9
-2022-06-12 08:38:03.538  INFO 40065 --- [http-nio-8080-exec-3] c.e.m.c.M.MovieListController            : User doing the call is: Aking with id: 9
-2022-06-12 08:38:03.538  INFO 40065 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : starting getUserById: user id is 9
-2022-06-12 08:38:04.095  INFO 40065 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@7065ae5c
-2022-06-12 08:38:04.095  INFO 40065 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@7065ae5c
-2022-06-12 08:38:04.551  INFO 40065 --- [http-nio-8080-exec-3] c.e.m.c.M.MovieListController            : User was found: Aking
-2022-06-12 08:38:04.551  INFO 40065 --- [http-nio-8080-exec-3] c.example.moviepal.service.ListsService  : calling getWishListByUserId for a list by user id: 9
-2022-06-12 08:38:04.645  INFO 40065 --- [http-nio-8080-exec-3] c.example.moviepal.service.ListsService  : list was NOT found, creating one using the given user
-2022-06-12 08:38:04.648  INFO 40065 --- [http-nio-8080-exec-3] c.e.m.advice.ControllerAdviseHandler     : NoMovieListWasFoundException was triggered
-2022-06-12 08:38:24.813  INFO 40065 --- [http-nio-8080-exec-6] c.e.m.c.M.MovieListController            : Starting user/wishlist in getWishList
-2022-06-12 08:38:24.814  INFO 40065 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : starting findUserIdByName: id is Aking
-2022-06-12 08:38:24.996  INFO 40065 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : userid was found: 9
-2022-06-12 08:38:24.996  INFO 40065 --- [http-nio-8080-exec-6] c.e.m.c.M.MovieListController            : User doing the call is: Aking with id: 9
-2022-06-12 08:38:24.996  INFO 40065 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : starting getUserById: user id is 9
-2022-06-12 08:38:25.542  INFO 40065 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@31205127
-2022-06-12 08:38:25.543  INFO 40065 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@31205127
-2022-06-12 08:38:25.998  INFO 40065 --- [http-nio-8080-exec-6] c.e.m.c.M.MovieListController            : User was found: Aking
-2022-06-12 08:38:25.998  INFO 40065 --- [http-nio-8080-exec-6] c.example.moviepal.service.ListsService  : calling getWishListByUserId for a list by user id: 9
-2022-06-12 08:38:26.090  INFO 40065 --- [http-nio-8080-exec-6] c.example.moviepal.service.ListsService  : list was NOT found, creating one using the given user
-2022-06-12 08:38:26.090  INFO 40065 --- [http-nio-8080-exec-6] c.e.m.advice.ControllerAdviseHandler     : NoMovieListWasFoundException was triggered
-2022-06-12 08:39:01.535  INFO 40065 --- [http-nio-8080-exec-8] c.e.moviepal.controllers.UserController  : Starting addUser in UserController
-2022-06-12 08:39:01.536  INFO 40065 --- [http-nio-8080-exec-8] c.e.moviepal.controllers.UserController  : calling adduser to the user service: com.example.moviepal.model.User@a5143b2
-2022-06-12 08:39:01.536  INFO 40065 --- [http-nio-8080-exec-8] c.example.moviepal.service.UserService   : Starting addUser from UserService
-2022-06-12 08:39:01.612  INFO 40065 --- [http-nio-8080-exec-8] c.example.moviepal.service.UserService   : created a hash password: $2a$10$SDpxP4AYevX5NFcFO/27JeKPoC2dVouJusEGaY1TZ80EOSeci8IWa
-2022-06-12 08:39:01.613  INFO 40065 --- [http-nio-8080-exec-8] c.example.moviepal.service.UserService   : hash password was set to the user: com.example.moviepal.model.User@a5143b2
-2022-06-12 08:39:01.901  WARN 40065 --- [http-nio-8080-exec-8] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1062, SQLState: 23000
-2022-06-12 08:39:01.902 ERROR 40065 --- [http-nio-8080-exec-8] o.h.engine.jdbc.spi.SqlExceptionHelper   : Duplicate entry 'Aking' for key 'user.UK_sb8bbouer5wak8vyiiy4pf2bx'
-2022-06-12 08:39:02.094  INFO 40065 --- [http-nio-8080-exec-8] c.e.m.advice.ControllerAdviseHandler     : handleDataIntegrity was triggered
-2022-06-12 08:39:08.299  INFO 40065 --- [http-nio-8080-exec-9] c.e.m.c.M.MovieListController            : Starting user/wishlist in getWishList
-2022-06-12 08:39:08.299  INFO 40065 --- [http-nio-8080-exec-9] c.example.moviepal.service.UserService   : starting findUserIdByName: id is Aking
-2022-06-12 08:39:08.483  INFO 40065 --- [http-nio-8080-exec-9] c.example.moviepal.service.UserService   : userid was found: 9
-2022-06-12 08:39:08.484  INFO 40065 --- [http-nio-8080-exec-9] c.e.m.c.M.MovieListController            : User doing the call is: Aking with id: 9
-2022-06-12 08:39:08.484  INFO 40065 --- [http-nio-8080-exec-9] c.example.moviepal.service.UserService   : starting getUserById: user id is 9
-2022-06-12 08:39:09.027  INFO 40065 --- [http-nio-8080-exec-9] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@9b6cdf2
-2022-06-12 08:39:09.027  INFO 40065 --- [http-nio-8080-exec-9] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@9b6cdf2
-2022-06-12 08:39:09.574  INFO 40065 --- [http-nio-8080-exec-9] c.e.m.c.M.MovieListController            : User was found: Aking
-2022-06-12 08:39:09.575  INFO 40065 --- [http-nio-8080-exec-9] c.example.moviepal.service.ListsService  : calling getWishListByUserId for a list by user id: 9
-2022-06-12 08:39:09.788  INFO 40065 --- [http-nio-8080-exec-9] c.example.moviepal.service.ListsService  : list was NOT found, creating one using the given user
-2022-06-12 08:39:09.788  INFO 40065 --- [http-nio-8080-exec-9] c.e.m.advice.ControllerAdviseHandler     : NoMovieListWasFoundException was triggered
-2022-06-12 08:39:16.907  INFO 40065 --- [http-nio-8080-exec-3] c.e.m.c.M.MovieListController            : Starting user/wishlist in getWishList
-2022-06-12 08:39:16.908  INFO 40065 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : starting findUserIdByName: id is Aking
-2022-06-12 08:39:17.000  INFO 40065 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : userid was found: 9
-2022-06-12 08:39:17.000  INFO 40065 --- [http-nio-8080-exec-3] c.e.m.c.M.MovieListController            : User doing the call is: Aking with id: 9
-2022-06-12 08:39:17.001  INFO 40065 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : starting getUserById: user id is 9
-2022-06-12 08:39:17.548  INFO 40065 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@555ad7f2
-2022-06-12 08:39:17.549  INFO 40065 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@555ad7f2
-2022-06-12 08:39:18.006  INFO 40065 --- [http-nio-8080-exec-3] c.e.m.c.M.MovieListController            : User was found: Aking
-2022-06-12 08:39:18.006  INFO 40065 --- [http-nio-8080-exec-3] c.example.moviepal.service.ListsService  : calling getWishListByUserId for a list by user id: 9
-2022-06-12 08:39:18.098  INFO 40065 --- [http-nio-8080-exec-3] c.example.moviepal.service.ListsService  : list was NOT found, creating one using the given user
-2022-06-12 08:39:18.098  INFO 40065 --- [http-nio-8080-exec-3] c.e.m.advice.ControllerAdviseHandler     : NoMovieListWasFoundException was triggered
-2022-06-12 08:41:24.874  INFO 40065 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-06-12 08:41:24.877  INFO 40065 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-06-12 08:41:25.808  INFO 40065 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-06-12 08:41:31.756  INFO 40128 --- [main] c.example.moviepal.MoviePaLApplication   : Starting MoviePaLApplication using Java 16.0.1 on abdo.local with PID 40128 (/Users/abdullahalmasar/IdeaProjects/MoviePaL/target/classes started by abdullahalmasar in /Users/abdullahalmasar/IdeaProjects/MoviePaL)
-2022-06-12 08:41:31.757  INFO 40128 --- [main] c.example.moviepal.MoviePaLApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-06-12 08:41:32.321  INFO 40128 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-06-12 08:41:32.379  INFO 40128 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 4 JPA repository interfaces.
-2022-06-12 08:41:32.760  INFO 40128 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-06-12 08:41:32.765  INFO 40128 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-06-12 08:41:32.765  INFO 40128 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
-2022-06-12 08:41:32.847  INFO 40128 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-06-12 08:41:32.847  INFO 40128 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1056 ms
-2022-06-12 08:41:32.924  INFO 40128 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-06-12 08:41:34.150  INFO 40128 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-06-12 08:41:34.197  INFO 40128 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-06-12 08:41:34.232  INFO 40128 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
-2022-06-12 08:41:34.326  INFO 40128 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-06-12 08:41:34.394  INFO 40128 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-06-12 08:41:35.811  INFO 40128 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-06-12 08:41:35.817  INFO 40128 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-06-12 08:41:36.067  WARN 40128 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-06-12 08:41:36.249  INFO 40128 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2f3a0f37, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7ec8db0c, org.springframework.security.web.context.SecurityContextPersistenceFilter@25b8f9d2, org.springframework.security.web.header.HeaderWriterFilter@3694461d, org.springframework.security.web.authentication.logout.LogoutFilter@45a9cf78, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7d15c513, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1af6974c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@33563147, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4f1a5b93, org.springframework.security.web.session.SessionManagementFilter@5c7a06ec, org.springframework.security.web.access.ExceptionTranslationFilter@2e38d44e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@49005dc4]
-2022-06-12 08:41:36.517  INFO 40128 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-06-12 08:41:36.524  INFO 40128 --- [main] c.example.moviepal.MoviePaLApplication   : Started MoviePaLApplication in 5.033 seconds (JVM running for 5.635)
-2022-06-12 08:41:41.988  INFO 40128 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-06-12 08:41:41.988  INFO 40128 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-06-12 08:41:41.989  INFO 40128 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2022-06-12 08:41:48.246  INFO 40128 --- [http-nio-8080-exec-5] c.e.moviepal.controllers.UserController  : Starting addUser in UserController
-2022-06-12 08:41:48.247  INFO 40128 --- [http-nio-8080-exec-5] c.e.moviepal.controllers.UserController  : calling adduser to the user service: com.example.moviepal.model.User@1b2be130
-2022-06-12 08:41:48.247  INFO 40128 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : Starting addUser from UserService
-2022-06-12 08:41:48.329  INFO 40128 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : created a hash password: $2a$10$dcotvXDhd7Dwl5BX0BzBOu8y9VfFUNez8e7Ju5bPn8RAT0vuvAuI2
-2022-06-12 08:41:48.329  INFO 40128 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : hash password was set to the user: com.example.moviepal.model.User@1b2be130
-2022-06-12 08:41:48.625  WARN 40128 --- [http-nio-8080-exec-5] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1062, SQLState: 23000
-2022-06-12 08:41:48.626 ERROR 40128 --- [http-nio-8080-exec-5] o.h.engine.jdbc.spi.SqlExceptionHelper   : Duplicate entry 'Aking' for key 'user.UK_sb8bbouer5wak8vyiiy4pf2bx'
-2022-06-12 08:41:48.809  INFO 40128 --- [http-nio-8080-exec-5] c.e.m.advice.ControllerAdviseHandler     : handleDataIntegrity was triggered
-2022-06-12 08:41:52.343  INFO 40128 --- [http-nio-8080-exec-7] c.e.m.c.M.MovieListController            : Starting user/wishlist in getWishList
-2022-06-12 08:41:52.343  INFO 40128 --- [http-nio-8080-exec-7] c.example.moviepal.service.UserService   : starting findUserIdByName: id is Aking
-2022-06-12 08:41:52.522  INFO 40128 --- [http-nio-8080-exec-7] c.example.moviepal.service.UserService   : userid was found: 9
-2022-06-12 08:41:52.522  INFO 40128 --- [http-nio-8080-exec-7] c.e.m.c.M.MovieListController            : User doing the call is: Aking with id: 9
-2022-06-12 08:41:52.523  INFO 40128 --- [http-nio-8080-exec-7] c.example.moviepal.service.UserService   : starting getUserById: user id is 9
-2022-06-12 08:41:53.057  INFO 40128 --- [http-nio-8080-exec-7] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@7013f4a9
-2022-06-12 08:41:53.058  INFO 40128 --- [http-nio-8080-exec-7] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@7013f4a9
-2022-06-12 08:41:53.497  INFO 40128 --- [http-nio-8080-exec-7] c.e.m.c.M.MovieListController            : User was found: Aking
-2022-06-12 08:41:53.498  INFO 40128 --- [http-nio-8080-exec-7] c.example.moviepal.service.ListsService  : calling getWishListByUserId for a list by user id: 9
-2022-06-12 08:41:53.587  INFO 40128 --- [http-nio-8080-exec-7] c.example.moviepal.service.ListsService  : list was NOT found, creating one using the given user
-2022-06-12 08:41:53.588  INFO 40128 --- [http-nio-8080-exec-7] c.e.m.advice.ControllerAdviseHandler     : NoMovieListWasFoundException was triggered
-2022-06-12 08:44:20.465  INFO 40128 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-06-12 08:44:20.467  INFO 40128 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-06-12 08:44:21.415  INFO 40128 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-06-12 08:44:23.436  INFO 40154 --- [main] c.example.moviepal.MoviePaLApplication   : Starting MoviePaLApplication using Java 16.0.1 on abdo.local with PID 40154 (/Users/abdullahalmasar/IdeaProjects/MoviePaL/target/classes started by abdullahalmasar in /Users/abdullahalmasar/IdeaProjects/MoviePaL)
-2022-06-12 08:44:23.438  INFO 40154 --- [main] c.example.moviepal.MoviePaLApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-06-12 08:44:23.944  INFO 40154 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-06-12 08:44:24.000  INFO 40154 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 4 JPA repository interfaces.
-2022-06-12 08:44:24.388  INFO 40154 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-06-12 08:44:24.394  INFO 40154 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-06-12 08:44:24.395  INFO 40154 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
-2022-06-12 08:44:24.472  INFO 40154 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-06-12 08:44:24.472  INFO 40154 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1000 ms
-2022-06-12 08:44:24.551  INFO 40154 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-06-12 08:44:25.848  INFO 40154 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-06-12 08:44:25.888  INFO 40154 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-06-12 08:44:25.924  INFO 40154 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
-2022-06-12 08:44:26.014  INFO 40154 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-06-12 08:44:26.088  INFO 40154 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-06-12 08:44:27.668  INFO 40154 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-06-12 08:44:27.676  INFO 40154 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-06-12 08:44:27.977  WARN 40154 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-06-12 08:44:28.157  INFO 40154 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5dd2ea0a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@65fa4a07, org.springframework.security.web.context.SecurityContextPersistenceFilter@3c2188f, org.springframework.security.web.header.HeaderWriterFilter@34d3bfca, org.springframework.security.web.authentication.logout.LogoutFilter@30adae45, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@41b2123e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4a094f90, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@97cb8dc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@782143e8, org.springframework.security.web.session.SessionManagementFilter@2979c6ef, org.springframework.security.web.access.ExceptionTranslationFilter@3694461d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@219db855]
-2022-06-12 08:44:28.463  INFO 40154 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-06-12 08:44:28.473  INFO 40154 --- [main] c.example.moviepal.MoviePaLApplication   : Started MoviePaLApplication in 5.297 seconds (JVM running for 5.887)
-2022-06-12 08:44:39.437  INFO 40154 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-06-12 08:44:39.437  INFO 40154 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-06-12 08:44:39.438  INFO 40154 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-06-12 08:45:15.756  INFO 40154 --- [http-nio-8080-exec-6] c.e.moviepal.controllers.UserController  : Starting addUser in UserController
-2022-06-12 08:45:15.757  INFO 40154 --- [http-nio-8080-exec-6] c.e.moviepal.controllers.UserController  : calling adduser to the user service: com.example.moviepal.model.User@44ce7466
-2022-06-12 08:45:15.757  INFO 40154 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : Starting addUser from UserService
-2022-06-12 08:45:15.838  INFO 40154 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : created a hash password: $2a$10$Ne0OaR1HPsYSEJyd66PI6uMtSfFEFYMv/UOs7HDQXFyXqtRDe5tDq
-2022-06-12 08:45:15.838  INFO 40154 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : hash password was set to the user: com.example.moviepal.model.User@44ce7466
-2022-06-12 08:45:16.178  WARN 40154 --- [http-nio-8080-exec-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1062, SQLState: 23000
-2022-06-12 08:45:16.178 ERROR 40154 --- [http-nio-8080-exec-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : Duplicate entry 'ahmed' for key 'user.UK_sb8bbouer5wak8vyiiy4pf2bx'
-2022-06-12 08:45:16.381  INFO 40154 --- [http-nio-8080-exec-6] c.e.m.advice.ControllerAdviseHandler     : handleDataIntegrity was triggered
-2022-06-12 08:45:21.873  INFO 40154 --- [http-nio-8080-exec-8] c.e.m.c.M.MovieListController            : Starting user/wishlist in getWishList
-2022-06-12 08:45:21.873  INFO 40154 --- [http-nio-8080-exec-8] c.example.moviepal.service.UserService   : starting findUserIdByName: id is Aking
-2022-06-12 08:45:21.974  INFO 40154 --- [http-nio-8080-exec-8] c.example.moviepal.service.UserService   : userid was found: 9
-2022-06-12 08:45:21.975  INFO 40154 --- [http-nio-8080-exec-8] c.e.m.c.M.MovieListController            : User doing the call is: Aking with id: 9
-2022-06-12 08:45:21.975  INFO 40154 --- [http-nio-8080-exec-8] c.example.moviepal.service.UserService   : starting getUserById: user id is 9
-2022-06-12 08:45:22.575  INFO 40154 --- [http-nio-8080-exec-8] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@1b127373
-2022-06-12 08:45:22.575  INFO 40154 --- [http-nio-8080-exec-8] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@1b127373
-2022-06-12 08:45:23.060  INFO 40154 --- [http-nio-8080-exec-8] c.e.m.c.M.MovieListController            : User was found: Aking
-2022-06-12 08:45:23.061  INFO 40154 --- [http-nio-8080-exec-8] c.example.moviepal.service.ListsService  : calling getWishListByUserId for a list by user id: 9
-2022-06-12 08:45:23.161  INFO 40154 --- [http-nio-8080-exec-8] c.example.moviepal.service.ListsService  : list was NOT found, creating one using the given user
-2022-06-12 08:45:23.161  INFO 40154 --- [http-nio-8080-exec-8] c.e.m.advice.ControllerAdviseHandler     : NoMovieListWasFoundException was triggered
-2022-06-12 08:47:38.775  INFO 40154 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-06-12 08:47:38.777  INFO 40154 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-06-12 08:47:39.719  INFO 40154 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-06-12 08:47:42.693  INFO 40194 --- [main] c.example.moviepal.MoviePaLApplication   : Starting MoviePaLApplication using Java 16.0.1 on abdo.local with PID 40194 (/Users/abdullahalmasar/IdeaProjects/MoviePaL/target/classes started by abdullahalmasar in /Users/abdullahalmasar/IdeaProjects/MoviePaL)
-2022-06-12 08:47:42.695  INFO 40194 --- [main] c.example.moviepal.MoviePaLApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-06-12 08:47:43.210  INFO 40194 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-06-12 08:47:43.265  INFO 40194 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 4 JPA repository interfaces.
-2022-06-12 08:47:43.642  INFO 40194 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-06-12 08:47:43.647  INFO 40194 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-06-12 08:47:43.648  INFO 40194 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
-2022-06-12 08:47:43.726  INFO 40194 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-06-12 08:47:43.727  INFO 40194 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 997 ms
-2022-06-12 08:47:43.803  INFO 40194 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-06-12 08:47:44.987  INFO 40194 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-06-12 08:47:45.028  INFO 40194 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-06-12 08:47:45.062  INFO 40194 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
-2022-06-12 08:47:45.157  INFO 40194 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-06-12 08:47:45.223  INFO 40194 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-06-12 08:47:46.680  INFO 40194 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-06-12 08:47:46.688  INFO 40194 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-06-12 08:47:46.968  WARN 40194 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-06-12 08:47:47.140  INFO 40194 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4f1a5b93, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@22ee1ad7, org.springframework.security.web.context.SecurityContextPersistenceFilter@3c2188f, org.springframework.security.web.header.HeaderWriterFilter@34d3bfca, org.springframework.security.web.authentication.logout.LogoutFilter@30adae45, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@78b44fcb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4a094f90, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@97cb8dc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5dd2ea0a, org.springframework.security.web.session.SessionManagementFilter@2979c6ef, org.springframework.security.web.access.ExceptionTranslationFilter@3694461d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@25d9298e]
-2022-06-12 08:47:47.421  INFO 40194 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-06-12 08:47:47.429  INFO 40194 --- [main] c.example.moviepal.MoviePaLApplication   : Started MoviePaLApplication in 4.981 seconds (JVM running for 5.467)
-2022-06-12 08:47:51.459  INFO 40194 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-06-12 08:47:51.459  INFO 40194 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-06-12 08:47:51.460  INFO 40194 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-06-12 08:48:02.000  INFO 40194 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-06-12 08:48:02.003  INFO 40194 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-06-12 08:48:02.934  INFO 40194 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-06-12 08:48:05.728  INFO 40200 --- [main] c.example.moviepal.MoviePaLApplication   : Starting MoviePaLApplication using Java 16.0.1 on abdo.local with PID 40200 (/Users/abdullahalmasar/IdeaProjects/MoviePaL/target/classes started by abdullahalmasar in /Users/abdullahalmasar/IdeaProjects/MoviePaL)
-2022-06-12 08:48:05.731  INFO 40200 --- [main] c.example.moviepal.MoviePaLApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-06-12 08:48:06.221  INFO 40200 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-06-12 08:48:06.283  INFO 40200 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 4 JPA repository interfaces.
-2022-06-12 08:48:06.656  INFO 40200 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-06-12 08:48:06.661  INFO 40200 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-06-12 08:48:06.661  INFO 40200 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
-2022-06-12 08:48:06.737  INFO 40200 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-06-12 08:48:06.737  INFO 40200 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 976 ms
-2022-06-12 08:48:06.807  INFO 40200 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-06-12 08:48:08.079  INFO 40200 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-06-12 08:48:08.120  INFO 40200 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-06-12 08:48:08.159  INFO 40200 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
-2022-06-12 08:48:08.259  INFO 40200 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-06-12 08:48:08.327  INFO 40200 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-06-12 08:48:09.873  INFO 40200 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-06-12 08:48:09.881  INFO 40200 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-06-12 08:48:10.171  WARN 40200 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-06-12 08:48:10.348  INFO 40200 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4f1a5b93, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@22ee1ad7, org.springframework.security.web.context.SecurityContextPersistenceFilter@1af6974c, org.springframework.security.web.header.HeaderWriterFilter@4d71ec5b, org.springframework.security.web.authentication.logout.LogoutFilter@41bbdd8a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@78b44fcb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3c2188f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@19c24321, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5dd2ea0a, org.springframework.security.web.session.SessionManagementFilter@137d04d8, org.springframework.security.web.access.ExceptionTranslationFilter@5f5c0eda, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@25d9298e]
-2022-06-12 08:48:10.633  INFO 40200 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-06-12 08:48:10.642  INFO 40200 --- [main] c.example.moviepal.MoviePaLApplication   : Started MoviePaLApplication in 5.167 seconds (JVM running for 5.561)
-2022-06-12 08:48:14.606  INFO 40200 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-06-12 08:48:14.606  INFO 40200 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-06-12 08:48:14.607  INFO 40200 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-06-12 08:48:35.406  INFO 40200 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-06-12 08:48:35.409  INFO 40200 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-06-12 08:48:36.358  INFO 40200 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-06-12 08:48:39.306  INFO 40216 --- [main] c.example.moviepal.MoviePaLApplication   : Starting MoviePaLApplication using Java 16.0.1 on abdo.local with PID 40216 (/Users/abdullahalmasar/IdeaProjects/MoviePaL/target/classes started by abdullahalmasar in /Users/abdullahalmasar/IdeaProjects/MoviePaL)
-2022-06-12 08:48:39.308  INFO 40216 --- [main] c.example.moviepal.MoviePaLApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-06-12 08:48:39.799  INFO 40216 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-06-12 08:48:39.859  INFO 40216 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 4 JPA repository interfaces.
-2022-06-12 08:48:40.228  INFO 40216 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-06-12 08:48:40.234  INFO 40216 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-06-12 08:48:40.234  INFO 40216 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
-2022-06-12 08:48:40.315  INFO 40216 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-06-12 08:48:40.315  INFO 40216 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 975 ms
-2022-06-12 08:48:40.386  INFO 40216 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-06-12 08:48:41.605  INFO 40216 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-06-12 08:48:41.646  INFO 40216 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-06-12 08:48:41.680  INFO 40216 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
-2022-06-12 08:48:41.779  INFO 40216 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-06-12 08:48:41.846  INFO 40216 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-06-12 08:48:43.352  INFO 40216 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-06-12 08:48:43.360  INFO 40216 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-06-12 08:48:43.638  WARN 40216 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-06-12 08:48:43.826  INFO 40216 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6003eb60, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@571e2f15, org.springframework.security.web.context.SecurityContextPersistenceFilter@8c34631, org.springframework.security.web.header.HeaderWriterFilter@30d5fc1b, org.springframework.security.web.authentication.logout.LogoutFilter@23aaa756, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7ec8db0c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@33239d72, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@59c00010, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2552181d, org.springframework.security.web.session.SessionManagementFilter@646bf8a6, org.springframework.security.web.access.ExceptionTranslationFilter@34d3bfca, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3c4e23be]
-2022-06-12 08:48:44.140  INFO 40216 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-06-12 08:48:44.150  INFO 40216 --- [main] c.example.moviepal.MoviePaLApplication   : Started MoviePaLApplication in 5.1 seconds (JVM running for 5.5)
-2022-06-12 08:48:44.291  INFO 40216 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-06-12 08:48:44.291  INFO 40216 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-06-12 08:48:44.293  INFO 40216 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2022-06-12 08:49:24.254  INFO 40216 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-06-12 08:49:24.256  INFO 40216 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-06-12 08:49:25.173  INFO 40216 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-06-12 08:49:28.135  INFO 40227 --- [main] c.example.moviepal.MoviePaLApplication   : Starting MoviePaLApplication using Java 16.0.1 on abdo.local with PID 40227 (/Users/abdullahalmasar/IdeaProjects/MoviePaL/target/classes started by abdullahalmasar in /Users/abdullahalmasar/IdeaProjects/MoviePaL)
-2022-06-12 08:49:28.137  INFO 40227 --- [main] c.example.moviepal.MoviePaLApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-06-12 08:49:28.651  INFO 40227 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-06-12 08:49:28.714  INFO 40227 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 4 JPA repository interfaces.
-2022-06-12 08:49:29.095  INFO 40227 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-06-12 08:49:29.101  INFO 40227 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-06-12 08:49:29.101  INFO 40227 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
-2022-06-12 08:49:29.181  INFO 40227 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-06-12 08:49:29.182  INFO 40227 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1018 ms
-2022-06-12 08:49:29.254  INFO 40227 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-06-12 08:49:30.545  INFO 40227 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-06-12 08:49:30.591  INFO 40227 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-06-12 08:49:30.629  INFO 40227 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
-2022-06-12 08:49:30.740  INFO 40227 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-06-12 08:49:30.817  INFO 40227 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-06-12 08:49:32.557  INFO 40227 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-06-12 08:49:32.565  INFO 40227 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-06-12 08:49:32.840  WARN 40227 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-06-12 08:49:33.021  INFO 40227 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2f3a0f37, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7ec8db0c, org.springframework.security.web.context.SecurityContextPersistenceFilter@1af6974c, org.springframework.security.web.header.HeaderWriterFilter@4d71ec5b, org.springframework.security.web.authentication.logout.LogoutFilter@41bbdd8a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7d15c513, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3c2188f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@19c24321, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4f1a5b93, org.springframework.security.web.session.SessionManagementFilter@137d04d8, org.springframework.security.web.access.ExceptionTranslationFilter@5f5c0eda, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@49005dc4]
-2022-06-12 08:49:33.317  INFO 40227 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-06-12 08:49:33.325  INFO 40227 --- [main] c.example.moviepal.MoviePaLApplication   : Started MoviePaLApplication in 5.423 seconds (JVM running for 5.81)
-2022-06-12 08:49:38.188  INFO 40227 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-06-12 08:49:38.188  INFO 40227 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-06-12 08:49:38.189  INFO 40227 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-06-12 08:49:38.624  INFO 40227 --- [http-nio-8080-exec-2] c.e.m.c.M.AddMovieController             : Starting movie/add/name in LookUpMovieController
-2022-06-12 08:49:38.624  INFO 40227 --- [http-nio-8080-exec-2] c.e.m.c.M.AddMovieController             : calling movieService.addByName with name
-2022-06-12 08:49:38.624  INFO 40227 --- [http-nio-8080-exec-2] c.example.moviepal.service.UserService   : starting findUserIdByName: id is Ahmed
-2022-06-12 08:49:38.724  INFO 40227 --- [http-nio-8080-exec-2] c.example.moviepal.service.UserService   : userid was found: 7
-2022-06-12 08:49:38.725  INFO 40227 --- [http-nio-8080-exec-2] c.e.m.c.M.AddMovieController             : User doing the call is: Ahmed with id: 7
-2022-06-12 08:49:38.725  INFO 40227 --- [http-nio-8080-exec-2] c.example.moviepal.service.UserService   : starting getUserById: user id is 7
-2022-06-12 08:49:39.321  INFO 40227 --- [http-nio-8080-exec-2] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@4a4dea48
-2022-06-12 08:49:39.321  INFO 40227 --- [http-nio-8080-exec-2] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@4a4dea48
-2022-06-12 08:49:39.801  INFO 40227 --- [http-nio-8080-exec-2] c.e.m.c.M.AddMovieController             : User was found: Ahmed
-2022-06-12 08:49:39.802  INFO 40227 --- [http-nio-8080-exec-2] c.example.moviepal.service.MovieService  : starting addMovieByNameToFavorite with name of the movie
-2022-06-12 08:49:39.802  INFO 40227 --- [http-nio-8080-exec-2] c.example.moviepal.service.MovieService  : starting findByName in MovieService
-2022-06-12 08:49:39.802  INFO 40227 --- [http-nio-8080-exec-2] c.example.moviepal.service.MovieService  : calling movieOMDBapi.findByTitle using the name
-2022-06-12 08:49:39.802  INFO 40227 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findByTitle
-2022-06-12 08:49:39.803  INFO 40227 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&t=joy
-2022-06-12 08:49:39.803  INFO 40227 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
-2022-06-12 08:49:41.381  INFO 40227 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Joy","Year":"2015","Rated":"PG-13","Released":"25 Dec 2015","Runtime":"124 min","Genre":"Biography, Drama","Director":"David O. Russell","Writer":"David O. Russell, Annie Mumolo","Actors":"Jennifer Lawrence, Robert De Niro, Bradley Cooper","Plot":"Joy is the story of the title character, who rose to become founder and matriarch of a powerful family business dynasty.","Language":"English, Spanish, French","Country":"United States","Awards":"Nominated for 1 Oscar. 8 wins & 23 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BNzRiOWZmMzUtZTJiOC00MjQ1LTkwMjgtNzhlYzBmODAzYTA0XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"6.6/10"},{"Source":"Rotten Tomatoes","Value":"60%"},{"Source":"Metacritic","Value":"56/100"}],"Metascore":"56","imdbRating":"6.6","imdbVotes":"135,525","imdbID":"tt2446980","Type":"movie","DVD":"03 May 2016","BoxOffice":"$56,451,232","Production":"N/A","Website":"N/A","Response":"True"}
-2022-06-12 08:49:41.382  INFO 40227 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
-2022-06-12 08:49:41.384  INFO 40227 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
-2022-06-12 08:49:41.427  INFO 40227 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt2446980, title=Joy, year=2015, type=movie)
-2022-06-12 08:49:41.427  INFO 40227 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
-2022-06-12 08:49:41.427  INFO 40227 --- [http-nio-8080-exec-2] c.example.moviepal.service.MovieService  : movie was called: Movie(id=tt2446980, title=Joy, year=2015, type=movie)
-2022-06-12 08:49:52.114  INFO 40227 --- [http-nio-8080-exec-3] c.e.m.c.M.RemoveMovieController          : Starting movie/remove/name in LookUpMovieController
-2022-06-12 08:49:52.115  INFO 40227 --- [http-nio-8080-exec-3] c.e.m.c.M.RemoveMovieController          : calling movieService.addByName with name
-2022-06-12 08:49:52.115  INFO 40227 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : starting findUserIdByName: id is Ahmed
-2022-06-12 08:49:52.310  INFO 40227 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : userid was found: 7
-2022-06-12 08:49:52.311  INFO 40227 --- [http-nio-8080-exec-3] c.e.m.c.M.RemoveMovieController          : User doing the call is: Ahmed with id: 7
-2022-06-12 08:49:52.311  INFO 40227 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : starting getUserById: user id is 7
-2022-06-12 08:49:52.889  INFO 40227 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@5ba0321
-2022-06-12 08:49:52.889  INFO 40227 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@5ba0321
-2022-06-12 08:49:53.381  INFO 40227 --- [http-nio-8080-exec-3] c.e.m.c.M.RemoveMovieController          : User was found: Ahmed
-2022-06-12 08:49:53.381  INFO 40227 --- [http-nio-8080-exec-3] c.example.moviepal.service.MovieService  : starting removeMovieByNameFromFavorite with name of the movie
-2022-06-12 08:49:53.381  INFO 40227 --- [http-nio-8080-exec-3] c.example.moviepal.service.ListsService  : calling getFavoriteListByUserId for a list by user id: 7
-2022-06-12 08:49:53.487  INFO 40227 --- [http-nio-8080-exec-3] c.example.moviepal.service.ListsService  : list was found and size is: 1
-2022-06-12 08:49:53.488  INFO 40227 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findById
-2022-06-12 08:49:53.488  INFO 40227 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&i=tt2446980
-2022-06-12 08:49:53.488  INFO 40227 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
-2022-06-12 08:49:53.593  INFO 40227 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Joy","Year":"2015","Rated":"PG-13","Released":"25 Dec 2015","Runtime":"124 min","Genre":"Biography, Drama","Director":"David O. Russell","Writer":"David O. Russell, Annie Mumolo","Actors":"Jennifer Lawrence, Robert De Niro, Bradley Cooper","Plot":"Joy is the story of the title character, who rose to become founder and matriarch of a powerful family business dynasty.","Language":"English, Spanish, French","Country":"United States","Awards":"Nominated for 1 Oscar. 8 wins & 23 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BNzRiOWZmMzUtZTJiOC00MjQ1LTkwMjgtNzhlYzBmODAzYTA0XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"6.6/10"},{"Source":"Rotten Tomatoes","Value":"60%"},{"Source":"Metacritic","Value":"56/100"}],"Metascore":"56","imdbRating":"6.6","imdbVotes":"135,525","imdbID":"tt2446980","Type":"movie","DVD":"03 May 2016","BoxOffice":"$56,451,232","Production":"N/A","Website":"N/A","Response":"True"}
-2022-06-12 08:49:53.593  INFO 40227 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
-2022-06-12 08:49:53.593  INFO 40227 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
-2022-06-12 08:49:53.594  INFO 40227 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt2446980, title=Joy, year=2015, type=movie)
-2022-06-12 08:49:53.595  INFO 40227 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
-2022-06-12 08:49:53.595  INFO 40227 --- [http-nio-8080-exec-3] c.example.moviepal.service.MovieService  : favoriteListMovie was obtained using the user
-2022-06-12 08:49:53.595  INFO 40227 --- [http-nio-8080-exec-3] c.example.moviepal.service.MovieService  : movie is in the list
-2022-06-12 08:49:53.694  INFO 40227 --- [http-nio-8080-exec-3] c.example.moviepal.service.MovieService  : movie was found, now deleting it
-2022-06-12 08:50:10.772  INFO 40227 --- [http-nio-8080-exec-5] c.e.m.c.M.AddMovieController             : Starting movie/add/name in LookUpMovieController
-2022-06-12 08:50:10.772  INFO 40227 --- [http-nio-8080-exec-5] c.e.m.c.M.AddMovieController             : calling movieService.addByName with name
-2022-06-12 08:50:10.772  INFO 40227 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : starting findUserIdByName: id is Ahmed
-2022-06-12 08:50:10.869  INFO 40227 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : userid was found: 7
-2022-06-12 08:50:10.869  INFO 40227 --- [http-nio-8080-exec-5] c.e.m.c.M.AddMovieController             : User doing the call is: Ahmed with id: 7
-2022-06-12 08:50:10.869  INFO 40227 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : starting getUserById: user id is 7
-2022-06-12 08:50:11.451  INFO 40227 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@2198de6
-2022-06-12 08:50:11.452  INFO 40227 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@2198de6
-2022-06-12 08:50:11.939  INFO 40227 --- [http-nio-8080-exec-5] c.e.m.c.M.AddMovieController             : User was found: Ahmed
-2022-06-12 08:50:11.939  INFO 40227 --- [http-nio-8080-exec-5] c.example.moviepal.service.MovieService  : starting addMovieByNameToWish with name of the movie
-2022-06-12 08:50:11.939  INFO 40227 --- [http-nio-8080-exec-5] c.example.moviepal.service.MovieService  : starting findByName in MovieService
-2022-06-12 08:50:11.939  INFO 40227 --- [http-nio-8080-exec-5] c.example.moviepal.service.MovieService  : calling movieOMDBapi.findByTitle using the name
-2022-06-12 08:50:11.940  INFO 40227 --- [http-nio-8080-exec-5] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findByTitle
-2022-06-12 08:50:11.940  INFO 40227 --- [http-nio-8080-exec-5] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&t=dark
-2022-06-12 08:50:11.940  INFO 40227 --- [http-nio-8080-exec-5] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
-2022-06-12 08:50:12.588  INFO 40227 --- [http-nio-8080-exec-5] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Dark","Year":"2017–2020","Rated":"TV-MA","Released":"01 Dec 2017","Runtime":"60 min","Genre":"Crime, Drama, Mystery","Director":"N/A","Writer":"Baran bo Odar, Jantje Friese","Actors":"Louis Hofmann, Karoline Eichhorn, Lisa Vicari","Plot":"A family saga with a supernatural twist, set in a German town where the disappearance of two young children exposes the relationships among four families.","Language":"German","Country":"Germany, United States","Awards":"8 wins & 22 nominations","Poster":"https://m.media-amazon.com/images/M/MV5BOTk2NzUyOTctZDdlMS00MDJlLTgzNTEtNzQzYjFhNjA0YjBjXkEyXkFqcGdeQXVyMjg1NDcxNDE@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"8.7/10"}],"Metascore":"N/A","imdbRating":"8.7","imdbVotes":"355,852","imdbID":"tt5753856","Type":"series","totalSeasons":"3","Response":"True"}
-2022-06-12 08:50:12.588  INFO 40227 --- [http-nio-8080-exec-5] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
-2022-06-12 08:50:12.589  INFO 40227 --- [http-nio-8080-exec-5] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
-2022-06-12 08:50:12.590  INFO 40227 --- [http-nio-8080-exec-5] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt5753856, title=Dark, year=2017–2020, type=series)
-2022-06-12 08:50:12.590  INFO 40227 --- [http-nio-8080-exec-5] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
-2022-06-12 08:50:12.590  INFO 40227 --- [http-nio-8080-exec-5] c.example.moviepal.service.MovieService  : movie was called: Movie(id=tt5753856, title=Dark, year=2017–2020, type=series)
-2022-06-12 08:50:19.768  INFO 40227 --- [http-nio-8080-exec-6] c.e.m.c.M.AddMovieController             : Starting movie/add/name in LookUpMovieController
-2022-06-12 08:50:19.768  INFO 40227 --- [http-nio-8080-exec-6] c.e.m.c.M.AddMovieController             : calling movieService.addByName with name
-2022-06-12 08:50:19.768  INFO 40227 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : starting findUserIdByName: id is Aking
-2022-06-12 08:50:19.866  INFO 40227 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : userid was found: 9
-2022-06-12 08:50:19.867  INFO 40227 --- [http-nio-8080-exec-6] c.e.m.c.M.AddMovieController             : User doing the call is: Aking with id: 9
-2022-06-12 08:50:19.867  INFO 40227 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : starting getUserById: user id is 9
-2022-06-12 08:50:20.444  INFO 40227 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@421a9142
-2022-06-12 08:50:20.444  INFO 40227 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@421a9142
-2022-06-12 08:50:20.929  INFO 40227 --- [http-nio-8080-exec-6] c.e.m.c.M.AddMovieController             : User was found: Aking
-2022-06-12 08:50:20.929  INFO 40227 --- [http-nio-8080-exec-6] c.example.moviepal.service.MovieService  : starting addMovieByNameToWish with name of the movie
-2022-06-12 08:50:20.929  INFO 40227 --- [http-nio-8080-exec-6] c.example.moviepal.service.MovieService  : starting findByName in MovieService
-2022-06-12 08:50:20.929  INFO 40227 --- [http-nio-8080-exec-6] c.example.moviepal.service.MovieService  : calling movieOMDBapi.findByTitle using the name
-2022-06-12 08:50:20.929  INFO 40227 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findByTitle
-2022-06-12 08:50:20.929  INFO 40227 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&t=dark
-2022-06-12 08:50:20.929  INFO 40227 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
-2022-06-12 08:50:21.030  INFO 40227 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Dark","Year":"2017–2020","Rated":"TV-MA","Released":"01 Dec 2017","Runtime":"60 min","Genre":"Crime, Drama, Mystery","Director":"N/A","Writer":"Baran bo Odar, Jantje Friese","Actors":"Louis Hofmann, Karoline Eichhorn, Lisa Vicari","Plot":"A family saga with a supernatural twist, set in a German town where the disappearance of two young children exposes the relationships among four families.","Language":"German","Country":"Germany, United States","Awards":"8 wins & 22 nominations","Poster":"https://m.media-amazon.com/images/M/MV5BOTk2NzUyOTctZDdlMS00MDJlLTgzNTEtNzQzYjFhNjA0YjBjXkEyXkFqcGdeQXVyMjg1NDcxNDE@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"8.7/10"}],"Metascore":"N/A","imdbRating":"8.7","imdbVotes":"355,852","imdbID":"tt5753856","Type":"series","totalSeasons":"3","Response":"True"}
-2022-06-12 08:50:21.031  INFO 40227 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
-2022-06-12 08:50:21.031  INFO 40227 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
-2022-06-12 08:50:21.032  INFO 40227 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt5753856, title=Dark, year=2017–2020, type=series)
-2022-06-12 08:50:21.032  INFO 40227 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
-2022-06-12 08:50:21.032  INFO 40227 --- [http-nio-8080-exec-6] c.example.moviepal.service.MovieService  : movie was called: Movie(id=tt5753856, title=Dark, year=2017–2020, type=series)
-2022-06-12 08:50:28.071  INFO 40227 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-06-12 08:50:28.072  INFO 40227 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-06-12 08:50:29.001  INFO 40227 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-27 10:34:36.879  INFO 38364 --- [main] c.example.moviepal.MoviePaLApplication   : Starting MoviePaLApplication using Java 18.0.1.1 on Abdullahs-MacBook-Pro.local with PID 38364 (/Users/abdo/IdeaProjects/MoviePaL/target/classes started by abdo in /Users/abdo/IdeaProjects/MoviePaL)
+2022-06-27 10:34:36.883  INFO 38364 --- [main] c.example.moviepal.MoviePaLApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-06-27 10:34:37.373  INFO 38364 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-27 10:34:37.436  INFO 38364 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 4 JPA repository interfaces.
+2022-06-27 10:34:37.828  INFO 38364 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-27 10:34:37.834  INFO 38364 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-27 10:34:37.834  INFO 38364 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-27 10:34:37.904  INFO 38364 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-27 10:34:37.904  INFO 38364 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 987 ms
+2022-06-27 10:34:37.985  INFO 38364 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-27 10:34:41.328  INFO 38364 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-27 10:34:41.371  INFO 38364 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-27 10:34:41.413  INFO 38364 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-27 10:34:41.508  INFO 38364 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-27 10:34:41.582  INFO 38364 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-06-27 10:34:43.783  INFO 38364 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-27 10:34:43.789  INFO 38364 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 10:34:44.076  WARN 38364 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-27 10:34:44.240  INFO 38364 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@bd09a26, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5020b59f, org.springframework.security.web.context.SecurityContextPersistenceFilter@24a7725d, org.springframework.security.web.header.HeaderWriterFilter@7352418c, org.springframework.security.web.authentication.logout.LogoutFilter@5f5c0eda, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2ce62e27, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@16c9f7f0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7615666e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@75db328e, org.springframework.security.web.session.SessionManagementFilter@29d33f1, org.springframework.security.web.access.ExceptionTranslationFilter@46ff1aad, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@79e9c14]
+2022-06-27 10:34:44.524  INFO 38364 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-27 10:34:44.533  INFO 38364 --- [main] c.example.moviepal.MoviePaLApplication   : Started MoviePaLApplication in 7.935 seconds (JVM running for 8.376)
+2022-06-27 10:35:15.944  INFO 38364 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-27 10:35:15.944  INFO 38364 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-27 10:35:15.945  INFO 38364 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-27 10:35:16.535  INFO 38364 --- [http-nio-8080-exec-1] c.example.moviepal.service.MovieService  : Starting movie/lookby/movie/lookby/name in LookUpMovieController
+2022-06-27 10:35:16.535  INFO 38364 --- [http-nio-8080-exec-1] c.example.moviepal.service.MovieService  : calling movieService.findByName with name
+2022-06-27 10:35:16.538  INFO 38364 --- [http-nio-8080-exec-1] c.example.moviepal.service.MovieService  : starting findByName in MovieService
+2022-06-27 10:35:16.538  INFO 38364 --- [http-nio-8080-exec-1] c.example.moviepal.service.MovieService  : calling movieOMDBapi.findByTitle using the name
+2022-06-27 10:35:16.538  INFO 38364 --- [http-nio-8080-exec-1] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findByTitle
+2022-06-27 10:35:16.538  INFO 38364 --- [http-nio-8080-exec-1] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&t=batman
+2022-06-27 10:35:16.538  INFO 38364 --- [http-nio-8080-exec-1] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-27 10:35:18.430  INFO 38364 --- [http-nio-8080-exec-1] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Batman","Year":"1989","Rated":"PG-13","Released":"23 Jun 1989","Runtime":"126 min","Genre":"Action, Adventure","Director":"Tim Burton","Writer":"Bob Kane, Sam Hamm, Warren Skaaren","Actors":"Michael Keaton, Jack Nicholson, Kim Basinger","Plot":"The Dark Knight of Gotham City begins his war on crime with his first major enemy being Jack Napier, a criminal who becomes the clownishly homicidal Joker.","Language":"English, French, Spanish","Country":"United States, United Kingdom","Awards":"Won 1 Oscar. 9 wins & 26 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BZTM2NmZlOTEtYTI5NS00N2JjLWJkNzItMmZkNDBlYmQzNDA2XkEyXkFqcGdeQXVyMTAxODYyODI@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"7.5/10"},{"Source":"Rotten Tomatoes","Value":"72%"},{"Source":"Metacritic","Value":"69/100"}],"Metascore":"69","imdbRating":"7.5","imdbVotes":"371,227","imdbID":"tt0096895","Type":"movie","DVD":"22 Aug 1997","BoxOffice":"$251,409,241","Production":"N/A","Website":"N/A","Response":"True"}
+2022-06-27 10:35:18.430  INFO 38364 --- [http-nio-8080-exec-1] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-27 10:35:18.432  INFO 38364 --- [http-nio-8080-exec-1] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-27 10:35:18.472  INFO 38364 --- [http-nio-8080-exec-1] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt0096895, title=Batman, year=1989, type=movie)
+2022-06-27 10:35:18.472  INFO 38364 --- [http-nio-8080-exec-1] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-27 12:38:03.377  INFO 38364 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 12:38:03.381  INFO 38364 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-27 12:38:03.385  INFO 38364 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-27 12:38:33.675  INFO 45073 --- [main] c.example.moviepal.MoviePaLApplication   : Starting MoviePaLApplication using Java 18.0.1.1 on Abdullahs-MacBook-Pro.local with PID 45073 (/Users/abdo/IdeaProjects/MoviePaL/target/classes started by abdo in /Users/abdo/IdeaProjects/MoviePaL)
+2022-06-27 12:38:33.677  INFO 45073 --- [main] c.example.moviepal.MoviePaLApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-06-27 12:38:34.132  INFO 45073 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-27 12:38:34.196  INFO 45073 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 4 JPA repository interfaces.
+2022-06-27 12:38:34.556  INFO 45073 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-27 12:38:34.569  INFO 45073 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-27 12:38:34.569  INFO 45073 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-27 12:38:34.633  INFO 45073 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-27 12:38:34.633  INFO 45073 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 921 ms
+2022-06-27 12:38:34.703  INFO 45073 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-27 12:38:36.400  INFO 45073 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-27 12:38:36.440  INFO 45073 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-27 12:38:36.479  INFO 45073 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-27 12:38:36.571  INFO 45073 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-27 12:38:36.633  INFO 45073 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-06-27 12:38:38.594  INFO 45073 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-27 12:38:38.602  INFO 45073 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 12:38:38.903  WARN 45073 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-27 12:38:39.069  INFO 45073 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@21bd6fd1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@79e9c14, org.springframework.security.web.context.SecurityContextPersistenceFilter@48188d23, org.springframework.security.web.header.HeaderWriterFilter@6fb219dd, org.springframework.security.web.authentication.logout.LogoutFilter@16c9f7f0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@28d16af8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@67f0bf7e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6c2fea95, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@340c7479, org.springframework.security.web.session.SessionManagementFilter@758ebec4, org.springframework.security.web.access.ExceptionTranslationFilter@3922b297, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@b386a17]
+2022-06-27 12:38:39.355  INFO 45073 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-27 12:38:39.364  INFO 45073 --- [main] c.example.moviepal.MoviePaLApplication   : Started MoviePaLApplication in 5.934 seconds (JVM running for 6.474)
+2022-06-27 13:00:58.895  INFO 45073 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-27 13:00:58.897  INFO 45073 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-27 13:00:58.906  INFO 45073 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2022-06-27 13:00:59.215  INFO 45073 --- [http-nio-8080-exec-1] c.e.m.advice.ControllerAdviseHandler     : handleMethodArgument was triggered
+2022-06-27 13:02:20.882  INFO 45073 --- [http-nio-8080-exec-2] c.e.m.advice.ControllerAdviseHandler     : handleMethodArgument was triggered
+2022-06-27 13:02:27.811  INFO 45073 --- [http-nio-8080-exec-3] c.e.m.advice.ControllerAdviseHandler     : handleMethodArgument was triggered
+2022-06-27 13:02:29.774  INFO 45073 --- [http-nio-8080-exec-4] c.e.m.advice.ControllerAdviseHandler     : handleMethodArgument was triggered
+2022-06-27 13:02:30.657  INFO 45073 --- [http-nio-8080-exec-5] c.e.m.advice.ControllerAdviseHandler     : handleMethodArgument was triggered
+2022-06-27 13:06:23.767  INFO 45073 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 13:06:23.771  INFO 45073 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-27 13:06:24.902  INFO 45073 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-27 13:06:28.012  INFO 45978 --- [main] c.example.moviepal.MoviePaLApplication   : Starting MoviePaLApplication using Java 18.0.1.1 on Abdullahs-MacBook-Pro.local with PID 45978 (/Users/abdo/IdeaProjects/MoviePaL/target/classes started by abdo in /Users/abdo/IdeaProjects/MoviePaL)
+2022-06-27 13:06:28.014  INFO 45978 --- [main] c.example.moviepal.MoviePaLApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-06-27 13:06:28.516  INFO 45978 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-27 13:06:28.576  INFO 45978 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 4 JPA repository interfaces.
+2022-06-27 13:06:28.937  INFO 45978 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-27 13:06:28.942  INFO 45978 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-27 13:06:28.942  INFO 45978 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-27 13:06:29.007  INFO 45978 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-27 13:06:29.008  INFO 45978 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 965 ms
+2022-06-27 13:06:29.081  INFO 45978 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-27 13:06:30.444  INFO 45978 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-27 13:06:30.487  INFO 45978 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-27 13:06:30.529  INFO 45978 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-27 13:06:30.648  INFO 45978 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-27 13:06:30.716  INFO 45978 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-06-27 13:06:32.328  INFO 45978 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-27 13:06:32.336  INFO 45978 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 13:06:32.621  WARN 45978 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-27 13:06:32.803  INFO 45978 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@328bc067, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@337fb1a5, org.springframework.security.web.context.SecurityContextPersistenceFilter@5ac53209, org.springframework.security.web.header.HeaderWriterFilter@19c24321, org.springframework.web.filter.CorsFilter@38b0e2a7, org.springframework.security.web.authentication.logout.LogoutFilter@2213854b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@279e8bc0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6fd2acf5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@66e62fc4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6bdad3bb, org.springframework.security.web.session.SessionManagementFilter@2af3b054, org.springframework.security.web.access.ExceptionTranslationFilter@1b5623b4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@782143e8]
+2022-06-27 13:06:33.069  INFO 45978 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-27 13:06:33.078  INFO 45978 --- [main] c.example.moviepal.MoviePaLApplication   : Started MoviePaLApplication in 5.287 seconds (JVM running for 5.79)
+2022-06-27 13:06:44.423  INFO 45978 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-27 13:06:44.423  INFO 45978 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-27 13:06:44.424  INFO 45978 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-27 13:06:45.047  INFO 45978 --- [http-nio-8080-exec-1] c.e.moviepal.controllers.UserController  : Starting addUser in UserController
+2022-06-27 13:06:45.047  INFO 45978 --- [http-nio-8080-exec-1] c.e.moviepal.controllers.UserController  : calling adduser to the user service: com.example.moviepal.model.User@4627478a
+2022-06-27 13:06:45.047  INFO 45978 --- [http-nio-8080-exec-1] c.example.moviepal.service.UserService   : Starting addUser from UserService
+2022-06-27 13:06:45.122  INFO 45978 --- [http-nio-8080-exec-1] c.example.moviepal.service.UserService   : created a hash password: $2a$10$G7QZW8PuFUzSfEVPnpmQYOmlibsndQP8.jwgeGf87hmaKjhBUhSWK
+2022-06-27 13:06:45.123  INFO 45978 --- [http-nio-8080-exec-1] c.example.moviepal.service.UserService   : hash password was set to the user: com.example.moviepal.model.User@4627478a
+2022-06-27 13:06:56.163  INFO 45978 --- [http-nio-8080-exec-4] c.e.m.advice.ControllerAdviseHandler     : handleMethodArgument was triggered
+2022-06-27 13:07:22.129  INFO 45978 --- [http-nio-8080-exec-5] c.e.m.advice.ControllerAdviseHandler     : handleMethodArgument was triggered
+2022-06-27 13:08:06.441  INFO 45978 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 13:08:06.443  INFO 45978 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-27 13:08:07.566  INFO 45978 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-27 13:08:10.328  INFO 46020 --- [main] c.example.moviepal.MoviePaLApplication   : Starting MoviePaLApplication using Java 18.0.1.1 on Abdullahs-MacBook-Pro.local with PID 46020 (/Users/abdo/IdeaProjects/MoviePaL/target/classes started by abdo in /Users/abdo/IdeaProjects/MoviePaL)
+2022-06-27 13:08:10.329  INFO 46020 --- [main] c.example.moviepal.MoviePaLApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-06-27 13:08:10.772  INFO 46020 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-27 13:08:10.829  INFO 46020 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 4 JPA repository interfaces.
+2022-06-27 13:08:11.193  INFO 46020 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-27 13:08:11.199  INFO 46020 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-27 13:08:11.200  INFO 46020 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-27 13:08:11.272  INFO 46020 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-27 13:08:11.272  INFO 46020 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 918 ms
+2022-06-27 13:08:11.358  INFO 46020 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-27 13:08:11.390  INFO 46020 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-27 13:08:11.476  INFO 46020 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-27 13:08:11.536  INFO 46020 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-27 13:08:12.905  INFO 46020 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-27 13:08:12.922  INFO 46020 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-06-27 13:08:14.543  INFO 46020 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-27 13:08:14.552  INFO 46020 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 13:08:14.840  WARN 46020 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-27 13:08:15.013  INFO 46020 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7a364e1c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@29a50a11, org.springframework.security.web.context.SecurityContextPersistenceFilter@177302d6, org.springframework.security.web.header.HeaderWriterFilter@1b5623b4, org.springframework.web.filter.CorsFilter@74cff17c, org.springframework.security.web.authentication.logout.LogoutFilter@3c5044fa, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@16745abd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@21046afa, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@41bbdd8a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7a053795, org.springframework.security.web.session.SessionManagementFilter@d960561, org.springframework.security.web.access.ExceptionTranslationFilter@61d61b0e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4f1a5b93]
+2022-06-27 13:08:15.296  INFO 46020 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-27 13:08:15.304  INFO 46020 --- [main] c.example.moviepal.MoviePaLApplication   : Started MoviePaLApplication in 5.203 seconds (JVM running for 5.543)
+2022-06-27 13:08:24.905  INFO 46020 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-27 13:08:24.906  INFO 46020 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-27 13:08:24.907  INFO 46020 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-27 13:08:25.472  INFO 46020 --- [http-nio-8080-exec-2] c.e.moviepal.controllers.UserController  : Starting addUser in UserController
+2022-06-27 13:08:25.473  INFO 46020 --- [http-nio-8080-exec-2] c.e.moviepal.controllers.UserController  : calling adduser to the user service: com.example.moviepal.model.User@4608f9c2
+2022-06-27 13:08:25.473  INFO 46020 --- [http-nio-8080-exec-2] c.example.moviepal.service.UserService   : Starting addUser from UserService
+2022-06-27 13:08:25.549  INFO 46020 --- [http-nio-8080-exec-2] c.example.moviepal.service.UserService   : created a hash password: $2a$10$Qz2gWv0vXT6ejOTiab8KF.yh4Y4l4Khyo7qgAHWW/gnIPLUmJdMUa
+2022-06-27 13:08:25.550  INFO 46020 --- [http-nio-8080-exec-2] c.example.moviepal.service.UserService   : hash password was set to the user: com.example.moviepal.model.User@4608f9c2
+2022-06-27 13:08:31.867  INFO 46020 --- [http-nio-8080-exec-3] c.e.moviepal.controllers.UserController  : Starting addUser in UserController
+2022-06-27 13:08:31.868  INFO 46020 --- [http-nio-8080-exec-3] c.e.moviepal.controllers.UserController  : calling adduser to the user service: com.example.moviepal.model.User@3c3551e3
+2022-06-27 13:08:31.868  INFO 46020 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : Starting addUser from UserService
+2022-06-27 13:08:31.955  INFO 46020 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : created a hash password: $2a$10$b34x7nbLpkJ9.r6qF8v6ue5vy/mVoAa7w6oeT9UpkPsb7xNiA/4na
+2022-06-27 13:08:31.955  INFO 46020 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : hash password was set to the user: com.example.moviepal.model.User@3c3551e3
+2022-06-27 13:08:42.778  INFO 46020 --- [http-nio-8080-exec-4] c.e.moviepal.controllers.UserController  : Starting addUser in UserController
+2022-06-27 13:08:42.778  INFO 46020 --- [http-nio-8080-exec-4] c.e.moviepal.controllers.UserController  : calling adduser to the user service: com.example.moviepal.model.User@65fcf890
+2022-06-27 13:08:42.778  INFO 46020 --- [http-nio-8080-exec-4] c.example.moviepal.service.UserService   : Starting addUser from UserService
+2022-06-27 13:08:42.866  INFO 46020 --- [http-nio-8080-exec-4] c.example.moviepal.service.UserService   : created a hash password: $2a$10$UChx/PCTsSDXLxMVcylh2ebAAsK.yXgM4jb./gVCAkupLeFYujoui
+2022-06-27 13:08:42.866  INFO 46020 --- [http-nio-8080-exec-4] c.example.moviepal.service.UserService   : hash password was set to the user: com.example.moviepal.model.User@65fcf890
+2022-06-27 13:08:56.362  INFO 46020 --- [http-nio-8080-exec-5] c.e.moviepal.controllers.UserController  : Starting addUser in UserController
+2022-06-27 13:08:56.362  INFO 46020 --- [http-nio-8080-exec-5] c.e.moviepal.controllers.UserController  : calling adduser to the user service: com.example.moviepal.model.User@471dad3b
+2022-06-27 13:08:56.362  INFO 46020 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : Starting addUser from UserService
+2022-06-27 13:08:56.449  INFO 46020 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : created a hash password: $2a$10$gxyjLD/E4UWh7/U/TLHgveuoz4025aN3fdUyZIyFtJ.zBmQ1gWu46
+2022-06-27 13:08:56.449  INFO 46020 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : hash password was set to the user: com.example.moviepal.model.User@471dad3b
+2022-06-27 13:08:56.864  WARN 46020 --- [http-nio-8080-exec-5] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1062, SQLState: 23000
+2022-06-27 13:08:56.864 ERROR 46020 --- [http-nio-8080-exec-5] o.h.engine.jdbc.spi.SqlExceptionHelper   : Duplicate entry 'fisal' for key 'user.UK_sb8bbouer5wak8vyiiy4pf2bx'
+2022-06-27 13:08:57.063  INFO 46020 --- [http-nio-8080-exec-5] c.e.m.advice.ControllerAdviseHandler     : handleDataIntegrity was triggered
+2022-06-27 13:09:10.362  INFO 46020 --- [http-nio-8080-exec-6] c.e.moviepal.controllers.UserController  : Starting addUser in UserController
+2022-06-27 13:09:10.363  INFO 46020 --- [http-nio-8080-exec-6] c.e.moviepal.controllers.UserController  : calling adduser to the user service: com.example.moviepal.model.User@61a9647
+2022-06-27 13:09:10.363  INFO 46020 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : Starting addUser from UserService
+2022-06-27 13:09:10.449  INFO 46020 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : created a hash password: $2a$10$pt4b2FoV3dmSAprrNBor/u6mDLBPEj7g10rEcvKbO6yJ4.EeZgYJO
+2022-06-27 13:09:10.449  INFO 46020 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : hash password was set to the user: com.example.moviepal.model.User@61a9647
+2022-06-27 13:09:10.761  WARN 46020 --- [http-nio-8080-exec-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1062, SQLState: 23000
+2022-06-27 13:09:10.762 ERROR 46020 --- [http-nio-8080-exec-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : Duplicate entry 'Fisal' for key 'user.UK_sb8bbouer5wak8vyiiy4pf2bx'
+2022-06-27 13:09:10.967  INFO 46020 --- [http-nio-8080-exec-6] c.e.m.advice.ControllerAdviseHandler     : handleDataIntegrity was triggered
+2022-06-27 13:09:15.797  INFO 46020 --- [http-nio-8080-exec-7] c.e.moviepal.controllers.UserController  : Starting addUser in UserController
+2022-06-27 13:09:15.797  INFO 46020 --- [http-nio-8080-exec-7] c.e.moviepal.controllers.UserController  : calling adduser to the user service: com.example.moviepal.model.User@29bccfe9
+2022-06-27 13:09:15.797  INFO 46020 --- [http-nio-8080-exec-7] c.example.moviepal.service.UserService   : Starting addUser from UserService
+2022-06-27 13:09:15.885  INFO 46020 --- [http-nio-8080-exec-7] c.example.moviepal.service.UserService   : created a hash password: $2a$10$zm5SuwtZXaVAC/Hrcq/1ku9EvSLjg84fCx5TjCBccQEfsebtKk95S
+2022-06-27 13:09:15.885  INFO 46020 --- [http-nio-8080-exec-7] c.example.moviepal.service.UserService   : hash password was set to the user: com.example.moviepal.model.User@29bccfe9
+2022-06-27 13:09:26.862  INFO 46020 --- [http-nio-8080-exec-9] c.e.moviepal.controllers.UserController  : Starting addUser in UserController
+2022-06-27 13:09:26.862  INFO 46020 --- [http-nio-8080-exec-9] c.e.moviepal.controllers.UserController  : calling adduser to the user service: com.example.moviepal.model.User@4bd1cfcf
+2022-06-27 13:09:26.862  INFO 46020 --- [http-nio-8080-exec-9] c.example.moviepal.service.UserService   : Starting addUser from UserService
+2022-06-27 13:09:26.949  INFO 46020 --- [http-nio-8080-exec-9] c.example.moviepal.service.UserService   : created a hash password: $2a$10$ry//aM0GLHFt22zzcuDv3eMQxlkhbU96VIUsh5Bo5DrwWXa0BlaCa
+2022-06-27 13:09:26.949  INFO 46020 --- [http-nio-8080-exec-9] c.example.moviepal.service.UserService   : hash password was set to the user: com.example.moviepal.model.User@4bd1cfcf
+2022-06-27 13:13:10.400  INFO 46020 --- [http-nio-8080-exec-1] c.e.moviepal.controllers.UserController  : Starting addUser in UserController
+2022-06-27 13:13:10.401  INFO 46020 --- [http-nio-8080-exec-1] c.e.moviepal.controllers.UserController  : calling adduser to the user service: com.example.moviepal.model.User@8d24dc2
+2022-06-27 13:13:10.401  INFO 46020 --- [http-nio-8080-exec-1] c.example.moviepal.service.UserService   : Starting addUser from UserService
+2022-06-27 13:13:10.486  INFO 46020 --- [http-nio-8080-exec-1] c.example.moviepal.service.UserService   : created a hash password: $2a$10$djitXzDrKMD/Mj1bTY69WeICU3GpCUsxVNX9ksrz1ouYeoProu4WS
+2022-06-27 13:13:10.486  INFO 46020 --- [http-nio-8080-exec-1] c.example.moviepal.service.UserService   : hash password was set to the user: com.example.moviepal.model.User@8d24dc2
+2022-06-27 13:13:28.081 ERROR 46020 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+java.lang.IllegalArgumentException: A granted authority textual representation is required
+	at org.springframework.util.Assert.hasText(Assert.java:289) ~[spring-core-5.3.20.jar:5.3.20]
+	at org.springframework.security.core.authority.SimpleGrantedAuthority.<init>(SimpleGrantedAuthority.java:39) ~[spring-security-core-5.7.1.jar:5.7.1]
+	at com.example.moviepal.model.User.getAuthorities(User.java:48) ~[classes/:na]
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.createSuccessAuthentication(AbstractUserDetailsAuthenticationProvider.java:197) ~[spring-security-core-5.7.1.jar:5.7.1]
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.createSuccessAuthentication(DaoAuthenticationProvider.java:122) ~[spring-security-core-5.7.1.jar:5.7.1]
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:168) ~[spring-security-core-5.7.1.jar:5.7.1]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182) ~[spring-security-core-5.7.1.jar:5.7.1]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:201) ~[spring-security-core-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:172) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-06-27 13:13:47.302 ERROR 46020 --- [http-nio-8080-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+java.lang.IllegalArgumentException: A granted authority textual representation is required
+	at org.springframework.util.Assert.hasText(Assert.java:289) ~[spring-core-5.3.20.jar:5.3.20]
+	at org.springframework.security.core.authority.SimpleGrantedAuthority.<init>(SimpleGrantedAuthority.java:39) ~[spring-security-core-5.7.1.jar:5.7.1]
+	at com.example.moviepal.model.User.getAuthorities(User.java:48) ~[classes/:na]
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.createSuccessAuthentication(AbstractUserDetailsAuthenticationProvider.java:197) ~[spring-security-core-5.7.1.jar:5.7.1]
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.createSuccessAuthentication(DaoAuthenticationProvider.java:122) ~[spring-security-core-5.7.1.jar:5.7.1]
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:168) ~[spring-security-core-5.7.1.jar:5.7.1]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182) ~[spring-security-core-5.7.1.jar:5.7.1]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:201) ~[spring-security-core-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:172) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-06-27 13:14:03.833  INFO 46020 --- [http-nio-8080-exec-7] c.e.m.c.M.MovieListController            : Starting user/wishlist in getWishList
+2022-06-27 13:14:03.834  INFO 46020 --- [http-nio-8080-exec-7] c.example.moviepal.service.UserService   : starting findUserIdByName: id is meshal
+2022-06-27 13:14:03.994  INFO 46020 --- [http-nio-8080-exec-7] c.example.moviepal.service.UserService   : userid was found: 25
+2022-06-27 13:14:03.995  INFO 46020 --- [http-nio-8080-exec-7] c.e.m.c.M.MovieListController            : User doing the call is: meshal with id: 25
+2022-06-27 13:14:03.995  INFO 46020 --- [http-nio-8080-exec-7] c.example.moviepal.service.UserService   : starting getUserById: user id is 25
+2022-06-27 13:14:04.607  INFO 46020 --- [http-nio-8080-exec-7] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@7dd074c5
+2022-06-27 13:14:04.607  INFO 46020 --- [http-nio-8080-exec-7] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@7dd074c5
+2022-06-27 13:14:05.173  INFO 46020 --- [http-nio-8080-exec-7] c.e.m.c.M.MovieListController            : User was found: meshal
+2022-06-27 13:14:05.174  INFO 46020 --- [http-nio-8080-exec-7] c.example.moviepal.service.ListsService  : calling getWishListByUserId for a list by user id: 25
+2022-06-27 13:14:05.267  INFO 46020 --- [http-nio-8080-exec-7] c.example.moviepal.service.ListsService  : list was found and size is: 1
+2022-06-27 13:14:05.267  INFO 46020 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findById
+2022-06-27 13:14:05.268  INFO 46020 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&i=tt1270798
+2022-06-27 13:14:05.268  INFO 46020 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-27 13:14:07.492  INFO 46020 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"X-Men: First Class","Year":"2011","Rated":"PG-13","Released":"03 Jun 2011","Runtime":"131 min","Genre":"Action, Adventure, Sci-Fi","Director":"Matthew Vaughn","Writer":"Ashley Miller, Zack Stentz, Jane Goldman","Actors":"James McAvoy, Michael Fassbender, Jennifer Lawrence","Plot":"In the 1960s, superpowered humans Charles Xavier and Erik Lensherr work together to find others like them, but Erik's vengeful pursuit of an ambitious mutant who ruined his life causes a schism to divide them.","Language":"English, German, French, Spanish, Russian","Country":"United States, United Kingdom","Awards":"21 wins & 39 nominations","Poster":"https://m.media-amazon.com/images/M/MV5BMTg5OTMxNzk4Nl5BMl5BanBnXkFtZTcwOTk1MjAwNQ@@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"7.7/10"},{"Source":"Rotten Tomatoes","Value":"86%"},{"Source":"Metacritic","Value":"65/100"}],"Metascore":"65","imdbRating":"7.7","imdbVotes":"681,536","imdbID":"tt1270798","Type":"movie","DVD":"09 Sep 2011","BoxOffice":"$146,408,305","Production":"N/A","Website":"N/A","Response":"True"}
+2022-06-27 13:14:07.492  INFO 46020 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-27 13:14:07.494  INFO 46020 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-27 13:14:07.502  INFO 46020 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt1270798, title=X-Men: First Class, year=2011, type=movie)
+2022-06-27 13:14:07.502  INFO 46020 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-27 13:15:14.286  INFO 46020 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 13:15:14.288  INFO 46020 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-27 13:15:15.297  INFO 46020 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-27 13:15:18.162  INFO 46068 --- [main] c.example.moviepal.MoviePaLApplication   : Starting MoviePaLApplication using Java 18.0.1.1 on Abdullahs-MacBook-Pro.local with PID 46068 (/Users/abdo/IdeaProjects/MoviePaL/target/classes started by abdo in /Users/abdo/IdeaProjects/MoviePaL)
+2022-06-27 13:15:18.163  INFO 46068 --- [main] c.example.moviepal.MoviePaLApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-06-27 13:15:18.686  INFO 46068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-27 13:15:18.746  INFO 46068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 4 JPA repository interfaces.
+2022-06-27 13:15:19.122  INFO 46068 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-27 13:15:19.128  INFO 46068 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-27 13:15:19.129  INFO 46068 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-27 13:15:19.194  INFO 46068 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-27 13:15:19.195  INFO 46068 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 997 ms
+2022-06-27 13:15:19.285  INFO 46068 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-27 13:15:19.327  INFO 46068 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-27 13:15:19.422  INFO 46068 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-27 13:15:19.523  INFO 46068 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-27 13:15:21.177  INFO 46068 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-27 13:15:21.192  INFO 46068 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-06-27 13:15:22.869  INFO 46068 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-27 13:15:22.877  INFO 46068 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 13:15:23.272  WARN 46068 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-27 13:15:23.484  INFO 46068 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2e7e4480, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@8beb0dd, org.springframework.security.web.context.SecurityContextPersistenceFilter@4a094f90, org.springframework.security.web.header.HeaderWriterFilter@2484c868, org.springframework.web.filter.CorsFilter@3d99d327, org.springframework.security.web.authentication.logout.LogoutFilter@66e62fc4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@65fa4a07, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@8c34631, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2dcbf825, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@233789d9, org.springframework.security.web.session.SessionManagementFilter@61d61b0e, org.springframework.security.web.access.ExceptionTranslationFilter@4d71ec5b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@488b46da]
+2022-06-27 13:15:23.775  INFO 46068 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-27 13:15:23.784  INFO 46068 --- [main] c.example.moviepal.MoviePaLApplication   : Started MoviePaLApplication in 5.865 seconds (JVM running for 6.284)
+2022-06-27 13:15:27.164  INFO 46068 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-27 13:15:27.165  INFO 46068 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-27 13:15:27.166  INFO 46068 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-27 13:15:27.299  INFO 46068 --- [http-nio-8080-exec-1] c.e.moviepal.controllers.UserController  : Starting addUser in UserController
+2022-06-27 13:15:27.300  INFO 46068 --- [http-nio-8080-exec-1] c.e.moviepal.controllers.UserController  : calling adduser to the user service: com.example.moviepal.model.User@6d8c91cc
+2022-06-27 13:15:27.300  INFO 46068 --- [http-nio-8080-exec-1] c.example.moviepal.service.UserService   : Starting addUser from UserService
+2022-06-27 13:15:27.381  INFO 46068 --- [http-nio-8080-exec-1] c.example.moviepal.service.UserService   : created a hash password: $2a$10$ZfmFEAO7jUm5rQM4nwERw.ROmBIO5jjbrhd.FccoMAg7K4U35JNIm
+2022-06-27 13:15:27.381  INFO 46068 --- [http-nio-8080-exec-1] c.example.moviepal.service.UserService   : hash password was set to the user: com.example.moviepal.model.User@6d8c91cc
+2022-06-27 13:15:32.810  INFO 46068 --- [http-nio-8080-exec-3] c.e.m.c.M.MovieListController            : Starting user/wishlist in getWishList
+2022-06-27 13:15:32.811  INFO 46068 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : starting findUserIdByName: id is fisal1234
+2022-06-27 13:15:32.915  INFO 46068 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : userid was found: 37
+2022-06-27 13:15:32.916  INFO 46068 --- [http-nio-8080-exec-3] c.e.m.c.M.MovieListController            : User doing the call is: fisal1234 with id: 37
+2022-06-27 13:15:32.916  INFO 46068 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : starting getUserById: user id is 37
+2022-06-27 13:15:33.649  INFO 46068 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@73397a2a
+2022-06-27 13:15:33.649  INFO 46068 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@73397a2a
+2022-06-27 13:15:34.173  INFO 46068 --- [http-nio-8080-exec-3] c.e.m.c.M.MovieListController            : User was found: fisal1234
+2022-06-27 13:15:34.173  INFO 46068 --- [http-nio-8080-exec-3] c.example.moviepal.service.ListsService  : calling getWishListByUserId for a list by user id: 37
+2022-06-27 13:15:34.305  INFO 46068 --- [http-nio-8080-exec-3] c.example.moviepal.service.ListsService  : list was NOT found, creating one using the given user
+2022-06-27 13:15:34.306  INFO 46068 --- [http-nio-8080-exec-3] c.e.m.advice.ControllerAdviseHandler     : NoMovieListWasFoundException was triggered
+2022-06-27 13:15:59.767 ERROR 46068 --- [http-nio-8080-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+java.lang.IllegalArgumentException: A granted authority textual representation is required
+	at org.springframework.util.Assert.hasText(Assert.java:289) ~[spring-core-5.3.20.jar:5.3.20]
+	at org.springframework.security.core.authority.SimpleGrantedAuthority.<init>(SimpleGrantedAuthority.java:39) ~[spring-security-core-5.7.1.jar:5.7.1]
+	at com.example.moviepal.model.User.getAuthorities(User.java:48) ~[classes/:na]
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.createSuccessAuthentication(AbstractUserDetailsAuthenticationProvider.java:197) ~[spring-security-core-5.7.1.jar:5.7.1]
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.createSuccessAuthentication(DaoAuthenticationProvider.java:122) ~[spring-security-core-5.7.1.jar:5.7.1]
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:168) ~[spring-security-core-5.7.1.jar:5.7.1]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182) ~[spring-security-core-5.7.1.jar:5.7.1]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:201) ~[spring-security-core-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:172) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-06-27 13:16:21.922  INFO 46068 --- [http-nio-8080-exec-7] c.e.m.c.M.MovieListController            : Starting user/wishlist in getWishList
+2022-06-27 13:16:21.923  INFO 46068 --- [http-nio-8080-exec-7] c.example.moviepal.service.UserService   : starting findUserIdByName: id is fisal1234
+2022-06-27 13:16:22.121  INFO 46068 --- [http-nio-8080-exec-7] c.example.moviepal.service.UserService   : userid was found: 37
+2022-06-27 13:16:22.122  INFO 46068 --- [http-nio-8080-exec-7] c.e.m.c.M.MovieListController            : User doing the call is: fisal1234 with id: 37
+2022-06-27 13:16:22.122  INFO 46068 --- [http-nio-8080-exec-7] c.example.moviepal.service.UserService   : starting getUserById: user id is 37
+2022-06-27 13:16:22.934  INFO 46068 --- [http-nio-8080-exec-7] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@7aa83c5a
+2022-06-27 13:16:22.934  INFO 46068 --- [http-nio-8080-exec-7] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@7aa83c5a
+2022-06-27 13:16:23.457  INFO 46068 --- [http-nio-8080-exec-7] c.e.m.c.M.MovieListController            : User was found: fisal1234
+2022-06-27 13:16:23.457  INFO 46068 --- [http-nio-8080-exec-7] c.example.moviepal.service.ListsService  : calling getWishListByUserId for a list by user id: 37
+2022-06-27 13:16:23.592  INFO 46068 --- [http-nio-8080-exec-7] c.example.moviepal.service.ListsService  : list was NOT found, creating one using the given user
+2022-06-27 13:16:23.593  INFO 46068 --- [http-nio-8080-exec-7] c.e.m.advice.ControllerAdviseHandler     : NoMovieListWasFoundException was triggered
+2022-06-27 13:24:06.106  INFO 46068 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 13:24:06.110  INFO 46068 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-27 13:24:07.161  INFO 46068 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-27 13:24:10.152  INFO 46142 --- [main] c.example.moviepal.MoviePaLApplication   : Starting MoviePaLApplication using Java 18.0.1.1 on Abdullahs-MacBook-Pro.local with PID 46142 (/Users/abdo/IdeaProjects/MoviePaL/target/classes started by abdo in /Users/abdo/IdeaProjects/MoviePaL)
+2022-06-27 13:24:10.154  INFO 46142 --- [main] c.example.moviepal.MoviePaLApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-06-27 13:24:10.614  INFO 46142 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-27 13:24:10.670  INFO 46142 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 4 JPA repository interfaces.
+2022-06-27 13:24:11.039  INFO 46142 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-27 13:24:11.045  INFO 46142 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-27 13:24:11.045  INFO 46142 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-27 13:24:11.118  INFO 46142 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-27 13:24:11.118  INFO 46142 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 937 ms
+2022-06-27 13:24:11.214  INFO 46142 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-27 13:24:11.250  INFO 46142 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-27 13:24:11.335  INFO 46142 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-27 13:24:11.395  INFO 46142 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-27 13:24:12.708  INFO 46142 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-27 13:24:12.725  INFO 46142 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-06-27 13:24:14.500  INFO 46142 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-27 13:24:14.508  INFO 46142 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 13:24:14.792  WARN 46142 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-27 13:24:14.961  INFO 46142 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@138b9abe, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@279e8bc0, org.springframework.security.web.context.SecurityContextPersistenceFilter@548f4f60, org.springframework.security.web.header.HeaderWriterFilter@61d61b0e, org.springframework.web.filter.CorsFilter@23ffc910, org.springframework.security.web.authentication.logout.LogoutFilter@68303c3e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6e612122, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3aa63b53, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6d035815, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@35277c6c, org.springframework.security.web.session.SessionManagementFilter@59c00010, org.springframework.security.web.access.ExceptionTranslationFilter@137d04d8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@486bcaa]
+2022-06-27 13:24:15.238  INFO 46142 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-27 13:24:15.245  INFO 46142 --- [main] c.example.moviepal.MoviePaLApplication   : Started MoviePaLApplication in 5.312 seconds (JVM running for 5.809)
+2022-06-27 13:24:18.836  INFO 46142 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-27 13:24:18.836  INFO 46142 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-27 13:24:18.837  INFO 46142 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-27 13:29:57.004  INFO 46142 --- [http-nio-8080-exec-7] c.e.m.c.M.MovieListController            : Starting user/wishlist in getWishList
+2022-06-27 13:29:57.006  INFO 46142 --- [http-nio-8080-exec-7] c.example.moviepal.service.UserService   : starting findUserIdByName: id is salah
+2022-06-27 13:29:57.250  INFO 46142 --- [http-nio-8080-exec-7] c.example.moviepal.service.UserService   : userid was found: 8
+2022-06-27 13:29:57.250  INFO 46142 --- [http-nio-8080-exec-7] c.e.m.c.M.MovieListController            : User doing the call is: salah with id: 8
+2022-06-27 13:29:57.251  INFO 46142 --- [http-nio-8080-exec-7] c.example.moviepal.service.UserService   : starting getUserById: user id is 8
+2022-06-27 13:29:57.863  INFO 46142 --- [http-nio-8080-exec-7] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@2d138d82
+2022-06-27 13:29:57.864  INFO 46142 --- [http-nio-8080-exec-7] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@2d138d82
+2022-06-27 13:29:58.429  INFO 46142 --- [http-nio-8080-exec-7] c.e.m.c.M.MovieListController            : User was found: salah
+2022-06-27 13:29:58.429  INFO 46142 --- [http-nio-8080-exec-7] c.example.moviepal.service.ListsService  : calling getWishListByUserId for a list by user id: 8
+2022-06-27 13:29:58.529  INFO 46142 --- [http-nio-8080-exec-7] c.example.moviepal.service.ListsService  : list was found and size is: 1
+2022-06-27 13:29:58.529  INFO 46142 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findById
+2022-06-27 13:29:58.530  INFO 46142 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&i=tt5753856
+2022-06-27 13:29:58.530  INFO 46142 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-27 13:30:00.963  INFO 46142 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Dark","Year":"2017–2020","Rated":"TV-MA","Released":"01 Dec 2017","Runtime":"60 min","Genre":"Crime, Drama, Mystery","Director":"N/A","Writer":"Baran bo Odar, Jantje Friese","Actors":"Louis Hofmann, Karoline Eichhorn, Lisa Vicari","Plot":"A family saga with a supernatural twist, set in a German town where the disappearance of two young children exposes the relationships among four families.","Language":"German","Country":"Germany, United States","Awards":"8 wins & 22 nominations","Poster":"https://m.media-amazon.com/images/M/MV5BOTk2NzUyOTctZDdlMS00MDJlLTgzNTEtNzQzYjFhNjA0YjBjXkEyXkFqcGdeQXVyMjg1NDcxNDE@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"8.7/10"}],"Metascore":"N/A","imdbRating":"8.7","imdbVotes":"355,852","imdbID":"tt5753856","Type":"series","totalSeasons":"3","Response":"True"}
+2022-06-27 13:30:00.963  INFO 46142 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-27 13:30:00.965  INFO 46142 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-27 13:30:00.995  INFO 46142 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt5753856, title=Dark, year=2017–2020, type=series)
+2022-06-27 13:30:01.000  INFO 46142 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-27 13:30:36.509  INFO 46142 --- [http-nio-8080-exec-9] c.e.m.c.M.MovieListController            : Starting user/wishlist in getWishList
+2022-06-27 13:30:36.510  INFO 46142 --- [http-nio-8080-exec-9] c.example.moviepal.service.UserService   : starting findUserIdByName: id is salah
+2022-06-27 13:30:36.751  INFO 46142 --- [http-nio-8080-exec-9] c.example.moviepal.service.UserService   : userid was found: 8
+2022-06-27 13:30:36.752  INFO 46142 --- [http-nio-8080-exec-9] c.e.m.c.M.MovieListController            : User doing the call is: salah with id: 8
+2022-06-27 13:30:36.752  INFO 46142 --- [http-nio-8080-exec-9] c.example.moviepal.service.UserService   : starting getUserById: user id is 8
+2022-06-27 13:30:37.411  INFO 46142 --- [http-nio-8080-exec-9] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@5b92d866
+2022-06-27 13:30:37.411  INFO 46142 --- [http-nio-8080-exec-9] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@5b92d866
+2022-06-27 13:30:37.896  INFO 46142 --- [http-nio-8080-exec-9] c.e.m.c.M.MovieListController            : User was found: salah
+2022-06-27 13:30:37.896  INFO 46142 --- [http-nio-8080-exec-9] c.example.moviepal.service.ListsService  : calling getWishListByUserId for a list by user id: 8
+2022-06-27 13:30:37.993  INFO 46142 --- [http-nio-8080-exec-9] c.example.moviepal.service.ListsService  : list was found and size is: 1
+2022-06-27 13:30:37.993  INFO 46142 --- [http-nio-8080-exec-9] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findById
+2022-06-27 13:30:37.993  INFO 46142 --- [http-nio-8080-exec-9] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&i=tt5753856
+2022-06-27 13:30:37.993  INFO 46142 --- [http-nio-8080-exec-9] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-27 13:30:38.147  INFO 46142 --- [http-nio-8080-exec-9] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Dark","Year":"2017–2020","Rated":"TV-MA","Released":"01 Dec 2017","Runtime":"60 min","Genre":"Crime, Drama, Mystery","Director":"N/A","Writer":"Baran bo Odar, Jantje Friese","Actors":"Louis Hofmann, Karoline Eichhorn, Lisa Vicari","Plot":"A family saga with a supernatural twist, set in a German town where the disappearance of two young children exposes the relationships among four families.","Language":"German","Country":"Germany, United States","Awards":"8 wins & 22 nominations","Poster":"https://m.media-amazon.com/images/M/MV5BOTk2NzUyOTctZDdlMS00MDJlLTgzNTEtNzQzYjFhNjA0YjBjXkEyXkFqcGdeQXVyMjg1NDcxNDE@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"8.7/10"}],"Metascore":"N/A","imdbRating":"8.7","imdbVotes":"355,852","imdbID":"tt5753856","Type":"series","totalSeasons":"3","Response":"True"}
+2022-06-27 13:30:38.148  INFO 46142 --- [http-nio-8080-exec-9] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-27 13:30:38.148  INFO 46142 --- [http-nio-8080-exec-9] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-27 13:30:38.149  INFO 46142 --- [http-nio-8080-exec-9] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt5753856, title=Dark, year=2017–2020, type=series)
+2022-06-27 13:30:38.149  INFO 46142 --- [http-nio-8080-exec-9] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-27 13:33:16.293  INFO 46142 --- [http-nio-8080-exec-10] c.e.m.c.M.MovieListController            : Starting user/wishlist in getWishList
+2022-06-27 13:33:16.294  INFO 46142 --- [http-nio-8080-exec-10] c.example.moviepal.service.UserService   : starting findUserIdByName: id is salah
+2022-06-27 13:33:16.484  INFO 46142 --- [http-nio-8080-exec-10] c.example.moviepal.service.UserService   : userid was found: 8
+2022-06-27 13:33:16.484  INFO 46142 --- [http-nio-8080-exec-10] c.e.m.c.M.MovieListController            : User doing the call is: salah with id: 8
+2022-06-27 13:33:16.484  INFO 46142 --- [http-nio-8080-exec-10] c.example.moviepal.service.UserService   : starting getUserById: user id is 8
+2022-06-27 13:33:17.099  INFO 46142 --- [http-nio-8080-exec-10] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@86b0f6
+2022-06-27 13:33:17.099  INFO 46142 --- [http-nio-8080-exec-10] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@86b0f6
+2022-06-27 13:33:17.666  INFO 46142 --- [http-nio-8080-exec-10] c.e.m.c.M.MovieListController            : User was found: salah
+2022-06-27 13:33:17.666  INFO 46142 --- [http-nio-8080-exec-10] c.example.moviepal.service.ListsService  : calling getWishListByUserId for a list by user id: 8
+2022-06-27 13:33:17.757  INFO 46142 --- [http-nio-8080-exec-10] c.example.moviepal.service.ListsService  : list was found and size is: 1
+2022-06-27 13:33:17.758  INFO 46142 --- [http-nio-8080-exec-10] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findById
+2022-06-27 13:33:17.758  INFO 46142 --- [http-nio-8080-exec-10] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&i=tt5753856
+2022-06-27 13:33:17.758  INFO 46142 --- [http-nio-8080-exec-10] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-27 13:33:17.902  INFO 46142 --- [http-nio-8080-exec-10] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Dark","Year":"2017–2020","Rated":"TV-MA","Released":"01 Dec 2017","Runtime":"60 min","Genre":"Crime, Drama, Mystery","Director":"N/A","Writer":"Baran bo Odar, Jantje Friese","Actors":"Louis Hofmann, Karoline Eichhorn, Lisa Vicari","Plot":"A family saga with a supernatural twist, set in a German town where the disappearance of two young children exposes the relationships among four families.","Language":"German","Country":"Germany, United States","Awards":"8 wins & 22 nominations","Poster":"https://m.media-amazon.com/images/M/MV5BOTk2NzUyOTctZDdlMS00MDJlLTgzNTEtNzQzYjFhNjA0YjBjXkEyXkFqcGdeQXVyMjg1NDcxNDE@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"8.7/10"}],"Metascore":"N/A","imdbRating":"8.7","imdbVotes":"355,852","imdbID":"tt5753856","Type":"series","totalSeasons":"3","Response":"True"}
+2022-06-27 13:33:17.903  INFO 46142 --- [http-nio-8080-exec-10] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-27 13:33:17.903  INFO 46142 --- [http-nio-8080-exec-10] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-27 13:33:17.904  INFO 46142 --- [http-nio-8080-exec-10] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt5753856, title=Dark, year=2017–2020, type=series)
+2022-06-27 13:33:17.904  INFO 46142 --- [http-nio-8080-exec-10] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-27 13:33:17.911  INFO 46142 --- [http-nio-8080-exec-1] c.e.m.c.M.MovieListController            : Starting user/wishlist in getWishList
+2022-06-27 13:33:17.911  INFO 46142 --- [http-nio-8080-exec-1] c.example.moviepal.service.UserService   : starting findUserIdByName: id is salah
+2022-06-27 13:33:18.059  INFO 46142 --- [http-nio-8080-exec-1] c.example.moviepal.service.UserService   : userid was found: 8
+2022-06-27 13:33:18.059  INFO 46142 --- [http-nio-8080-exec-1] c.e.m.c.M.MovieListController            : User doing the call is: salah with id: 8
+2022-06-27 13:33:18.059  INFO 46142 --- [http-nio-8080-exec-1] c.example.moviepal.service.UserService   : starting getUserById: user id is 8
+2022-06-27 13:33:18.713  INFO 46142 --- [http-nio-8080-exec-1] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@6692b97f
+2022-06-27 13:33:18.714  INFO 46142 --- [http-nio-8080-exec-1] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@6692b97f
+2022-06-27 13:33:19.196  INFO 46142 --- [http-nio-8080-exec-1] c.e.m.c.M.MovieListController            : User was found: salah
+2022-06-27 13:33:19.196  INFO 46142 --- [http-nio-8080-exec-1] c.example.moviepal.service.ListsService  : calling getWishListByUserId for a list by user id: 8
+2022-06-27 13:33:19.287  INFO 46142 --- [http-nio-8080-exec-1] c.example.moviepal.service.ListsService  : list was found and size is: 1
+2022-06-27 13:33:19.288  INFO 46142 --- [http-nio-8080-exec-1] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findById
+2022-06-27 13:33:19.288  INFO 46142 --- [http-nio-8080-exec-1] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&i=tt5753856
+2022-06-27 13:33:19.288  INFO 46142 --- [http-nio-8080-exec-1] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-27 13:33:19.392  INFO 46142 --- [http-nio-8080-exec-1] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Dark","Year":"2017–2020","Rated":"TV-MA","Released":"01 Dec 2017","Runtime":"60 min","Genre":"Crime, Drama, Mystery","Director":"N/A","Writer":"Baran bo Odar, Jantje Friese","Actors":"Louis Hofmann, Karoline Eichhorn, Lisa Vicari","Plot":"A family saga with a supernatural twist, set in a German town where the disappearance of two young children exposes the relationships among four families.","Language":"German","Country":"Germany, United States","Awards":"8 wins & 22 nominations","Poster":"https://m.media-amazon.com/images/M/MV5BOTk2NzUyOTctZDdlMS00MDJlLTgzNTEtNzQzYjFhNjA0YjBjXkEyXkFqcGdeQXVyMjg1NDcxNDE@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"8.7/10"}],"Metascore":"N/A","imdbRating":"8.7","imdbVotes":"355,852","imdbID":"tt5753856","Type":"series","totalSeasons":"3","Response":"True"}
+2022-06-27 13:33:19.392  INFO 46142 --- [http-nio-8080-exec-1] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-27 13:33:19.392  INFO 46142 --- [http-nio-8080-exec-1] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-27 13:33:19.393  INFO 46142 --- [http-nio-8080-exec-1] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt5753856, title=Dark, year=2017–2020, type=series)
+2022-06-27 13:33:19.394  INFO 46142 --- [http-nio-8080-exec-1] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-27 13:33:49.609  INFO 46142 --- [http-nio-8080-exec-2] c.e.m.c.M.MovieListController            : Starting user/wishlist in getWishList
+2022-06-27 13:33:49.609  INFO 46142 --- [http-nio-8080-exec-2] c.example.moviepal.service.UserService   : starting findUserIdByName: id is salah
+2022-06-27 13:33:49.791  INFO 46142 --- [http-nio-8080-exec-2] c.example.moviepal.service.UserService   : userid was found: 8
+2022-06-27 13:33:49.792  INFO 46142 --- [http-nio-8080-exec-2] c.e.m.c.M.MovieListController            : User doing the call is: salah with id: 8
+2022-06-27 13:33:49.792  INFO 46142 --- [http-nio-8080-exec-2] c.example.moviepal.service.UserService   : starting getUserById: user id is 8
+2022-06-27 13:33:50.442  INFO 46142 --- [http-nio-8080-exec-2] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@3e6966ca
+2022-06-27 13:33:50.443  INFO 46142 --- [http-nio-8080-exec-2] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@3e6966ca
+2022-06-27 13:33:50.926  INFO 46142 --- [http-nio-8080-exec-2] c.e.m.c.M.MovieListController            : User was found: salah
+2022-06-27 13:33:50.926  INFO 46142 --- [http-nio-8080-exec-2] c.example.moviepal.service.ListsService  : calling getWishListByUserId for a list by user id: 8
+2022-06-27 13:33:51.094  INFO 46142 --- [http-nio-8080-exec-2] c.example.moviepal.service.ListsService  : list was found and size is: 1
+2022-06-27 13:33:51.094  INFO 46142 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findById
+2022-06-27 13:33:51.094  INFO 46142 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&i=tt5753856
+2022-06-27 13:33:51.094  INFO 46142 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-27 13:33:51.221  INFO 46142 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Dark","Year":"2017–2020","Rated":"TV-MA","Released":"01 Dec 2017","Runtime":"60 min","Genre":"Crime, Drama, Mystery","Director":"N/A","Writer":"Baran bo Odar, Jantje Friese","Actors":"Louis Hofmann, Karoline Eichhorn, Lisa Vicari","Plot":"A family saga with a supernatural twist, set in a German town where the disappearance of two young children exposes the relationships among four families.","Language":"German","Country":"Germany, United States","Awards":"8 wins & 22 nominations","Poster":"https://m.media-amazon.com/images/M/MV5BOTk2NzUyOTctZDdlMS00MDJlLTgzNTEtNzQzYjFhNjA0YjBjXkEyXkFqcGdeQXVyMjg1NDcxNDE@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"8.7/10"}],"Metascore":"N/A","imdbRating":"8.7","imdbVotes":"355,852","imdbID":"tt5753856","Type":"series","totalSeasons":"3","Response":"True"}
+2022-06-27 13:33:51.221  INFO 46142 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-27 13:33:51.222  INFO 46142 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-27 13:33:51.222  INFO 46142 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt5753856, title=Dark, year=2017–2020, type=series)
+2022-06-27 13:33:51.223  INFO 46142 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-27 13:34:01.821  INFO 46142 --- [http-nio-8080-exec-3] c.e.m.c.M.MovieListController            : Starting user/wishlist in getWishList
+2022-06-27 13:34:01.821  INFO 46142 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : starting findUserIdByName: id is salah
+2022-06-27 13:34:02.001  INFO 46142 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : userid was found: 8
+2022-06-27 13:34:02.001  INFO 46142 --- [http-nio-8080-exec-3] c.e.m.c.M.MovieListController            : User doing the call is: salah with id: 8
+2022-06-27 13:34:02.001  INFO 46142 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : starting getUserById: user id is 8
+2022-06-27 13:34:02.622  INFO 46142 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@fd575c6
+2022-06-27 13:34:02.623  INFO 46142 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@fd575c6
+2022-06-27 13:34:03.148  INFO 46142 --- [http-nio-8080-exec-3] c.e.m.c.M.MovieListController            : User was found: salah
+2022-06-27 13:34:03.148  INFO 46142 --- [http-nio-8080-exec-3] c.example.moviepal.service.ListsService  : calling getWishListByUserId for a list by user id: 8
+2022-06-27 13:34:03.244  INFO 46142 --- [http-nio-8080-exec-3] c.example.moviepal.service.ListsService  : list was found and size is: 1
+2022-06-27 13:34:03.244  INFO 46142 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findById
+2022-06-27 13:34:03.244  INFO 46142 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&i=tt5753856
+2022-06-27 13:34:03.245  INFO 46142 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-27 13:34:03.349  INFO 46142 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Dark","Year":"2017–2020","Rated":"TV-MA","Released":"01 Dec 2017","Runtime":"60 min","Genre":"Crime, Drama, Mystery","Director":"N/A","Writer":"Baran bo Odar, Jantje Friese","Actors":"Louis Hofmann, Karoline Eichhorn, Lisa Vicari","Plot":"A family saga with a supernatural twist, set in a German town where the disappearance of two young children exposes the relationships among four families.","Language":"German","Country":"Germany, United States","Awards":"8 wins & 22 nominations","Poster":"https://m.media-amazon.com/images/M/MV5BOTk2NzUyOTctZDdlMS00MDJlLTgzNTEtNzQzYjFhNjA0YjBjXkEyXkFqcGdeQXVyMjg1NDcxNDE@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"8.7/10"}],"Metascore":"N/A","imdbRating":"8.7","imdbVotes":"355,852","imdbID":"tt5753856","Type":"series","totalSeasons":"3","Response":"True"}
+2022-06-27 13:34:03.350  INFO 46142 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-27 13:34:03.350  INFO 46142 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-27 13:34:03.351  INFO 46142 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt5753856, title=Dark, year=2017–2020, type=series)
+2022-06-27 13:34:03.351  INFO 46142 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-27 13:34:03.356  INFO 46142 --- [http-nio-8080-exec-4] c.e.m.c.M.MovieListController            : Starting user/wishlist in getWishList
+2022-06-27 13:34:03.356  INFO 46142 --- [http-nio-8080-exec-4] c.example.moviepal.service.UserService   : starting findUserIdByName: id is salah
+2022-06-27 13:34:03.446  INFO 46142 --- [http-nio-8080-exec-4] c.example.moviepal.service.UserService   : userid was found: 8
+2022-06-27 13:34:03.446  INFO 46142 --- [http-nio-8080-exec-4] c.e.m.c.M.MovieListController            : User doing the call is: salah with id: 8
+2022-06-27 13:34:03.446  INFO 46142 --- [http-nio-8080-exec-4] c.example.moviepal.service.UserService   : starting getUserById: user id is 8
+2022-06-27 13:34:04.073  INFO 46142 --- [http-nio-8080-exec-4] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@36031e46
+2022-06-27 13:34:04.073  INFO 46142 --- [http-nio-8080-exec-4] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@36031e46
+2022-06-27 13:34:04.567  INFO 46142 --- [http-nio-8080-exec-4] c.e.m.c.M.MovieListController            : User was found: salah
+2022-06-27 13:34:04.568  INFO 46142 --- [http-nio-8080-exec-4] c.example.moviepal.service.ListsService  : calling getWishListByUserId for a list by user id: 8
+2022-06-27 13:34:04.721  INFO 46142 --- [http-nio-8080-exec-4] c.example.moviepal.service.ListsService  : list was found and size is: 1
+2022-06-27 13:34:04.722  INFO 46142 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findById
+2022-06-27 13:34:04.722  INFO 46142 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&i=tt5753856
+2022-06-27 13:34:04.722  INFO 46142 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-27 13:34:04.854  INFO 46142 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Dark","Year":"2017–2020","Rated":"TV-MA","Released":"01 Dec 2017","Runtime":"60 min","Genre":"Crime, Drama, Mystery","Director":"N/A","Writer":"Baran bo Odar, Jantje Friese","Actors":"Louis Hofmann, Karoline Eichhorn, Lisa Vicari","Plot":"A family saga with a supernatural twist, set in a German town where the disappearance of two young children exposes the relationships among four families.","Language":"German","Country":"Germany, United States","Awards":"8 wins & 22 nominations","Poster":"https://m.media-amazon.com/images/M/MV5BOTk2NzUyOTctZDdlMS00MDJlLTgzNTEtNzQzYjFhNjA0YjBjXkEyXkFqcGdeQXVyMjg1NDcxNDE@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"8.7/10"}],"Metascore":"N/A","imdbRating":"8.7","imdbVotes":"355,852","imdbID":"tt5753856","Type":"series","totalSeasons":"3","Response":"True"}
+2022-06-27 13:34:04.856  INFO 46142 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-27 13:34:04.856  INFO 46142 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-27 13:34:04.857  INFO 46142 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt5753856, title=Dark, year=2017–2020, type=series)
+2022-06-27 13:34:04.857  INFO 46142 --- [http-nio-8080-exec-4] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-27 13:34:18.364  INFO 46142 --- [http-nio-8080-exec-5] c.e.m.c.M.MovieListController            : Starting user/wishlist in getWishList
+2022-06-27 13:34:18.365  INFO 46142 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : starting findUserIdByName: id is salah
+2022-06-27 13:34:18.574  INFO 46142 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : userid was found: 8
+2022-06-27 13:34:18.574  INFO 46142 --- [http-nio-8080-exec-5] c.e.m.c.M.MovieListController            : User doing the call is: salah with id: 8
+2022-06-27 13:34:18.574  INFO 46142 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : starting getUserById: user id is 8
+2022-06-27 13:34:19.145  INFO 46142 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@2562adc2
+2022-06-27 13:34:19.145  INFO 46142 --- [http-nio-8080-exec-5] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@2562adc2
+2022-06-27 13:34:19.711  INFO 46142 --- [http-nio-8080-exec-5] c.e.m.c.M.MovieListController            : User was found: salah
+2022-06-27 13:34:19.711  INFO 46142 --- [http-nio-8080-exec-5] c.example.moviepal.service.ListsService  : calling getWishListByUserId for a list by user id: 8
+2022-06-27 13:34:19.802  INFO 46142 --- [http-nio-8080-exec-5] c.example.moviepal.service.ListsService  : list was found and size is: 1
+2022-06-27 13:34:19.802  INFO 46142 --- [http-nio-8080-exec-5] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findById
+2022-06-27 13:34:19.802  INFO 46142 --- [http-nio-8080-exec-5] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&i=tt5753856
+2022-06-27 13:34:19.802  INFO 46142 --- [http-nio-8080-exec-5] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-27 13:34:19.926  INFO 46142 --- [http-nio-8080-exec-5] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Dark","Year":"2017–2020","Rated":"TV-MA","Released":"01 Dec 2017","Runtime":"60 min","Genre":"Crime, Drama, Mystery","Director":"N/A","Writer":"Baran bo Odar, Jantje Friese","Actors":"Louis Hofmann, Karoline Eichhorn, Lisa Vicari","Plot":"A family saga with a supernatural twist, set in a German town where the disappearance of two young children exposes the relationships among four families.","Language":"German","Country":"Germany, United States","Awards":"8 wins & 22 nominations","Poster":"https://m.media-amazon.com/images/M/MV5BOTk2NzUyOTctZDdlMS00MDJlLTgzNTEtNzQzYjFhNjA0YjBjXkEyXkFqcGdeQXVyMjg1NDcxNDE@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"8.7/10"}],"Metascore":"N/A","imdbRating":"8.7","imdbVotes":"355,852","imdbID":"tt5753856","Type":"series","totalSeasons":"3","Response":"True"}
+2022-06-27 13:34:19.926  INFO 46142 --- [http-nio-8080-exec-5] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-27 13:34:19.926  INFO 46142 --- [http-nio-8080-exec-5] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-27 13:34:19.927  INFO 46142 --- [http-nio-8080-exec-5] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt5753856, title=Dark, year=2017–2020, type=series)
+2022-06-27 13:34:19.928  INFO 46142 --- [http-nio-8080-exec-5] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-27 13:34:24.532  INFO 46142 --- [http-nio-8080-exec-6] c.e.m.c.M.MovieListController            : Starting user/wishlist in getWishList
+2022-06-27 13:34:24.532  INFO 46142 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : starting findUserIdByName: id is salah
+2022-06-27 13:34:24.865  INFO 46142 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : userid was found: 8
+2022-06-27 13:34:24.865  INFO 46142 --- [http-nio-8080-exec-6] c.e.m.c.M.MovieListController            : User doing the call is: salah with id: 8
+2022-06-27 13:34:24.865  INFO 46142 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : starting getUserById: user id is 8
+2022-06-27 13:34:25.435  INFO 46142 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@774f4ae8
+2022-06-27 13:34:25.435  INFO 46142 --- [http-nio-8080-exec-6] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@774f4ae8
+2022-06-27 13:34:26.003  INFO 46142 --- [http-nio-8080-exec-6] c.e.m.c.M.MovieListController            : User was found: salah
+2022-06-27 13:34:26.004  INFO 46142 --- [http-nio-8080-exec-6] c.example.moviepal.service.ListsService  : calling getWishListByUserId for a list by user id: 8
+2022-06-27 13:34:26.095  INFO 46142 --- [http-nio-8080-exec-6] c.example.moviepal.service.ListsService  : list was found and size is: 1
+2022-06-27 13:34:26.095  INFO 46142 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findById
+2022-06-27 13:34:26.095  INFO 46142 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&i=tt5753856
+2022-06-27 13:34:26.095  INFO 46142 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-27 13:34:26.223  INFO 46142 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Dark","Year":"2017–2020","Rated":"TV-MA","Released":"01 Dec 2017","Runtime":"60 min","Genre":"Crime, Drama, Mystery","Director":"N/A","Writer":"Baran bo Odar, Jantje Friese","Actors":"Louis Hofmann, Karoline Eichhorn, Lisa Vicari","Plot":"A family saga with a supernatural twist, set in a German town where the disappearance of two young children exposes the relationships among four families.","Language":"German","Country":"Germany, United States","Awards":"8 wins & 22 nominations","Poster":"https://m.media-amazon.com/images/M/MV5BOTk2NzUyOTctZDdlMS00MDJlLTgzNTEtNzQzYjFhNjA0YjBjXkEyXkFqcGdeQXVyMjg1NDcxNDE@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"8.7/10"}],"Metascore":"N/A","imdbRating":"8.7","imdbVotes":"355,852","imdbID":"tt5753856","Type":"series","totalSeasons":"3","Response":"True"}
+2022-06-27 13:34:26.223  INFO 46142 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-27 13:34:26.223  INFO 46142 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-27 13:34:26.224  INFO 46142 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt5753856, title=Dark, year=2017–2020, type=series)
+2022-06-27 13:34:26.224  INFO 46142 --- [http-nio-8080-exec-6] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-27 13:34:26.229  INFO 46142 --- [http-nio-8080-exec-8] c.e.m.c.M.MovieListController            : Starting user/wishlist in getWishList
+2022-06-27 13:34:26.229  INFO 46142 --- [http-nio-8080-exec-8] c.example.moviepal.service.UserService   : starting findUserIdByName: id is salah
+2022-06-27 13:34:26.318  INFO 46142 --- [http-nio-8080-exec-8] c.example.moviepal.service.UserService   : userid was found: 8
+2022-06-27 13:34:26.319  INFO 46142 --- [http-nio-8080-exec-8] c.e.m.c.M.MovieListController            : User doing the call is: salah with id: 8
+2022-06-27 13:34:26.319  INFO 46142 --- [http-nio-8080-exec-8] c.example.moviepal.service.UserService   : starting getUserById: user id is 8
+2022-06-27 13:34:26.962  INFO 46142 --- [http-nio-8080-exec-8] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@11d287ae
+2022-06-27 13:34:26.963  INFO 46142 --- [http-nio-8080-exec-8] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@11d287ae
+2022-06-27 13:34:27.445  INFO 46142 --- [http-nio-8080-exec-8] c.e.m.c.M.MovieListController            : User was found: salah
+2022-06-27 13:34:27.445  INFO 46142 --- [http-nio-8080-exec-8] c.example.moviepal.service.ListsService  : calling getWishListByUserId for a list by user id: 8
+2022-06-27 13:34:27.537  INFO 46142 --- [http-nio-8080-exec-8] c.example.moviepal.service.ListsService  : list was found and size is: 1
+2022-06-27 13:34:27.537  INFO 46142 --- [http-nio-8080-exec-8] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findById
+2022-06-27 13:34:27.537  INFO 46142 --- [http-nio-8080-exec-8] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&i=tt5753856
+2022-06-27 13:34:27.537  INFO 46142 --- [http-nio-8080-exec-8] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-27 13:34:27.647  INFO 46142 --- [http-nio-8080-exec-8] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Dark","Year":"2017–2020","Rated":"TV-MA","Released":"01 Dec 2017","Runtime":"60 min","Genre":"Crime, Drama, Mystery","Director":"N/A","Writer":"Baran bo Odar, Jantje Friese","Actors":"Louis Hofmann, Karoline Eichhorn, Lisa Vicari","Plot":"A family saga with a supernatural twist, set in a German town where the disappearance of two young children exposes the relationships among four families.","Language":"German","Country":"Germany, United States","Awards":"8 wins & 22 nominations","Poster":"https://m.media-amazon.com/images/M/MV5BOTk2NzUyOTctZDdlMS00MDJlLTgzNTEtNzQzYjFhNjA0YjBjXkEyXkFqcGdeQXVyMjg1NDcxNDE@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"8.7/10"}],"Metascore":"N/A","imdbRating":"8.7","imdbVotes":"355,852","imdbID":"tt5753856","Type":"series","totalSeasons":"3","Response":"True"}
+2022-06-27 13:34:27.647  INFO 46142 --- [http-nio-8080-exec-8] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-27 13:34:27.648  INFO 46142 --- [http-nio-8080-exec-8] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-27 13:34:27.649  INFO 46142 --- [http-nio-8080-exec-8] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt5753856, title=Dark, year=2017–2020, type=series)
+2022-06-27 13:34:27.649  INFO 46142 --- [http-nio-8080-exec-8] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-27 13:35:00.199  INFO 46142 --- [http-nio-8080-exec-10] c.e.m.c.M.MovieListController            : Starting user/wishlist in getWishList
+2022-06-27 13:35:00.199  INFO 46142 --- [http-nio-8080-exec-10] c.example.moviepal.service.UserService   : starting findUserIdByName: id is meshal
+2022-06-27 13:35:00.296  INFO 46142 --- [http-nio-8080-exec-10] c.example.moviepal.service.UserService   : userid was found: 25
+2022-06-27 13:35:00.296  INFO 46142 --- [http-nio-8080-exec-10] c.e.m.c.M.MovieListController            : User doing the call is: meshal with id: 25
+2022-06-27 13:35:00.296  INFO 46142 --- [http-nio-8080-exec-10] c.example.moviepal.service.UserService   : starting getUserById: user id is 25
+2022-06-27 13:35:00.911  INFO 46142 --- [http-nio-8080-exec-10] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@4522c620
+2022-06-27 13:35:00.911  INFO 46142 --- [http-nio-8080-exec-10] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@4522c620
+2022-06-27 13:35:01.477  INFO 46142 --- [http-nio-8080-exec-10] c.e.m.c.M.MovieListController            : User was found: meshal
+2022-06-27 13:35:01.477  INFO 46142 --- [http-nio-8080-exec-10] c.example.moviepal.service.ListsService  : calling getWishListByUserId for a list by user id: 25
+2022-06-27 13:35:01.569  INFO 46142 --- [http-nio-8080-exec-10] c.example.moviepal.service.ListsService  : list was found and size is: 1
+2022-06-27 13:35:01.569  INFO 46142 --- [http-nio-8080-exec-10] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findById
+2022-06-27 13:35:01.569  INFO 46142 --- [http-nio-8080-exec-10] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&i=tt1270798
+2022-06-27 13:35:01.569  INFO 46142 --- [http-nio-8080-exec-10] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-27 13:35:02.206  INFO 46142 --- [http-nio-8080-exec-10] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"X-Men: First Class","Year":"2011","Rated":"PG-13","Released":"03 Jun 2011","Runtime":"131 min","Genre":"Action, Adventure, Sci-Fi","Director":"Matthew Vaughn","Writer":"Ashley Miller, Zack Stentz, Jane Goldman","Actors":"James McAvoy, Michael Fassbender, Jennifer Lawrence","Plot":"In the 1960s, superpowered humans Charles Xavier and Erik Lensherr work together to find others like them, but Erik's vengeful pursuit of an ambitious mutant who ruined his life causes a schism to divide them.","Language":"English, German, French, Spanish, Russian","Country":"United States, United Kingdom","Awards":"21 wins & 39 nominations","Poster":"https://m.media-amazon.com/images/M/MV5BMTg5OTMxNzk4Nl5BMl5BanBnXkFtZTcwOTk1MjAwNQ@@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"7.7/10"},{"Source":"Rotten Tomatoes","Value":"86%"},{"Source":"Metacritic","Value":"65/100"}],"Metascore":"65","imdbRating":"7.7","imdbVotes":"681,536","imdbID":"tt1270798","Type":"movie","DVD":"09 Sep 2011","BoxOffice":"$146,408,305","Production":"N/A","Website":"N/A","Response":"True"}
+2022-06-27 13:35:02.206  INFO 46142 --- [http-nio-8080-exec-10] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-27 13:35:02.206  INFO 46142 --- [http-nio-8080-exec-10] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-27 13:35:02.207  INFO 46142 --- [http-nio-8080-exec-10] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt1270798, title=X-Men: First Class, year=2011, type=movie)
+2022-06-27 13:35:02.207  INFO 46142 --- [http-nio-8080-exec-10] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-27 13:35:17.058  INFO 46142 --- [http-nio-8080-exec-2] c.e.m.c.M.MovieListController            : Starting user/wishlist in getWishList
+2022-06-27 13:35:17.059  INFO 46142 --- [http-nio-8080-exec-2] c.example.moviepal.service.UserService   : starting findUserIdByName: id is meshal
+2022-06-27 13:35:17.206  INFO 46142 --- [http-nio-8080-exec-2] c.example.moviepal.service.UserService   : userid was found: 25
+2022-06-27 13:35:17.206  INFO 46142 --- [http-nio-8080-exec-2] c.e.m.c.M.MovieListController            : User doing the call is: meshal with id: 25
+2022-06-27 13:35:17.206  INFO 46142 --- [http-nio-8080-exec-2] c.example.moviepal.service.UserService   : starting getUserById: user id is 25
+2022-06-27 13:35:17.778  INFO 46142 --- [http-nio-8080-exec-2] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@5bc37b83
+2022-06-27 13:35:17.778  INFO 46142 --- [http-nio-8080-exec-2] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@5bc37b83
+2022-06-27 13:35:18.344  INFO 46142 --- [http-nio-8080-exec-2] c.e.m.c.M.MovieListController            : User was found: meshal
+2022-06-27 13:35:18.344  INFO 46142 --- [http-nio-8080-exec-2] c.example.moviepal.service.ListsService  : calling getWishListByUserId for a list by user id: 25
+2022-06-27 13:35:18.436  INFO 46142 --- [http-nio-8080-exec-2] c.example.moviepal.service.ListsService  : list was found and size is: 1
+2022-06-27 13:35:18.436  INFO 46142 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findById
+2022-06-27 13:35:18.436  INFO 46142 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&i=tt1270798
+2022-06-27 13:35:18.436  INFO 46142 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-27 13:35:18.542  INFO 46142 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"X-Men: First Class","Year":"2011","Rated":"PG-13","Released":"03 Jun 2011","Runtime":"131 min","Genre":"Action, Adventure, Sci-Fi","Director":"Matthew Vaughn","Writer":"Ashley Miller, Zack Stentz, Jane Goldman","Actors":"James McAvoy, Michael Fassbender, Jennifer Lawrence","Plot":"In the 1960s, superpowered humans Charles Xavier and Erik Lensherr work together to find others like them, but Erik's vengeful pursuit of an ambitious mutant who ruined his life causes a schism to divide them.","Language":"English, German, French, Spanish, Russian","Country":"United States, United Kingdom","Awards":"21 wins & 39 nominations","Poster":"https://m.media-amazon.com/images/M/MV5BMTg5OTMxNzk4Nl5BMl5BanBnXkFtZTcwOTk1MjAwNQ@@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"7.7/10"},{"Source":"Rotten Tomatoes","Value":"86%"},{"Source":"Metacritic","Value":"65/100"}],"Metascore":"65","imdbRating":"7.7","imdbVotes":"681,536","imdbID":"tt1270798","Type":"movie","DVD":"09 Sep 2011","BoxOffice":"$146,408,305","Production":"N/A","Website":"N/A","Response":"True"}
+2022-06-27 13:35:18.542  INFO 46142 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-27 13:35:18.542  INFO 46142 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-27 13:35:18.544  INFO 46142 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt1270798, title=X-Men: First Class, year=2011, type=movie)
+2022-06-27 13:35:18.544  INFO 46142 --- [http-nio-8080-exec-2] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-27 13:35:18.549  INFO 46142 --- [http-nio-8080-exec-3] c.e.m.c.M.MovieListController            : Starting user/wishlist in getWishList
+2022-06-27 13:35:18.549  INFO 46142 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : starting findUserIdByName: id is meshal
+2022-06-27 13:35:18.647  INFO 46142 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : userid was found: 25
+2022-06-27 13:35:18.647  INFO 46142 --- [http-nio-8080-exec-3] c.e.m.c.M.MovieListController            : User doing the call is: meshal with id: 25
+2022-06-27 13:35:18.647  INFO 46142 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : starting getUserById: user id is 25
+2022-06-27 13:35:19.304  INFO 46142 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@1d171184
+2022-06-27 13:35:19.304  INFO 46142 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@1d171184
+2022-06-27 13:35:19.793  INFO 46142 --- [http-nio-8080-exec-3] c.e.m.c.M.MovieListController            : User was found: meshal
+2022-06-27 13:35:19.793  INFO 46142 --- [http-nio-8080-exec-3] c.example.moviepal.service.ListsService  : calling getWishListByUserId for a list by user id: 25
+2022-06-27 13:35:19.884  INFO 46142 --- [http-nio-8080-exec-3] c.example.moviepal.service.ListsService  : list was found and size is: 1
+2022-06-27 13:35:19.884  INFO 46142 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findById
+2022-06-27 13:35:19.884  INFO 46142 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&i=tt1270798
+2022-06-27 13:35:19.884  INFO 46142 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-27 13:35:19.989  INFO 46142 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"X-Men: First Class","Year":"2011","Rated":"PG-13","Released":"03 Jun 2011","Runtime":"131 min","Genre":"Action, Adventure, Sci-Fi","Director":"Matthew Vaughn","Writer":"Ashley Miller, Zack Stentz, Jane Goldman","Actors":"James McAvoy, Michael Fassbender, Jennifer Lawrence","Plot":"In the 1960s, superpowered humans Charles Xavier and Erik Lensherr work together to find others like them, but Erik's vengeful pursuit of an ambitious mutant who ruined his life causes a schism to divide them.","Language":"English, German, French, Spanish, Russian","Country":"United States, United Kingdom","Awards":"21 wins & 39 nominations","Poster":"https://m.media-amazon.com/images/M/MV5BMTg5OTMxNzk4Nl5BMl5BanBnXkFtZTcwOTk1MjAwNQ@@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"7.7/10"},{"Source":"Rotten Tomatoes","Value":"86%"},{"Source":"Metacritic","Value":"65/100"}],"Metascore":"65","imdbRating":"7.7","imdbVotes":"681,536","imdbID":"tt1270798","Type":"movie","DVD":"09 Sep 2011","BoxOffice":"$146,408,305","Production":"N/A","Website":"N/A","Response":"True"}
+2022-06-27 13:35:19.989  INFO 46142 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-27 13:35:19.990  INFO 46142 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-27 13:35:19.991  INFO 46142 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt1270798, title=X-Men: First Class, year=2011, type=movie)
+2022-06-27 13:35:19.991  INFO 46142 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object

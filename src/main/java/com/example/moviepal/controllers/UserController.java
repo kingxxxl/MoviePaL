@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+import java.security.Principal;
 import java.util.List;
 
 @RestController
@@ -50,6 +51,11 @@ public class UserController {
         logger.info("calling adduser to the user service: "+user);
         userService.addUser(user);
         return ResponseEntity.status(HttpStatus.CREATED).body(new API("New user was added!", 201));
+    }
+    @PostMapping("/login")
+    public ResponseEntity<API> login(Principal principal) {
+        System.out.println(principal.getName());
+        return ResponseEntity.status(HttpStatus.CREATED).body(new API(principal.getName(), 201));
     }
 
     @DeleteMapping("/{id}")

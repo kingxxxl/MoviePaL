@@ -39,6 +39,7 @@ import java.util.Optional;
             }
 
             logger.info("hash password was set to the user: " + user);
+            user.setRole("User");
             userRepository.save(user);
         }
     public User getUserById(Integer id) {

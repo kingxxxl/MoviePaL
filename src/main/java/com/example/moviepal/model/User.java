@@ -30,7 +30,7 @@ public class User implements UserDetails {
 //    @Pattern(regexp = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}", message = "Password need to have a minimum eight characters, at least one letter and one number")
 
     private String password;
-    @NotEmpty(message ="role may not be empty" )
+//    @NotEmpty(message ="role may not be empty" )
     @Pattern(regexp = "Admin|User",message = "Role must be in (ADMIN|USER)")
     private String role;
 
