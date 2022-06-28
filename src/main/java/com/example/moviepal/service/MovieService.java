@@ -5,11 +5,8 @@ import com.example.moviepal.exceptions.InvalidIdException;
 import com.example.moviepal.exceptions.MovieAlreadyInTheListException;
 import com.example.moviepal.exceptions.NoMovieWasFoundException;
 import com.example.moviepal.exceptions.NoSuchFoundException;
-import com.example.moviepal.model.FavoriteListMovie;
-import com.example.moviepal.model.WatchedListMovie;
+import com.example.moviepal.model.*;
 import com.example.moviepal.model.outDB.Movie;
-import com.example.moviepal.model.User;
-import com.example.moviepal.model.WishListMovie;
 import com.example.moviepal.repository.FavoriteListMovieRepository;
 import com.example.moviepal.repository.UserRepository;
 import com.example.moviepal.repository.WatchedListMovieRepository;
@@ -18,6 +15,7 @@ import com.example.moviepal.service.MovieApi.MovieOMDBapi;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -34,6 +32,8 @@ import java.util.Optional;
     private final FavoriteListMovieRepository favoriteListMovieRepository;
     private final WatchedListMovieRepository watchedListMovieRepository;
 
+
+    @Cacheable(value="Movie", key="#name")
     public Movie findByName(String name) {
         logger.info("starting findByName in MovieService");
 
@@ -63,6 +63,18 @@ import java.util.Optional;
         }
     }
 
+
+//    @Cacheable(value="Invoice", key="#invId")
+//    public Invoice getOneInvoice(Integer invId) {
+//        System.out.println("getOneInvoice");
+//        System.out.println("id = " + invId);
+//
+//        Invoice invoice = invoiceRepo.findById(invId).get();
+//        System.out.println("invoice = " + invoice);
+//        return invoice;
+//    }
+
+@Cacheable(value="Movie", key="#id")
     public Movie findById(String id) {
         logger.info("starting findById in MovieService");
         try {

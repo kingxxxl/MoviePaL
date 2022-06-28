@@ -24,7 +24,7 @@ public class MovieOMDBapi {
     private final String URL_SEARCH_LIST_BY_NAME = "https://www.omdbapi.com/?apikey=c2f1c494&s=";
     private final String URL_SEARCH_LIST_BY_NAME_YEAR = "https://www.omdbapi.com/?apikey=c2f1c494&y=";
     public Movie findByTitle(String name) throws JsonProcessingException {
-        logger.info("Starting findByTitle");
+        logger.info("Starting findByTitle from MovieOMDBapi");
 
         String url = URL_FIND_SINGLE_BY_NAME + name;
 
@@ -41,7 +41,7 @@ public class MovieOMDBapi {
 
     }
     public Movie findById(String id) throws InvalidIdException {
-        logger.info("Starting findById");
+        logger.info("Starting findById from DB");
         String url = URL_FIND_SINGLE_BY_ID + id;
 
         logger.info("URL was obtained:"+url);

@@ -7,12 +7,16 @@ import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
 import javax.persistence.Id;
+import java.io.Serializable;
 
 @AllArgsConstructor
 @RequiredArgsConstructor
 @Data
 //@Entity
-public class Movie {
+public class Movie implements Serializable {
+
+    private static final long serialVersionUID = -4439114469417994310L;
+
     @Id
     @JsonProperty("imdbID")
     private String id;
