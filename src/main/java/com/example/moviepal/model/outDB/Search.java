@@ -15,6 +15,11 @@ public class Search {
     private String title;
     private String year;
     private String type;
+    private String poster;
+    private String runtime;
+    @JsonProperty("imdbRating")
+    private String imdbRating;
+
     @JsonProperty("imdbID")
     private String id;
 }

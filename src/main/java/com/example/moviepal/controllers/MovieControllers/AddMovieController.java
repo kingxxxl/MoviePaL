@@ -24,7 +24,7 @@ public class AddMovieController {
 
     Logger logger = LoggerFactory.getLogger(AddMovieController.class);
 
-    @PostMapping("/name/wishlist/{name}")
+    @PostMapping("/name/wish-list/{name}")
     public ResponseEntity<API> byNameToWishList(@PathVariable String name){
         logger.info("Starting movie/add/name in LookUpMovieController");
         logger.info("calling movieService.addByName with name");
