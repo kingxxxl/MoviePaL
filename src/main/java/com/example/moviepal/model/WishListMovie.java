@@ -5,13 +5,17 @@ import com.example.moviepal.model.outDB.MovieList;
 import lombok.*;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 @AllArgsConstructor
 @RequiredArgsConstructor
 @Setter
 @Getter
 @Entity
-public class WishListMovie implements MovieList {
+public class WishListMovie implements MovieList, Serializable {
+
+    private static final long serialVersionUID = -4439114469417994319L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer listId;

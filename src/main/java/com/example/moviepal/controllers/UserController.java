@@ -36,8 +36,13 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<User> getUser(@PathVariable Integer id){
-        return ResponseEntity.status(HttpStatus.OK).body(userService.getUserById(id));
+    public ResponseEntity<?> getUser(@PathVariable Integer id){
+        return ResponseEntity.status(HttpStatus.OK).body(userService.getUserById(id).getUsername());
+
+    }
+    @GetMapping("/name/{name}")
+    public ResponseEntity<?> getUser(@PathVariable String name){
+        return ResponseEntity.status(HttpStatus.OK).body(userService.findUserIdByName(name));
 
     }
     @GetMapping("/logout-done")

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
@@ -40,6 +41,7 @@ public class MovieOMDBapi {
         return movie;
 
     }
+    @Cacheable(value="Movie", key="#id")
     public Movie findById(String id) throws InvalidIdException {
         logger.info("Starting findById from DB");
         String url = URL_FIND_SINGLE_BY_ID + id;

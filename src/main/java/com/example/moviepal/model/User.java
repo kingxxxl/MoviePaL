@@ -8,6 +8,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
@@ -15,7 +16,10 @@ import java.util.List;
 @AllArgsConstructor @RequiredArgsConstructor
 @Setter @Getter
 @Entity
-public class User implements UserDetails {
+public class User implements UserDetails, Serializable {
+
+    private static final long serialVersionUID = -4439114469417994391L;
+
     @Id
 //    @GeneratedValue(strategy = GenerationType.AUTO)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
