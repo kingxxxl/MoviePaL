@@ -142,6 +142,9 @@ public class MovieOMDBapi {
         movie.setTitle(c.getTitle());
         movie.setYear(c.getYear());
         movie.setType(c.getType());
+        movie.setPoster(c.getPoster());
+        movie.setRuntime(c.getRuntime());
+        movie.setImdbRating(c.getImdbRating());
         result.add(movie);
         }
         logger.info("fished  creating movie list result in getListFromSearch");

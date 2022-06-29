@@ -24,7 +24,7 @@ public class RemoveMovieController {
 
     Logger logger = LoggerFactory.getLogger(RemoveMovieController.class);
 
-    @DeleteMapping ("/name/wishlist/{name}")
+    @DeleteMapping ("/name/wish-list/{name}")
     public ResponseEntity<API> byNameToWishList(@PathVariable String name){
         logger.info("Starting movie/remove/name in LookUpMovieController");
         logger.info("calling movieService.addByName with name");
