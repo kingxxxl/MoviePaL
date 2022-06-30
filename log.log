@@ -959,3 +959,299 @@ java.net.SocketException: Connection reset
 2022-06-30 10:03:51.443  WARN 3224 --- [http-nio-8080-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: null
 2022-06-30 10:03:51.443 ERROR 3224 --- [http-nio-8080-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Interrupted during connection acquisition
 2022-06-30 10:03:52.290  INFO 3224 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-30 11:04:21.514  INFO 9068 --- [main] c.example.moviepal.MoviePaLApplication   : Starting MoviePaLApplication using Java 18.0.1.1 on Abdullahs-MacBook-Pro.local with PID 9068 (/Users/abdo/IdeaProjects/MoviePaL/target/classes started by abdo in /Users/abdo/IdeaProjects/MoviePaL)
+2022-06-30 11:04:21.516  INFO 9068 --- [main] c.example.moviepal.MoviePaLApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-06-30 11:04:21.993  INFO 9068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-06-30 11:04:21.994  INFO 9068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-30 11:04:22.052  INFO 9068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 5 JPA repository interfaces.
+2022-06-30 11:04:22.065  INFO 9068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-06-30 11:04:22.066  INFO 9068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-06-30 11:04:22.077  INFO 9068 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.moviepal.repository.FavoriteListMovieRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-06-30 11:04:22.077  INFO 9068 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.moviepal.repository.InvoiceRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-06-30 11:04:22.077  INFO 9068 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.moviepal.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-06-30 11:04:22.078  INFO 9068 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.moviepal.repository.WatchedListMovieRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-06-30 11:04:22.078  INFO 9068 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.moviepal.repository.WishListMovieRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-06-30 11:04:22.078  INFO 9068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2022-06-30 11:04:22.436  INFO 9068 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-30 11:04:22.442  INFO 9068 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-30 11:04:22.442  INFO 9068 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-30 11:04:22.500  INFO 9068 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-30 11:04:22.500  INFO 9068 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 954 ms
+2022-06-30 11:04:23.163  INFO 9068 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-30 11:04:23.190  INFO 9068 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-30 11:04:23.286  INFO 9068 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-30 11:04:23.334  INFO 9068 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-30 11:04:28.098  INFO 9068 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-30 11:04:28.117  INFO 9068 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-06-30 11:04:32.472  INFO 9068 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-30 11:04:32.483  INFO 9068 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-30 11:04:32.776  WARN 9068 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-30 11:04:33.118  INFO 9068 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@e2696e8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@345d641e, org.springframework.security.web.context.SecurityContextPersistenceFilter@75882ac2, org.springframework.security.web.header.HeaderWriterFilter@24e31f06, org.springframework.web.filter.CorsFilter@70cdbd18, org.springframework.security.web.authentication.logout.LogoutFilter@2e488e45, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@79d3c655, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@43255f91, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4518497e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@38d895e8, org.springframework.security.web.session.SessionManagementFilter@647b3fd3, org.springframework.security.web.access.ExceptionTranslationFilter@36f438f1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@337e573b]
+2022-06-30 11:04:33.726  INFO 9068 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-30 11:04:33.739  INFO 9068 --- [main] c.example.moviepal.MoviePaLApplication   : Started MoviePaLApplication in 12.434 seconds (JVM running for 12.782)
+2022-06-30 11:04:37.195  INFO 9068 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-30 11:04:37.196  INFO 9068 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-30 11:04:37.197  INFO 9068 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-30 11:04:42.050  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.c.M.MovieListController            : Starting user/wishlist in getWishList
+2022-06-30 11:04:42.331  INFO 9068 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : starting findUserIdByName: id is Aking
+2022-06-30 11:04:42.867  INFO 9068 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : userid was found: 1
+2022-06-30 11:04:42.880  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.c.M.MovieListController            : User doing the call is: Aking with id: 1
+2022-06-30 11:04:42.881  INFO 9068 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : starting getUserById: user id is 1
+2022-06-30 11:04:44.962  INFO 9068 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : starting getUserById: user iscom.example.moviepal.model.User@66595820
+2022-06-30 11:04:44.962  INFO 9068 --- [http-nio-8080-exec-3] c.example.moviepal.service.UserService   : user was found: com.example.moviepal.model.User@66595820
+2022-06-30 11:04:46.976  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.c.M.MovieListController            : User was found: Aking
+2022-06-30 11:04:46.977  INFO 9068 --- [http-nio-8080-exec-3] c.example.moviepal.service.ListsService  : calling getWishListByUserId for a list by user id: 1
+2022-06-30 11:04:47.071  INFO 9068 --- [http-nio-8080-exec-3] c.example.moviepal.service.ListsService  : list was found and size is: 11
+2022-06-30 11:04:47.076  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findById from DB
+2022-06-30 11:04:47.076  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&i=tt0120363
+2022-06-30 11:04:47.076  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-30 11:04:49.272  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Toy Story 2","Year":"1999","Rated":"G","Released":"24 Nov 1999","Runtime":"92 min","Genre":"Animation, Adventure, Comedy","Director":"John Lasseter, Ash Brannon, Lee Unkrich","Writer":"John Lasseter, Pete Docter, Ash Brannon","Actors":"Tom Hanks, Tim Allen, Joan Cusack","Plot":"When Woody is stolen by a toy collector, Buzz and his friends set out on a rescue mission to save Woody before he becomes a museum toy property with his roundup gang Jessie, Prospector, and Bullseye.","Language":"Spanish, English, Arabic, French","Country":"United States","Awards":"Nominated for 1 Oscar. 21 wins & 27 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BMWM5ZDcxMTYtNTEyNS00MDRkLWI3YTItNThmMGExMWY4NDIwXkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"7.9/10"},{"Source":"Rotten Tomatoes","Value":"100%"},{"Source":"Metacritic","Value":"88/100"}],"Metascore":"88","imdbRating":"7.9","imdbVotes":"569,882","imdbID":"tt0120363","Type":"movie","DVD":"23 Mar 2010","BoxOffice":"$245,852,179","Production":"N/A","Website":"N/A","Response":"True"}
+2022-06-30 11:04:49.272  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-30 11:04:49.274  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-30 11:04:49.324  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt0120363, title=Toy Story 2, year=1999, type=movie, poster=https://m.media-amazon.com/images/M/MV5BMWM5ZDcxMTYtNTEyNS00MDRkLWI3YTItNThmMGExMWY4NDIwXkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg, runtime=92 min, imdbRating=7.9)
+2022-06-30 11:04:49.324  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-30 11:04:49.326  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findById from DB
+2022-06-30 11:04:49.327  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&i=tt0084809
+2022-06-30 11:04:49.327  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-30 11:04:50.221  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"The Toy","Year":"1982","Rated":"PG","Released":"10 Dec 1982","Runtime":"102 min","Genre":"Comedy","Director":"Richard Donner","Writer":"Francis Veber, Carol Sobieski","Actors":"Richard Pryor, Jackie Gleason, Ned Beatty","Plot":"An underemployed reporter finds himself literally purchased as a toy for a rich spoiled brat.","Language":"English, German","Country":"United States","Awards":"1 nomination","Poster":"https://m.media-amazon.com/images/M/MV5BZDI2OTg4NDAtODI3YS00NmYwLTg2ZjUtMTBjYmQ0Yjc2OGYzXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"5.8/10"},{"Source":"Rotten Tomatoes","Value":"3%"},{"Source":"Metacritic","Value":"16/100"}],"Metascore":"16","imdbRating":"5.8","imdbVotes":"13,460","imdbID":"tt0084809","Type":"movie","DVD":"13 Nov 2001","BoxOffice":"$47,118,057","Production":"N/A","Website":"N/A","Response":"True"}
+2022-06-30 11:04:50.222  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-30 11:04:50.222  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-30 11:04:50.223  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt0084809, title=The Toy, year=1982, type=movie, poster=https://m.media-amazon.com/images/M/MV5BZDI2OTg4NDAtODI3YS00NmYwLTg2ZjUtMTBjYmQ0Yjc2OGYzXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg, runtime=102 min, imdbRating=5.8)
+2022-06-30 11:04:50.223  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-30 11:04:50.227  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findById from DB
+2022-06-30 11:04:50.227  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&i=tt0944947
+2022-06-30 11:04:50.227  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-30 11:04:50.326  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Game of Thrones","Year":"2011–2019","Rated":"TV-MA","Released":"17 Apr 2011","Runtime":"57 min","Genre":"Action, Adventure, Drama","Director":"N/A","Writer":"David Benioff, D.B. Weiss","Actors":"Emilia Clarke, Peter Dinklage, Kit Harington","Plot":"Nine noble families fight for control over the lands of Westeros, while an ancient enemy returns after being dormant for millennia.","Language":"English","Country":"United States, United Kingdom","Awards":"Won 59 Primetime Emmys. 387 wins & 632 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BYTRiNDQwYzAtMzVlZS00NTI5LWJjYjUtMzkwNTUzMWMxZTllXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"9.2/10"}],"Metascore":"N/A","imdbRating":"9.2","imdbVotes":"1,996,267","imdbID":"tt0944947","Type":"series","totalSeasons":"8","Response":"True"}
+2022-06-30 11:04:50.326  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-30 11:04:50.326  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-30 11:04:50.328  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt0944947, title=Game of Thrones, year=2011–2019, type=series, poster=https://m.media-amazon.com/images/M/MV5BYTRiNDQwYzAtMzVlZS00NTI5LWJjYjUtMzkwNTUzMWMxZTllXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_SX300.jpg, runtime=57 min, imdbRating=9.2)
+2022-06-30 11:04:50.328  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-30 11:04:50.331  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findById from DB
+2022-06-30 11:04:50.331  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&i=tt2084970
+2022-06-30 11:04:50.331  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-30 11:04:51.167  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"The Imitation Game","Year":"2014","Rated":"PG-13","Released":"25 Dec 2014","Runtime":"114 min","Genre":"Biography, Drama, Thriller","Director":"Morten Tyldum","Writer":"Graham Moore, Andrew Hodges","Actors":"Benedict Cumberbatch, Keira Knightley, Matthew Goode","Plot":"During World War II, the English mathematical genius Alan Turing tries to crack the German Enigma code with help from fellow mathematicians while attempting to come to terms with his troubled private life.","Language":"English, German","Country":"United Kingdom, United States","Awards":"Won 1 Oscar. 49 wins & 165 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BOTgwMzFiMWYtZDhlNS00ODNkLWJiODAtZDVhNzgyNzJhYjQ4L2ltYWdlXkEyXkFqcGdeQXVyNzEzOTYxNTQ@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"8.0/10"},{"Source":"Rotten Tomatoes","Value":"89%"},{"Source":"Metacritic","Value":"71/100"}],"Metascore":"71","imdbRating":"8.0","imdbVotes":"753,452","imdbID":"tt2084970","Type":"movie","DVD":"31 Mar 2015","BoxOffice":"$91,125,683","Production":"N/A","Website":"N/A","Response":"True"}
+2022-06-30 11:04:51.168  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-30 11:04:51.168  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-30 11:04:51.170  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt2084970, title=The Imitation Game, year=2014, type=movie, poster=https://m.media-amazon.com/images/M/MV5BOTgwMzFiMWYtZDhlNS00ODNkLWJiODAtZDVhNzgyNzJhYjQ4L2ltYWdlXkEyXkFqcGdeQXVyNzEzOTYxNTQ@._V1_SX300.jpg, runtime=114 min, imdbRating=8.0)
+2022-06-30 11:04:51.187  INFO 9068 --- [http-nio-8080-exec-3] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-30 11:04:51.409  INFO 9068 --- [http-nio-8080-exec-4] c.e.m.c.M.MovieListController            : Starting user/wishlist in getWishList
+2022-06-30 11:04:51.410  INFO 9068 --- [http-nio-8080-exec-4] c.e.m.c.M.MovieListController            : User doing the call is: Aking with id: 1
+2022-06-30 11:04:51.411  INFO 9068 --- [http-nio-8080-exec-4] c.e.m.c.M.MovieListController            : User was found: Aking
+2022-06-30 11:04:51.412  INFO 9068 --- [http-nio-8080-exec-4] c.example.moviepal.service.ListsService  : calling getWishListByUserId for a list by user id: 1
+2022-06-30 11:04:52.311  INFO 9068 --- [http-nio-8080-exec-4] c.example.moviepal.service.ListsService  : list was found and size is: 11
+2022-06-30 11:04:54.326  INFO 9068 --- [http-nio-8080-exec-5] c.e.m.c.M.MovieListController            : Starting user/favoritelist in getFavoriteList
+2022-06-30 11:04:54.328  INFO 9068 --- [http-nio-8080-exec-5] c.e.m.c.M.MovieListController            : User doing the call is: Aking with id: 1
+2022-06-30 11:04:54.329  INFO 9068 --- [http-nio-8080-exec-5] c.e.m.c.M.MovieListController            : User was found: Aking
+2022-06-30 11:04:54.329  INFO 9068 --- [http-nio-8080-exec-5] c.example.moviepal.service.ListsService  : calling getFavoriteListByUserId for a list by user id: 1
+2022-06-30 11:04:54.514  INFO 9068 --- [http-nio-8080-exec-5] c.example.moviepal.service.ListsService  : list was found and size is: 2
+2022-06-30 11:04:54.524  INFO 9068 --- [http-nio-8080-exec-6] c.e.m.c.M.MovieListController            : Starting user/favoritelist in getFavoriteList
+2022-06-30 11:04:54.526  INFO 9068 --- [http-nio-8080-exec-6] c.e.m.c.M.MovieListController            : User doing the call is: Aking with id: 1
+2022-06-30 11:04:54.527  INFO 9068 --- [http-nio-8080-exec-6] c.e.m.c.M.MovieListController            : User was found: Aking
+2022-06-30 11:04:54.527  INFO 9068 --- [http-nio-8080-exec-6] c.example.moviepal.service.ListsService  : calling getFavoriteListByUserId for a list by user id: 1
+2022-06-30 11:04:55.360  INFO 9068 --- [http-nio-8080-exec-6] c.example.moviepal.service.ListsService  : list was found and size is: 2
+2022-06-30 11:04:55.943  INFO 9068 --- [http-nio-8080-exec-7] c.e.m.c.M.MovieListController            : Starting user/watchedlist in getWatchedList
+2022-06-30 11:04:55.959  INFO 9068 --- [http-nio-8080-exec-7] c.e.m.c.M.MovieListController            : User doing the call is: Aking with id: 1
+2022-06-30 11:04:55.960  INFO 9068 --- [http-nio-8080-exec-7] c.e.m.c.M.MovieListController            : User was found: Aking
+2022-06-30 11:04:55.960  INFO 9068 --- [http-nio-8080-exec-7] c.example.moviepal.service.ListsService  : calling getWatchedListByUserId for a list by user id: 1
+2022-06-30 11:04:56.590  INFO 9068 --- [http-nio-8080-exec-7] c.example.moviepal.service.ListsService  : list was found and size is: 5
+2022-06-30 11:04:56.591  INFO 9068 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findById from DB
+2022-06-30 11:04:56.591  INFO 9068 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&i=tt0435761
+2022-06-30 11:04:56.591  INFO 9068 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-30 11:04:57.460  INFO 9068 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Toy Story 3","Year":"2010","Rated":"G","Released":"18 Jun 2010","Runtime":"103 min","Genre":"Animation, Adventure, Comedy","Director":"Lee Unkrich","Writer":"John Lasseter, Andrew Stanton, Lee Unkrich","Actors":"Tom Hanks, Tim Allen, Joan Cusack","Plot":"The toys are mistakenly delivered to a day-care center instead of the attic right before Andy leaves for college, and it's up to Woody to convince the other toys that they weren't abandoned and to return home.","Language":"English, Spanish","Country":"United States","Awards":"Won 2 Oscars. 61 wins & 96 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BMTgxOTY4Mjc0MF5BMl5BanBnXkFtZTcwNTA4MDQyMw@@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"8.3/10"},{"Source":"Rotten Tomatoes","Value":"98%"},{"Source":"Metacritic","Value":"92/100"}],"Metascore":"92","imdbRating":"8.3","imdbVotes":"818,626","imdbID":"tt0435761","Type":"movie","DVD":"02 Nov 2010","BoxOffice":"$415,004,880","Production":"N/A","Website":"N/A","Response":"True"}
+2022-06-30 11:04:57.460  INFO 9068 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-30 11:04:57.461  INFO 9068 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-30 11:04:57.462  INFO 9068 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt0435761, title=Toy Story 3, year=2010, type=movie, poster=https://m.media-amazon.com/images/M/MV5BMTgxOTY4Mjc0MF5BMl5BanBnXkFtZTcwNTA4MDQyMw@@._V1_SX300.jpg, runtime=103 min, imdbRating=8.3)
+2022-06-30 11:04:57.462  INFO 9068 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-30 11:04:57.464  INFO 9068 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : Starting findById from DB
+2022-06-30 11:04:57.464  INFO 9068 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : URL was obtained:https://www.omdbapi.com/?apikey=c2f1c494&i=tt2446040
+2022-06-30 11:04:57.464  INFO 9068 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getBodyFromURL
+2022-06-30 11:04:57.595  INFO 9068 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : The body from the url was obtained:{"Title":"Toy Story of Terror","Year":"2013","Rated":"TV-G","Released":"16 Oct 2013","Runtime":"22 min","Genre":"Animation, Short, Adventure","Director":"Angus MacLane","Writer":"Angus MacLane, Andrew Stanton, John Lasseter","Actors":"Tom Hanks, Tim Allen, Joan Cusack","Plot":"Woody and the gang are held up at a roadside motel and members of the group start to disappear from everywhere. Woody and set about getting to the bottom of the mystery.","Language":"English","Country":"United States","Awards":"6 wins & 10 nominations","Poster":"https://m.media-amazon.com/images/M/MV5BYTZkY2JjMDItYzEwMS00MjVlLTlhYjktMmI5YjYzMjdmZGMxXkEyXkFqcGdeQXVyNDIwODAwNzg@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"7.5/10"},{"Source":"Rotten Tomatoes","Value":"94%"}],"Metascore":"N/A","imdbRating":"7.5","imdbVotes":"15,619","imdbID":"tt2446040","Type":"movie","DVD":"01 Jun 2018","BoxOffice":"N/A","Production":"N/A","Website":"N/A","Response":"True"}
+2022-06-30 11:04:57.596  INFO 9068 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : Starting getMovieFromSingleJson
+2022-06-30 11:04:57.596  INFO 9068 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : returning movie object from getMovieFromSingleJson: 
+2022-06-30 11:04:57.597  INFO 9068 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : The movie was mapped with the given json: Movie(id=tt2446040, title=Toy Story of Terror, year=2013, type=movie, poster=https://m.media-amazon.com/images/M/MV5BYTZkY2JjMDItYzEwMS00MjVlLTlhYjktMmI5YjYzMjdmZGMxXkEyXkFqcGdeQXVyNDIwODAwNzg@._V1_SX300.jpg, runtime=22 min, imdbRating=7.5)
+2022-06-30 11:04:57.597  INFO 9068 --- [http-nio-8080-exec-7] c.e.m.service.MovieApi.MovieOMDBapi      : returning the movie object
+2022-06-30 11:04:57.606  INFO 9068 --- [http-nio-8080-exec-8] c.e.m.c.M.MovieListController            : Starting user/watchedlist in getWatchedList
+2022-06-30 11:04:57.607  INFO 9068 --- [http-nio-8080-exec-8] c.e.m.c.M.MovieListController            : User doing the call is: Aking with id: 1
+2022-06-30 11:04:57.608  INFO 9068 --- [http-nio-8080-exec-8] c.e.m.c.M.MovieListController            : User was found: Aking
+2022-06-30 11:04:57.608  INFO 9068 --- [http-nio-8080-exec-8] c.example.moviepal.service.ListsService  : calling getWatchedListByUserId for a list by user id: 1
+2022-06-30 11:04:58.596  INFO 9068 --- [http-nio-8080-exec-8] c.example.moviepal.service.ListsService  : list was found and size is: 5
+2022-06-30 11:07:48.533  INFO 9068 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-30 11:07:48.538  INFO 9068 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-30 11:07:52.567  INFO 9068 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-30 11:07:54.519  INFO 9164 --- [main] c.example.moviepal.MoviePaLApplication   : Starting MoviePaLApplication using Java 18.0.1.1 on Abdullahs-MacBook-Pro.local with PID 9164 (/Users/abdo/IdeaProjects/MoviePaL/target/classes started by abdo in /Users/abdo/IdeaProjects/MoviePaL)
+2022-06-30 11:07:54.522  INFO 9164 --- [main] c.example.moviepal.MoviePaLApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-06-30 11:07:54.989  INFO 9164 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-06-30 11:07:54.989  INFO 9164 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-30 11:07:55.037  INFO 9164 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 5 JPA repository interfaces.
+2022-06-30 11:07:55.051  INFO 9164 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-06-30 11:07:55.052  INFO 9164 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-06-30 11:07:55.063  INFO 9164 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.moviepal.repository.FavoriteListMovieRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-06-30 11:07:55.063  INFO 9164 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.moviepal.repository.InvoiceRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-06-30 11:07:55.063  INFO 9164 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.moviepal.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-06-30 11:07:55.064  INFO 9164 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.moviepal.repository.WatchedListMovieRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-06-30 11:07:55.064  INFO 9164 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.moviepal.repository.WishListMovieRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-06-30 11:07:55.064  INFO 9164 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2022-06-30 11:07:55.429  INFO 9164 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-30 11:07:55.434  INFO 9164 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-30 11:07:55.434  INFO 9164 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-30 11:07:55.492  INFO 9164 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-30 11:07:55.492  INFO 9164 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 941 ms
+2022-06-30 11:07:56.121  INFO 9164 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-30 11:07:56.144  INFO 9164 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-30 11:07:56.244  INFO 9164 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-30 11:07:56.298  INFO 9164 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-30 11:08:00.960  INFO 9164 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-30 11:08:00.979  INFO 9164 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-06-30 11:08:02.210  WARN 9164 --- [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table favorite_list_movie drop foreign key FKba25th3qncslu0lew7lb9r6kd" via JDBC Statement
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table favorite_list_movie drop foreign key FKba25th3qncslu0lew7lb9r6kd" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:387) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:371) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:341) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:235) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:156) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:128) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:114) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:157) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.0.jar:2.7.0]
+	at com.example.moviepal.MoviePaLApplication.main(MoviePaLApplication.java:12) ~[classes/:na]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'moviepal2.favorite_list_movie' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	... 35 common frames omitted
+
+2022-06-30 11:08:03.152  WARN 9164 --- [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table watched_list_movie drop foreign key FKnsgf8m2hcr3jangknares39q6" via JDBC Statement
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table watched_list_movie drop foreign key FKnsgf8m2hcr3jangknares39q6" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:387) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:371) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:341) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:235) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:156) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:128) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:114) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:157) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.0.jar:2.7.0]
+	at com.example.moviepal.MoviePaLApplication.main(MoviePaLApplication.java:12) ~[classes/:na]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'moviepal2.watched_list_movie' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	... 35 common frames omitted
+
+2022-06-30 11:08:04.104  WARN 9164 --- [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table wish_list_movie drop foreign key FK92st5ga0r5klxy0offf6w0gm8" via JDBC Statement
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table wish_list_movie drop foreign key FK92st5ga0r5klxy0offf6w0gm8" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:387) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:371) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:341) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:235) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:156) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:128) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:114) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:157) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.0.jar:2.7.0]
+	at com.example.moviepal.MoviePaLApplication.main(MoviePaLApplication.java:12) ~[classes/:na]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'moviepal2.wish_list_movie' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	... 35 common frames omitted
+
+2022-06-30 11:08:16.687  INFO 9164 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-30 11:08:16.695  INFO 9164 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-30 11:08:16.985  WARN 9164 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-30 11:08:17.213  INFO 9164 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7a6e0f3c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5184da2b, org.springframework.security.web.context.SecurityContextPersistenceFilter@7d3a2459, org.springframework.security.web.header.HeaderWriterFilter@35d53cd8, org.springframework.web.filter.CorsFilter@6fa2d0b2, org.springframework.security.web.authentication.logout.LogoutFilter@4c6fe482, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7e1953f7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3833897c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6f12b637, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@49c37918, org.springframework.security.web.session.SessionManagementFilter@62ec4146, org.springframework.security.web.access.ExceptionTranslationFilter@502b9399, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4daead88]
+2022-06-30 11:08:17.593  INFO 9164 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-30 11:08:17.602  INFO 9164 --- [main] c.example.moviepal.MoviePaLApplication   : Started MoviePaLApplication in 23.282 seconds (JVM running for 23.734)
