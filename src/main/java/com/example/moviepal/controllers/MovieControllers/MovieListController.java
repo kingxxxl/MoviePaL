@@ -25,7 +25,7 @@ public class MovieListController {
     final private UserService userService;
     Logger logger = LoggerFactory.getLogger(MovieListController.class);
 
-    @GetMapping("/wishlist")
+    @GetMapping("/wish-list")
     public ResponseEntity<List<Movie>> getWishList(){
         logger.info("Starting user/wishlist in getWishList");
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
