@@ -261,3 +261,27 @@
 2022-07-01 22:28:21.609  INFO 1846 --- [http-nio-8080-exec-5] c.e.m.c.M.MovieListController            : User was found: Aking
 2022-07-01 22:28:21.609  INFO 1846 --- [http-nio-8080-exec-5] c.example.moviepal.service.ListsService  : calling getWishListByUserId for a list by user id: 1
 2022-07-01 22:28:21.717  INFO 1846 --- [http-nio-8080-exec-5] c.example.moviepal.service.ListsService  : list was found and size is: 5
+2022-07-01 22:28:49.471  WARN 1846 --- [reactor-http-nio-2] r.netty.http.client.HttpClientConnect    : [dffcf677-8, L:/192.168.100.188:53303 - R:www.omdbapi.com/104.20.135.15:443] The connection observed an error
+
+java.io.IOException: Operation timed out
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:47) ~[na:na]
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:340) ~[na:na]
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:294) ~[na:na]
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:269) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:417) ~[na:na]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:258) ~[netty-buffer-4.1.77.Final.jar:4.1.77.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.77.Final.jar:4.1.77.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357) ~[netty-transport-4.1.77.Final.jar:4.1.77.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.77.Final.jar:4.1.77.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722) ~[netty-transport-4.1.77.Final.jar:4.1.77.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658) ~[netty-transport-4.1.77.Final.jar:4.1.77.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584) ~[netty-transport-4.1.77.Final.jar:4.1.77.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496) ~[netty-transport-4.1.77.Final.jar:4.1.77.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:995) ~[netty-common-4.1.77.Final.jar:4.1.77.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.77.Final.jar:4.1.77.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.77.Final.jar:4.1.77.Final]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-07-01 22:28:49.482  WARN 1846 --- [http-nio-8080-exec-1] c.example.moviepal.service.MovieService  : no movie with that name
+2022-07-01 22:28:49.483  INFO 1846 --- [http-nio-8080-exec-1] c.e.m.advice.ControllerAdviseHandler     : NoMovieWasFoundException was triggered
